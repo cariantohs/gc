@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geotagging Usaha - Data Samosir</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #2196F3, #1976D2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        @media (min-width: 992px) {
+            .content {
+                flex-direction: row;
+            }
+        }
+
+        .map-section {
+            flex: 1;
+            min-height: 500px;
+            border-right: 1px solid #eee;
+        }
+
+        .form-section {
+            flex: 1;
+            min-width: 400px;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 700px;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2196F3;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .coordinates-display {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 13px;
+            border: 1px solid #ddd;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #616161;
+        }
+
+        .btn-location {
+            background: #2196F3;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .btn-location:hover {
+            background: #1976D2;
+        }
+
+        .map-controls {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #eee;
+        }
+
+        .status-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .status-option {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .status-option:hover {
+            border-color: #2196F3;
+        }
+
+        .status-option.selected {
+            border-color: #4CAF50;
+            background: #E8F5E9;
+        }
+
+        .status-option[data-status="Ditemukan"] {
+            color: #4CAF50;
+        }
+
+        .status-option[data-status="Pindah"] {
+            color: #FF9800;
+        }
+
+        .status-option[data-status="Tutup"] {
+            color: #F44336;
+        }
+
+        .status-option[data-status="Tidak Ditemukan"] {
+            color: #9E9E9E;
+        }
+
+        .required {
+            color: #F44336;
+        }
+
+        .instructions {
+            background: #E3F2FD;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .data-counter {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .success-message {
+            background: #E8F5E9;
+            color: #4CAF50;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+
+        .progress-info {
+            background: #FFF3E0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .dropdown-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 991px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .map-section {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                min-height: 400px;
+            }
+            
+            .form-section {
+                max-height: none;
+                min-width: 100%;
+            }
+            
+            .status-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .dropdown-group {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 10px;
+            }
+            
+            .form-section {
+                padding: 15px;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📍 Geotagging Usaha - Kabupaten Samosir</h1>
+            <p>Pilih Kecamatan → Desa → Nama Usaha → Tandai Lokasi di Peta</p>
+            <div class="data-counter" id="dataCount">Data tersimpan: 0 | Sisa data: 0</div>
+        </header>
+
+        <div class="content">
+            <div class="map-section">
+                <div class="map-controls">
+                    <button class="btn btn-location" id="btnMyLocation">
+                        📍 Gunakan Lokasi Saya
+                    </button>
+                    <div class="loading" id="mapLoading">Memuat peta...</div>
+                </div>
+                <div id="map"></div>
+            </div>
+
+            <div class="form-section">
+                <div class="instructions">
+                    <strong>📋 Petunjuk Pengisian:</strong>
+                    <ol>
+                        <li>Pilih <strong>Kecamatan</strong> dari dropdown</li>
+                        <li>Pilih <strong>Desa</strong> yang tersedia</li>
+                        <li>Pilih <strong>Nama Usaha</strong> dari daftar</li>
+                        <li>Alamat akan terisi otomatis (bantu mengenali lokasi)</li>
+                        <li><strong>Klik di peta</strong> untuk menentukan koordinat</li>
+                        <li>Pilih status usaha</li>
+                        <li>Klik <strong>"Simpan Data"</strong> untuk menyimpan</li>
+                        <li>Usaha yang sudah disimpan akan hilang dari daftar</li>
+                    </ol>
+                </div>
+
+                <div class="progress-info" id="progressInfo">
+                    Memuat data usaha...
+                </div>
+
+                <div class="form-group">
+                    <label for="selectKecamatan">Kecamatan <span class="required">*</span></label>
+                    <select id="selectKecamatan" required>
+                        <option value="">-- Pilih Kecamatan --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectDesa">Desa <span class="required">*</span></label>
+                    <select id="selectDesa" required disabled>
+                        <option value="">-- Pilih Desa --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectNamaUsaha">Nama Usaha <span class="required">*</span></label>
+                    <select id="selectNamaUsaha" required disabled>
+                        <option value="">-- Pilih Nama Usaha --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat (Terisi Otomatis)</label>
+                    <textarea id="alamat" rows="2" readonly placeholder="Alamat akan muncul setelah memilih nama usaha"></textarea>
+                    <small style="color: #666;">Alamat dari data untuk membantu mengenali lokasi</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Koordinat <span class="required">*</span></label>
+                    <div class="coordinates-display">
+                        Latitude: <span id="latDisplay">-</span><br>
+                        Longitude: <span id="lngDisplay">-</span>
+                    </div>
+                    <small style="color: #666;">Klik di peta untuk mengatur koordinat</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Status Usaha <span class="required">*</span></label>
+                    <div class="status-options">
+                        <div class="status-option" data-status="Ditemukan">
+                            ✅ Ditemukan (Beroperasi)
+                        </div>
+                        <div class="status-option" data-status="Pindah">
+                            🚚 Pindah Lokasi
+                        </div>
+                        <div class="status-option" data-status="Tutup">
+                            ❌ Tutup/Non-Aktif
+                        </div>
+                        <div class="status-option" data-status="Tidak Ditemukan">
+                            🔍 Tidak Ditemukan
+                        </div>
+                    </div>
+                    <input type="hidden" id="status" value="" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="keterangan">Keterangan Tambahan</label>
+                    <textarea id="keterangan" rows="3" placeholder="Catatan, kondisi usaha, atau informasi tambahan lainnya"></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="btnSave">
+                    💾 Simpan Data
+                </button>
+
+                <button class="btn btn-secondary" id="btnReset">
+                    🔄 Form Baru
+                </button>
+
+                <button class="btn btn-secondary" id="btnExport">
+                    📥 Export Data ke CSV
+                </button>
+
+                <button class="btn btn-secondary" id="btnShowData">
+                    📋 Lihat Data Tersimpan
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    <span style="font-size: 24px;">✅</span>
+                    <div>
+                        <strong>Data berhasil disimpan!</strong>
+                        <div id="saveDetails" style="font-size: 12px; margin-top: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Sistem Geotagging Usaha - Kabupaten Samosir | Data dari daftar usaha.xlsx</p>
+        </footer>
+    </div>
+
+    <!-- Data dari Excel -->
+    <script>
+        // Data usaha dari file Excel (contoh 50 data pertama, Anda bisa tambahkan sisanya)
+        const semuaDataUsaha = [
+            { nama: "KEPLER PONSEL", alamat: "JL KOL LIBERTY MALAU", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "POLINDES <SANTI>", alamat: "BONAN DOLOK", kecamatan: "Sianjur Mulamula", desa: "Bonan Dolok" },
+            { nama: "WARUNG KOPI<AKDEN>", alamat: "PINTU BATU DESA RIANIATE", kecamatan: "Pangururan", desa: "Rianiate" },
+            { nama: "CU.SATAHI", alamat: "JL USKUP AGUNG SUGIOPRANOTO", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "KEDAI KOPI <NAUDUR>", alamat: "SIMPANG 4 DUSUN 3 PARSAORAN 1", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "DEPOT ISI ULANG AIR VED WATER", alamat: "JALAN SIMANINDO DUSUN 3", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "SMA ADVENT", alamat: "JL. LINTAS SAMOSIR DUSUN 2", kecamatan: "Palipi", desa: "Sigaol Simbolon" },
+            { nama: "LOKET LISTRIK (BETTY)", alamat: "PASAR NAINGGOLAN", kecamatan: "Nainggolan", desa: "Nainggolan" },
+            { nama: "PAUD BONA PASOGIT SIPIRA", alamat: "HUTAGODANG", kecamatan: "Onan Runggu", desa: "Sipira" },
+            { nama: "JODHA, UD", alamat: "LUMBANHARO DESA SIBO NOR OMPURATUS", kecamatan: "Nainggolan", desa: "Sibonor Ompu Ratus" },
+            { nama: "TOKO OBAT PARSITABU", alamat: "JL DI PANDJAITAN", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "WARUNG KELONTONG <RIO>", alamat: "KAMENTE DUSUN 1", kecamatan: "Palipi", desa: "Sigaol Marbun" },
+            { nama: "TABO RESTAURANT", alamat: "JL LINGKAR TUKTUK SOSOR GALUNG", kecamatan: "Simanindo", desa: "Tuk-Tuk Siadong" },
+            { nama: "SMK N 1 NAINGGOLAN", alamat: "SIRUMAHOMBAR", kecamatan: "Nainggolan", desa: "Siruma Hombar" },
+            { nama: "TUKTUK TIMBUL BUNGALOWS", alamat: "JL LINGKAR TUKTUK SIA LLAGAN PINDARAYA", kecamatan: "Simanindo", desa: "Siallagan Pindaraya" },
+            { nama: "PUSTU SABUNGAN NIHUTA", alamat: "SABUNGAN NIHUTA", kecamatan: "Ronggur Nihuta", desa: "Sabungan Ni Huta" },
+            { nama: "LAUNDRY MANUAL <NUR>", alamat: "HARIARA TOLU", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "VANESHA HOTEL", alamat: "TOLPING", kecamatan: "Simanindo", desa: "Martoba" },
+            { nama: "BENGKEL CINTA KAWAN", alamat: "JL PUTRI LOPIAN", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "SD N 25", alamat: "JLN INPRES TUKTUK SI ADONG", kecamatan: "Simanindo", desa: "Tuk-Tuk Siadong" },
+            { nama: "VILLA SITIOTIO", alamat: "JALAN AEK RANGAT", kecamatan: "Pangururan", desa: "Siogung - Ogung" },
+            { nama: "SMP N 3 LONTUNG", alamat: "PARDOMUAN", kecamatan: "Simanindo", desa: "Pardomuan" },
+            { nama: "SMK KARYA JAYA", alamat: "JALAN TANAH LAPANG", kecamatan: "Pangururan", desa: "Pasar Pangururan" },
+            { nama: "BATU BATA LIBERA", alamat: "KAMENDETE DUSUN I", kecamatan: "Palipi", desa: "Sigaol Marbun" },
+            { nama: "SAMOSIR RESTAURANT", alamat: "JLN LINGKAR TUK-TUK SIADONG", kecamatan: "Simanindo", desa: "Ambarita" },
+            { nama: "BAGUS BAY HOME STAY", alamat: "JL LINGKAR TUKTUK", kecamatan: "Simanindo", desa: "Tuk-Tuk Siadong" },
+            { nama: "MS, UD", alamat: "KIOS NO 4-5 PEKAN INPRES", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "LEKJON RESTAURANT", alamat: "JL LINGKAR TUKTUK", kecamatan: "Simanindo", desa: "Tuk-Tuk Siadong" },
+            { nama: "PAUD TUNAS BANGSA", alamat: "LUMBAN TONGA TONGA", kecamatan: "Harian", desa: "Hariara Pohan" },
+            { nama: "HK BAKMIE (SAUT)", alamat: "JL.DR HADRIANUS SINAGA", kecamatan: "Pangururan", desa: "Pintusona" },
+            { nama: "USAHA FOTOCOPY <ERNA>", alamat: "JL SIMANINDO DUSUN 3 PANGURURAN", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "PUSKESDES <MEY>", alamat: "LUMBAN SIDAURUK", kecamatan: "Simanindo", desa: "Ambarita" },
+            { nama: "PAUD HONEY KIDS", alamat: "JL LINGKAR TUKTUK PIN DARAYA", kecamatan: "Simanindo", desa: "Siallagan Pindaraya" },
+            { nama: "KILANG PADI OP EVA", alamat: "LONDUT DUSUN 2", kecamatan: "Sitio-tio", desa: "Tamba Dolok" },
+            { nama: "TOKO OBAT SEHATI <TOGA>", alamat: "TOLPING", kecamatan: "Simanindo", desa: "Tomok Parsaoran" },
+            { nama: "TOKO DEVOSIONAL", alamat: "JL USKUP AGUNG SUGIO PRANOTO", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "HOTEL DAINANG", alamat: "JL. PUTRI LOPIAN PARDOMUAN I", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "RUMAH SAKIT HKBP", alamat: "SIRUMAHOMBAR", kecamatan: "Nainggolan", desa: "Siruma Hombar" },
+            { nama: "LOKET PEMBAYARAN <AMOR>", alamat: "ALNGIT LUMBAN PASIR", kecamatan: "Pangururan", desa: "Lumban Suhi Suhi Toruan" },
+            { nama: "PANGLONG PARMAN ARTHA", alamat: "JL USKUP AGUNG SUGIO PRANOTO", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "HOTEL CAHAYA", alamat: "JL PUTRI LOPIAN", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "CU ST JOSEP", alamat: "PONDOK BULU", kecamatan: "Palipi", desa: "Urat II" },
+            { nama: "YAYASAN SANTO PETRUS", alamat: "SIBATUARA DUSUN 1", kecamatan: "Palipi", desa: "Urat Timur" },
+            { nama: "PUSKESMAS PEMBANTU PARDOMUAN", alamat: "PARDOMUAN", kecamatan: "Simanindo", desa: "Pardomuan" },
+            { nama: "USAHA ROTI PARSAORAN 1", alamat: "SITANGGAN BAU", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "PENJAHIT CACA (ADEL)", alamat: "JL NAHUM SITUMORANG", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "PRIMA HOTEL", alamat: "LUMBAN BOLAK", kecamatan: "Pangururan", desa: "Situngkir" },
+            { nama: "UD.HARIS", alamat: "JL.DI. PANDJAITAN", kecamatan: "Pangururan", desa: "Pardomuan I" },
+            { nama: "KLINIK <HOTNIDA>", alamat: "JL SIMANINDO DSN 3", kecamatan: "Pangururan", desa: "Parsaoran I" },
+            { nama: "HORAS FAMILY SPEDBOAT", alamat: "JLN LINGKAR TUK TUK SIADONG", kecamatan: "Simanindo", desa: "Dosroha" }
+            // Tambahkan data lainnya sesuai kebutuhan
+        ];
+
+        // Data untuk dropdown
+        let dataUsahaTersedia = [];
+        let dataUsahaTersimpan = [];
+    </script>
+
+    <!-- Google Maps API -->
+    <script>
+        const API_KEY = 'AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao';
+        
+        function loadGoogleMaps() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+        
+        loadGoogleMaps();
+    </script>
+
+    <script>
+        // Variabel global
+        let map;
+        let marker;
+        let selectedStatus = '';
+        let currentLat = 2.5555; // Koordinat default di sekitar Samosir
+        let currentLng = 98.6519;
+        
+        // Inisialisasi data
+        function initData() {
+            // Inisialisasi dataUsahaTersedia
+            dataUsahaTersedia = [...semuaDataUsaha];
+            
+            // Load saved data from localStorage
+            const savedData = JSON.parse(localStorage.getItem('geotagDataSamosir') || '[]');
+            dataUsahaTersimpan = savedData;
+            
+            // Filter out already saved data
+            if (savedData.length > 0) {
+                dataUsahaTersedia = semuaDataUsaha.filter(usaha => {
+                    return !savedData.some(saved => saved.namaUsaha === usaha.nama);
+                });
+            }
+            
+            updateDropdownKecamatan();
+            updateProgressInfo();
+        }
+        
+        // Update dropdown kecamatan
+        function updateDropdownKecamatan() {
+            const selectKecamatan = document.getElementById('selectKecamatan');
+            
+            // Simpan nilai yang sedang dipilih
+            const currentValue = selectKecamatan.value;
+            
+            // Clear existing options
+            selectKecamatan.innerHTML = '<option value="">-- Pilih Kecamatan --</option>';
+            
+            // Ambil kecamatan unik dari data tersedia
+            const kecamatanList = [...new Set(dataUsahaTersedia.map(item => item.kecamatan))];
+            
+            // Sort kecamatan alphabetically
+            kecamatanList.sort();
+            
+            // Populate dropdown
+            kecamatanList.forEach(kecamatan => {
+                const option = document.createElement('option');
+                option.value = kecamatan;
+                option.textContent = kecamatan;
+                selectKecamatan.appendChild(option);
+            });
+            
+            // Restore previous selection if still available
+            if (currentValue && kecamatanList.includes(currentValue)) {
+                selectKecamatan.value = currentValue;
+            }
+            
+            // Reset dropdown desa dan nama usaha
+            resetDropdownDesa();
+            resetDropdownNamaUsaha();
+        }
+        
+        // Reset dropdown desa
+        function resetDropdownDesa() {
+            const selectDesa = document.getElementById('selectDesa');
+            selectDesa.innerHTML = '<option value="">-- Pilih Desa --</option>';
+            selectDesa.disabled = true;
+            document.getElementById('alamat').value = '';
+        }
+        
+        // Reset dropdown nama usaha
+        function resetDropdownNamaUsaha() {
+            const selectNamaUsaha = document.getElementById('selectNamaUsaha');
+            selectNamaUsaha.innerHTML = '<option value="">-- Pilih Nama Usaha --</option>';
+            selectNamaUsaha.disabled = true;
+            document.getElementById('alamat').value = '';
+        }
+        
+        // Event listener untuk perubahan kecamatan
+        document.getElementById('selectKecamatan').addEventListener('change', function() {
+            const kecamatan = this.value;
+            
+            if (!kecamatan) {
+                resetDropdownDesa();
+                return;
+            }
+            
+            // Filter desa berdasarkan kecamatan
+            const desaList = [...new Set(
+                dataUsahaTersedia
+                    .filter(item => item.kecamatan === kecamatan)
+                    .map(item => item.desa)
+            )];
+            
+            // Sort desa alphabetically
+            desaList.sort();
+            
+            // Update dropdown desa
+            const selectDesa = document.getElementById('selectDesa');
+            selectDesa.innerHTML = '<option value="">-- Pilih Desa --</option>';
+            
+            desaList.forEach(desa => {
+                const option = document.createElement('option');
+                option.value = desa;
+                option.textContent = desa;
+                selectDesa.appendChild(option);
+            });
+            
+            selectDesa.disabled = false;
+            resetDropdownNamaUsaha();
+        });
+        
+        // Event listener untuk perubahan desa
+        document.getElementById('selectDesa').addEventListener('change', function() {
+            const kecamatan = document.getElementById('selectKecamatan').value;
+            const desa = this.value;
+            
+            if (!desa) {
+                resetDropdownNamaUsaha();
+                return;
+            }
+            
+            // Filter nama usaha berdasarkan kecamatan dan desa
+            const usahaList = dataUsahaTersedia.filter(item => 
+                item.kecamatan === kecamatan && item.desa === desa
+            );
+            
+            // Sort nama usaha alphabetically
+            usahaList.sort((a, b) => a.nama.localeCompare(b.nama));
+            
+            // Update dropdown nama usaha
+            const selectNamaUsaha = document.getElementById('selectNamaUsaha');
+            selectNamaUsaha.innerHTML = '<option value="">-- Pilih Nama Usaha --</option>';
+            
+            usahaList.forEach(usaha => {
+                const option = document.createElement('option');
+                option.value = usaha.nama;
+                option.textContent = usaha.nama;
+                option.setAttribute('data-alamat', usaha.alamat);
+                selectNamaUsaha.appendChild(option);
+            });
+            
+            selectNamaUsaha.disabled = false;
+            document.getElementById('alamat').value = '';
+        });
+        
+        // Event listener untuk perubahan nama usaha
+        document.getElementById('selectNamaUsaha').addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const alamat = selectedOption.getAttribute('data-alamat') || '';
+            
+            document.getElementById('alamat').value = alamat;
+        });
+        
+        // Initialize map
+        function initMap() {
+            // Default location (Samosir)
+            const defaultLocation = { lat: currentLat, lng: currentLng };
+            
+            // Create map
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: defaultLocation,
+                zoom: 12,
+                mapTypeId: 'hybrid',
+                mapTypeControl: true,
+                streetViewControl: false,
+                fullscreenControl: true,
+                zoomControl: true
+            });
+            
+            // Add click event to map
+            map.addListener('click', (event) => {
+                setMarker(event.latLng);
+                updateCoordinates(event.latLng);
+            });
+            
+            // Add initial marker
+            setMarker(defaultLocation);
+            updateCoordinates(defaultLocation);
+            
+            // Hide loading
+            document.getElementById('mapLoading').style.display = 'none';
+            
+            // Initialize data
+            initData();
+        }
+        
+        // Set marker on map
+        function setMarker(location) {
+            if (marker) {
+                marker.setPosition(location);
+            } else {
+                marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    draggable: true,
+                    title: "Lokasi usaha"
+                });
+                
+                // Update coordinates when marker is dragged
+                marker.addListener('dragend', () => {
+                    updateCoordinates(marker.getPosition());
+                });
+            }
+            
+            // Center map on marker
+            map.panTo(location);
+        }
+        
+        // Update coordinate display
+        function updateCoordinates(latlng) {
+            currentLat = latlng.lat();
+            currentLng = latlng.lng();
+            
+            document.getElementById('latDisplay').textContent = currentLat.toFixed(6);
+            document.getElementById('lngDisplay').textContent = currentLng.toFixed(6);
+        }
+        
+        // Get current location
+        document.getElementById('btnMyLocation').addEventListener('click', () => {
+            if (navigator.geolocation) {
+                document.getElementById('mapLoading').style.display = 'block';
+                document.getElementById('mapLoading').textContent = 'Mendapatkan lokasi...';
+                
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        
+                        setMarker(userLocation);
+                        updateCoordinates(userLocation);
+                        map.setZoom(16);
+                        
+                        document.getElementById('mapLoading').style.display = 'none';
+                    },
+                    (error) => {
+                        alert("Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.");
+                        console.error("Error:", error);
+                        document.getElementById('mapLoading').style.display = 'none';
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000
+                    }
+                );
+            } else {
+                alert("Browser tidak mendukung geolocation");
+            }
+        });
+        
+        // Status selection
+        document.querySelectorAll('.status-option').forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove selected class from all options
+                document.querySelectorAll('.status-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                option.classList.add('selected');
+                
+                // Set status value
+                selectedStatus = option.getAttribute('data-status');
+                document.getElementById('status').value = selectedStatus;
+            });
+        });
+        
+        // Update progress info
+        function updateProgressInfo() {
+            const totalData = semuaDataUsaha.length;
+            const tersimpan = dataUsahaTersimpan.length;
+            const tersedia = dataUsahaTersedia.length;
+            
+            const progressInfo = document.getElementById('progressInfo');
+            progressInfo.innerHTML = `
+                <strong>Progress: ${tersimpan}/${totalData} data</strong><br>
+                <small>${tersedia} data belum di-geotag | ${tersimpan} sudah disimpan</small>
+            `;
+            
+            document.getElementById('dataCount').textContent = 
+                `Data tersimpan: ${tersimpan} | Sisa data: ${tersedia}`;
+        }
+        
+        // Save data
+        document.getElementById('btnSave').addEventListener('click', () => {
+            // Get form values
+            const data = {
+                namaUsaha: document.getElementById('selectNamaUsaha').value.trim(),
+                kecamatan: document.getElementById('selectKecamatan').value.trim(),
+                desa: document.getElementById('selectDesa').value.trim(),
+                alamat: document.getElementById('alamat').value.trim(),
+                latitude: currentLat,
+                longitude: currentLng,
+                status: selectedStatus,
+                keterangan: document.getElementById('keterangan').value.trim(),
+                tanggal: new Date().toISOString(),
+                timestamp: Date.now()
+            };
+            
+            // Validate required fields
+            if (!data.namaUsaha || !data.kecamatan || !data.desa || !selectedStatus) {
+                alert("Harap isi semua field yang wajib diisi (bertanda *)");
+                return;
+            }
+            
+            // Validate coordinates (jangan default Samosir)
+            if (currentLat === 2.5555 && currentLng === 98.6519) {
+                if (!confirm("Koordinat masih default (Samosir). Apakah Anda yakin lokasi ini benar? Lanjutkan?")) {
+                    return;
+                }
+            }
+            
+            // Remove selected usaha from available data
+            const indexToRemove = dataUsahaTersedia.findIndex(item => 
+                item.nama === data.namaUsaha && 
+                item.kecamatan === data.kecamatan && 
+                item.desa === data.desa
+            );
+            
+            if (indexToRemove !== -1) {
+                // Simpan data asli sebelum dihapus
+                const dataAsli = dataUsahaTersedia[indexToRemove];
+                data.alamatAsli = dataAsli.alamat;
+                
+                // Hapus dari data tersedia
+                dataUsahaTersedia.splice(indexToRemove, 1);
+                
+                // Tambah ke data tersimpan
+                dataUsahaTersimpan.push(data);
+            }
+            
+            // Save to localStorage
+            saveToLocalStorage(data);
+            
+            // Show success message
+            showSuccessMessage(data);
+            
+            // Update dropdowns
+            const currentKecamatan = data.kecamatan;
+            const currentDesa = data.desa;
+            
+            // Reset form untuk usaha berikutnya
+            resetFormPartial();
+            
+            // Update kecamatan dropdown jika perlu
+            updateDropdownKecamatan();
+            
+            // Jika masih ada usaha di desa yang sama, otomatis pilih
+            const usahaDiDesaLainnya = dataUsahaTersedia.filter(item => 
+                item.kecamatan === currentKecamatan && item.desa === currentDesa
+            );
+            
+            if (usahaDiDesaLainnya.length > 0) {
+                // Otomatis pilih kecamatan dan desa yang sama
+                document.getElementById('selectKecamatan').value = currentKecamatan;
+                
+                // Trigger change event untuk kecamatan
+                const event = new Event('change');
+                document.getElementById('selectKecamatan').dispatchEvent(event);
+                
+                // Setelah dropdown desa diupdate, pilih desa
+                setTimeout(() => {
+                    document.getElementById('selectDesa').value = currentDesa;
+                    
+                    // Trigger change event untuk desa
+                    const event2 = new Event('change');
+                    document.getElementById('selectDesa').dispatchEvent(event2);
+                }, 100);
+            }
+            
+            // Update progress
+            updateProgressInfo();
+        });
+        
+        // Save to localStorage
+        function saveToLocalStorage(data) {
+            let savedData = JSON.parse(localStorage.getItem('geotagDataSamosir') || '[]');
+            savedData.push(data);
+            localStorage.setItem('geotagDataSamosir', JSON.stringify(savedData));
+        }
+        
+        // Show success message
+        function showSuccessMessage(data) {
+            const successMessage = document.getElementById('successMessage');
+            const saveDetails = document.getElementById('saveDetails');
+            
+            saveDetails.innerHTML = `
+                ${data.namaUsaha}<br>
+                ${data.kecamatan}, ${data.desa}<br>
+                Status: ${data.status} | ${new Date().toLocaleTimeString('id-ID')}
+            `;
+            
+            successMessage.classList.add('show');
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        }
+        
+        // Reset form partially (setelah simpan)
+        function resetFormPartial() {
+            // Reset field yang perlu diisi ulang
+            document.getElementById('keterangan').value = '';
+            document.getElementById('alamat').value = '';
+            
+            // Reset status selection
+            document.querySelectorAll('.status-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            selectedStatus = '';
+            document.getElementById('status').value = '';
+            
+            // Reset dropdown nama usaha
+            resetDropdownNamaUsaha();
+            
+            // Jika tidak ada usaha di desa yang dipilih, reset desa
+            const kecamatan = document.getElementById('selectKecamatan').value;
+            const desa = document.getElementById('selectDesa').value;
+            
+            if (kecamatan && desa) {
+                const sisaUsaha = dataUsahaTersedia.filter(item => 
+                    item.kecamatan === kecamatan && item.desa === desa
+                );
+                
+                if (sisaUsaha.length === 0) {
+                    resetDropdownDesa();
+                }
+            }
+        }
+        
+        // Reset form completely
+        document.getElementById('btnReset').addEventListener('click', () => {
+            if (confirm("Reset form ke kondisi awal? Data yang sudah diisi akan hilang.")) {
+                // Clear form fields
+                document.getElementById('selectKecamatan').selectedIndex = 0;
+                document.getElementById('selectDesa').selectedIndex = 0;
+                document.getElementById('selectDesa').disabled = true;
+                document.getElementById('selectNamaUsaha').selectedIndex = 0;
+                document.getElementById('selectNamaUsaha').disabled = true;
+                document.getElementById('alamat').value = '';
+                document.getElementById('keterangan').value = '';
+                
+                // Reset status selection
+                document.querySelectorAll('.status-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                selectedStatus = '';
+                document.getElementById('status').value = '';
+                
+                // Reset coordinates to default
+                const defaultLocation = { lat: 2.5555, lng: 98.6519 };
+                setMarker(defaultLocation);
+                updateCoordinates(defaultLocation);
+                map.setZoom(12);
+                
+                // Hide success message
+                document.getElementById('successMessage').classList.remove('show');
+            }
+        });
+        
+        // Export data
+        document.getElementById('btnExport').addEventListener('click', () => {
+            const savedData = JSON.parse(localStorage.getItem('geotagDataSamosir') || '[]');
+            
+            if (savedData.length === 0) {
+                alert("Belum ada data yang disimpan");
+                return;
+            }
+            
+            // Convert to CSV
+            const headers = ['Nama Usaha', 'Kecamatan', 'Desa', 'Alamat', 'Latitude', 'Longitude', 'Status', 'Keterangan', 'Tanggal'];
+            const csvRows = [headers.join(',')];
+            
+            savedData.forEach(item => {
+                const row = [
+                    `"${item.namaUsaha}"`,
+                    `"${item.kecamatan}"`,
+                    `"${item.desa}"`,
+                    `"${item.alamat}"`,
+                    item.latitude,
+                    item.longitude,
+                    `"${item.status}"`,
+                    `"${item.keterangan}"`,
+                    `"${new Date(item.tanggal).toLocaleString('id-ID')}"`
+                ];
+                csvRows.push(row.join(','));
+            });
+            
+            const csvString = csvRows.join('\n');
+            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            
+            link.href = url;
+            link.download = `geotag_samosir_${new Date().toISOString().split('T')[0]}.csv`;
+            link.click();
+            
+            URL.revokeObjectURL(url);
+        });
+        
+        // Show saved data
+        document.getElementById('btnShowData').addEventListener('click', () => {
+            const savedData = JSON.parse(localStorage.getItem('geotagDataSamosir') || '[]');
+            
+            if (savedData.length === 0) {
+                alert("Belum ada data yang disimpan");
+                return;
+            }
+            
+            let message = `Total data tersimpan: ${savedData.length}\n\n`;
+            
+            // Tampilkan 10 data terakhir
+            const recentData = savedData.slice(-10);
+            recentData.forEach((item, index) => {
+                message += `${index + 1}. ${item.namaUsaha}\n`;
+                message += `   ${item.kecamatan}, ${item.desa}\n`;
+                message += `   Status: ${item.status}\n`;
+                message += `   Tanggal: ${new Date(item.tanggal).toLocaleDateString('id-ID')}\n\n`;
+            });
+            
+            alert(message);
+        });
+        
+        // Handle Enter key to save
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'Enter') {
+                document.getElementById('btnSave').click();
+            }
+        });
+        
+        // Error handler for Google Maps
+        function gm_authFailure() {
+            alert("Error: Google Maps gagal dimuat. Periksa koneksi internet.");
+            document.getElementById('mapLoading').textContent = 'Gagal memuat peta. Periksa koneksi internet.';
+        }
+        
+        // Expose function to window
+        window.gm_authFailure = gm_authFailure;
+        window.initMap = initMap;
+    </script>
+</body>
+</html>
