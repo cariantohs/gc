@@ -12,8 +12,6 @@ let completedUsaha = null;
 let savedData = null;
 let isFullscreen = false;
 let fullscreenBtn = null;
-let userLocationMarker = null;
-let watchId = null;
 
 // Pengecekan apakah variabel dari data.js sudah tersedia
 function checkRequiredData() {
@@ -46,6 +44,12 @@ function initApp() {
         
         // Inisialisasi variabel dari localStorage
         initLocalStorage();
+        
+        // Inisialisasi peta
+        initMap();
+        
+        // Inisialisasi tombol fullscreen
+        initFullscreenButton();
         
         // Inisialisasi event listeners
         initEventListeners();
@@ -81,7 +85,7 @@ function initLocalStorage() {
     console.log('Usaha yang sudah selesai:', completedUsaha.size);
 }
 
-// Inisialisasi peta Google Maps (dipanggil oleh callback Google Maps API)
+// Inisialisasi peta Google Maps
 function initMap() {
     console.log('Menginisialisasi peta...');
     
@@ -103,7 +107,7 @@ function initMap() {
             mapTypeId: 'hybrid',
             mapTypeControl: true,
             streetViewControl: true,
-            fullscreenControl: true,
+            fullscreenControl: true, // Aktifkan kontrol fullscreen bawaan Google Maps
             zoomControl: true,
             gestureHandling: 'greedy',
             mapTypeControlOptions: {
@@ -112,9 +116,6 @@ function initMap() {
             },
             zoomControlOptions: {
                 position: google.maps.ControlPosition.RIGHT_CENTER
-            },
-            fullscreenControlOptions: {
-                position: google.maps.ControlPosition.RIGHT_TOP
             },
             styles: [
                 {
@@ -127,40 +128,93 @@ function initMap() {
         
         console.log('Peta berhasil dibuat');
         
-        // Inisialisasi tombol fullscreen custom
-        initFullscreenButton();
+        // Tambahkan kontrol lokasi saya (tombol bawaan Google Maps)
+        const locationButton = document.createElement("button");
+        locationButton.innerHTML = '<i class="fas fa-location-crosshairs"></i>';
+        locationButton.style.cssText = `
+            background-color: white;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        `;
+        
+        locationButton.title = "Lokasi Saya";
+        
+        // Tambahkan event listener untuk tombol lokasi
+        locationButton.addEventListener("click", () => {
+            console.log('Tombol lokasi bawaan Google Maps diklik');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        
+                        console.log('Lokasi pengguna ditemukan:', pos);
+                        
+                        // Tampilkan marker di lokasi pengguna
+                        if (!selectedUsaha) {
+                            // Jika belum ada usaha yang dipilih, tetap pindah ke lokasi
+                            map.setCenter(pos);
+                            map.setZoom(16);
+                            
+                            // Tampilkan info lokasi
+                            const infoWindow = new google.maps.InfoWindow({
+                                content: "Lokasi Anda: " + pos.lat.toFixed(6) + ", " + pos.lng.toFixed(6),
+                                position: pos,
+                            });
+                            infoWindow.open(map);
+                            
+                            // Tutup info window setelah 3 detik
+                            setTimeout(() => infoWindow.close(), 3000);
+                            
+                        } else {
+                            // Jika sudah ada usaha yang dipilih, set marker dan update koordinat
+                            setMarker(pos);
+                            updateCoordinates(pos);
+                            map.setZoom(16);
+                        }
+                    },
+                    () => {
+                        console.error('Error: Gagal mendapatkan lokasi pengguna');
+                        alert("Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.");
+                    }
+                );
+            } else {
+                alert("Browser tidak mendukung geolocation");
+            }
+        });
+        
+        // Tambahkan tombol ke kontrol peta
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(locationButton);
         
         // Tambahkan event listener untuk klik peta
-        map.addListener('click', handleMapClick);
+        map.addListener('click', (event) => {
+            console.log('Peta diklik di:', event.latLng.lat(), event.latLng.lng());
+            
+            if (!selectedUsaha) {
+                alert('Pilih usaha terlebih dahulu!');
+                return;
+            }
+            setMarker(event.latLng);
+            updateCoordinates(event.latLng);
+        });
         
         // Tambahkan listener untuk tombol ESC
-        document.addEventListener('keydown', handleKeyDown);
-        
-        // Coba dapatkan lokasi pengguna secara otomatis (opsional)
-        // tryGetUserLocation(false); // Nonaktifkan dulu, biarkan user yang memilih
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isFullscreen) {
+                exitFullscreen();
+            }
+        });
         
     } catch (error) {
         console.error('Error saat membuat peta:', error);
         alert('Gagal memuat peta. Periksa koneksi internet dan API key.');
-    }
-}
-
-// Handle klik pada peta
-function handleMapClick(event) {
-    console.log('Peta diklik di:', event.latLng.lat(), event.latLng.lng());
-    
-    if (!selectedUsaha) {
-        alert('Pilih usaha terlebih dahulu!');
-        return;
-    }
-    setMarker(event.latLng);
-    updateCoordinates(event.latLng);
-}
-
-// Handle tombol keyboard
-function handleKeyDown(e) {
-    if (e.key === 'Escape' && isFullscreen) {
-        exitFullscreen();
     }
 }
 
@@ -305,162 +359,6 @@ function exitFullscreen() {
 }
 
 // ============================================
-// FUNGSI LOKASI PENGGUNA (Seperti Google Maps)
-// ============================================
-
-// Fungsi untuk mendapatkan lokasi pengguna
-function getUserLocation(useForMarker = true) {
-    console.log('Mendapatkan lokasi pengguna...');
-    
-    if (!navigator.geolocation) {
-        alert('Browser tidak mendukung geolocation');
-        return;
-    }
-    
-    // Tampilkan loading jika perlu
-    showLoading(true, 'Mendapatkan lokasi Anda...');
-    
-    // Opsi untuk geolocation
-    const options = {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 0
-    };
-    
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-            const userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            
-            console.log('Lokasi pengguna ditemukan:', userLocation);
-            
-            // Hentikan loading
-            showLoading(false);
-            
-            // Pindahkan peta ke lokasi pengguna dengan zoom yang sesuai
-            if (map) {
-                map.setCenter(userLocation);
-                map.setZoom(16); // Zoom yang cukup dekat seperti Google Maps
-                
-                // Tambahkan atau update marker lokasi pengguna
-                updateUserLocationMarker(userLocation);
-                
-                // Jika useForMarker true dan sudah ada usaha yang dipilih, gunakan lokasi ini sebagai marker
-                if (useForMarker && selectedUsaha) {
-                    setMarker(userLocation);
-                    updateCoordinates(userLocation);
-                    
-                    // Tampilkan pesan sukses
-                    showMarkerInfo(userLocation, 'Lokasi Anda telah digunakan sebagai koordinat usaha');
-                } else if (!selectedUsaha) {
-                    // Jika belum ada usaha yang dipilih, tampilkan pesan
-                    showMarkerInfo(userLocation, 'Lokasi Anda ditemukan. Pilih usaha terlebih dahulu untuk menggunakan lokasi ini.');
-                }
-            }
-        },
-        (error) => {
-            console.error('Error mendapatkan lokasi:', error);
-            showLoading(false);
-            
-            let errorMessage = 'Tidak dapat mengakses lokasi. ';
-            switch(error.code) {
-                case error.PERMISSION_DENIED:
-                    errorMessage += 'Izin lokasi ditolak. Silakan aktifkan izin lokasi di pengaturan browser.';
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    errorMessage += 'Informasi lokasi tidak tersedia.';
-                    break;
-                case error.TIMEOUT:
-                    errorMessage += 'Permintaan lokasi timeout.';
-                    break;
-                default:
-                    errorMessage += 'Terjadi kesalahan yang tidak diketahui.';
-                    break;
-            }
-            
-            alert(errorMessage);
-        },
-        options
-    );
-}
-
-// Update atau buat marker lokasi pengguna
-function updateUserLocationMarker(location) {
-    // Hapus marker lama jika ada
-    if (userLocationMarker) {
-        userLocationMarker.setMap(null);
-    }
-    
-    // Buat marker baru untuk lokasi pengguna
-    userLocationMarker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Lokasi Anda",
-        icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 10,
-            fillColor: "#4285F4",
-            fillOpacity: 1,
-            strokeColor: "#FFFFFF",
-            strokeWeight: 2,
-        },
-        zIndex: 999
-    });
-    
-    // Tambahkan lingkaran akurasi (opsional)
-    const accuracyCircle = new google.maps.Circle({
-        map: map,
-        center: location,
-        radius: 50, // Radius dalam meter (contoh: 50m)
-        fillColor: '#4285F4',
-        fillOpacity: 0.2,
-        strokeColor: '#4285F4',
-        strokeOpacity: 0.5,
-        strokeWeight: 1
-    });
-    
-    // Set timeout untuk menghapus circle setelah beberapa detik
-    setTimeout(() => {
-        accuracyCircle.setMap(null);
-    }, 5000);
-    
-    return userLocationMarker;
-}
-
-// Coba dapatkan lokasi pengguna (untuk inisialisasi)
-function tryGetUserLocation(useForMarker = false) {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const userLocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-                
-                // Update marker lokasi pengguna
-                updateUserLocationMarker(userLocation);
-                
-                // Jika useForMarker true, gunakan lokasi ini
-                if (useForMarker && selectedUsaha) {
-                    setMarker(userLocation);
-                    updateCoordinates(userLocation);
-                }
-            },
-            (error) => {
-                console.log('Lokasi pengguna tidak tersedia:', error.message);
-            },
-            {
-                enableHighAccuracy: false,
-                timeout: 5000,
-                maximumAge: 60000
-            }
-        );
-    }
-}
-
-// ============================================
 // FUNGSI PETA DAN MARKER
 // ============================================
 
@@ -493,7 +391,7 @@ function setMarker(location) {
     map.panTo(location);
     
     // Tampilkan info marker
-    showMarkerInfo(location, 'Lokasi usaha dipilih');
+    showMarkerInfo(location);
 }
 
 function updateCoordinates(latlng) {
@@ -520,35 +418,14 @@ function updateCoordinates(latlng) {
     checkSaveButton();
 }
 
-function showMarkerInfo(location, message = 'Lokasi dipilih') {
+function showMarkerInfo(location) {
     const markerInfo = document.getElementById('markerInfo');
     if (markerInfo) {
-        // Update teks jika ada message
-        const title = markerInfo.querySelector('strong');
-        if (title && message) {
-            title.innerHTML = `<i class="fas fa-map-pin me-1"></i> ${message}`;
-        }
-        
         markerInfo.style.display = 'block';
         
-        // Auto hide setelah 5 detik
         setTimeout(() => {
             markerInfo.style.display = 'none';
-        }, 5000);
-    }
-}
-
-function showLoading(show, text = 'Memuat...') {
-    const loadingOverlay = document.getElementById('loadingOverlay');
-    const loadingText = document.getElementById('loadingText');
-    
-    if (loadingOverlay && loadingText) {
-        if (show) {
-            loadingText.textContent = text;
-            loadingOverlay.classList.add('show');
-        } else {
-            loadingOverlay.classList.remove('show');
-        }
+        }, 3000);
     }
 }
 
@@ -720,7 +597,13 @@ async function saveData() {
     console.log('Menyimpan data untuk:', selectedUsaha.nama_usaha);
     
     // Tampilkan loading
-    showLoading(true, 'Menyimpan data ke Google Sheets...');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const loadingText = document.getElementById('loadingText');
+    
+    if (loadingOverlay && loadingText) {
+        loadingText.textContent = 'Menyimpan data ke Google Sheets...';
+        loadingOverlay.classList.add('show');
+    }
     
     const data = {
         nama_usaha: selectedUsaha.nama_usaha,
@@ -824,7 +707,9 @@ async function saveData() {
         }
     } finally {
         // Sembunyikan loading
-        showLoading(false);
+        if (loadingOverlay) {
+            loadingOverlay.classList.remove('show');
+        }
     }
 }
 
@@ -1073,12 +958,53 @@ function initEventListeners() {
             exportBtn.addEventListener('click', exportData);
         }
         
-        // 8. Tombol "Lokasi Saya" - DIPERBAIKI SEPERTI GOOGLE MAPS
+        // 8. Tombol "Lokasi Saya" di map-controls
         const btnMyLocation = document.getElementById('btnMyLocation');
         if (btnMyLocation) {
             btnMyLocation.addEventListener('click', () => {
-                console.log('Tombol "Lokasi Saya" diklik');
-                getUserLocation(true); // Gunakan lokasi untuk marker
+                console.log('Tombol lokasi saya diklik');
+                
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const userLocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+                            
+                            console.log('Lokasi pengguna ditemukan:', userLocation);
+                            
+                            if (selectedUsaha) {
+                                // Jika sudah ada usaha yang dipilih, set marker dan update koordinat
+                                setMarker(userLocation);
+                                updateCoordinates(userLocation);
+                                if (map) map.setZoom(16);
+                            } else {
+                                // Jika belum ada usaha yang dipilih, hanya pindah ke lokasi
+                                if (map) {
+                                    map.setCenter(userLocation);
+                                    map.setZoom(16);
+                                    
+                                    // Tampilkan info lokasi
+                                    const infoWindow = new google.maps.InfoWindow({
+                                        content: "Lokasi Anda: " + userLocation.lat.toFixed(6) + ", " + userLocation.lng.toFixed(6),
+                                        position: userLocation,
+                                    });
+                                    infoWindow.open(map);
+                                    
+                                    // Tutup info window setelah 3 detik
+                                    setTimeout(() => infoWindow.close(), 3000);
+                                }
+                            }
+                        },
+                        (error) => {
+                            console.error('Error geolocation:', error);
+                            alert('Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.');
+                        }
+                    );
+                } else {
+                    alert('Browser tidak mendukung geolocation');
+                }
             });
         }
         
@@ -1125,7 +1051,6 @@ function initEventListeners() {
 // ============================================
 
 window.initApp = initApp;
-window.initMap = initMap;
 window.enterFullscreen = enterFullscreen;
 window.exitFullscreen = exitFullscreen;
 
