@@ -6,6 +6,7 @@ let selectedUsaha = null;
 let selectedStatus = "";
 let completedUsaha = new Set();
 let savedData = [];
+let isFullscreen = false;
 
 // Pastikan dataUsaha tersedia
 if (typeof dataUsaha === 'undefined') {
@@ -74,6 +75,13 @@ function initMap() {
         
         // Inisialisasi event listeners
         initEventListeners();
+        
+        // Tambahkan listener untuk tombol ESC untuk keluar fullscreen
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isFullscreen) {
+                exitFullscreen();
+            }
+        });
         
     } catch (error) {
         console.error('Error saat membuat peta:', error);
@@ -456,6 +464,70 @@ function exportData() {
     URL.revokeObjectURL(url);
 }
 
+// Fungsi untuk memperbesar peta (fullscreen mode)
+function enterFullscreen() {
+    isFullscreen = true;
+    
+    // Tambah class fullscreen ke body dan content wrapper
+    document.body.classList.add('fullscreen-mode');
+    document.getElementById('contentWrapper').classList.add('fullscreen');
+    
+    // Tampilkan notifikasi
+    const notification = document.getElementById('fullscreenNotification');
+    notification.classList.add('show');
+    
+    // Sembunyikan notifikasi setelah 3 detik
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
+    
+    // Toggle tombol
+    document.getElementById('btnFullscreen').style.display = 'none';
+    document.getElementById('btnExitFullscreen').style.display = 'flex';
+    
+    // Resize peta setelah transisi
+    setTimeout(() => {
+        if (map) {
+            google.maps.event.trigger(map, 'resize');
+            // Kembalikan ke posisi sebelumnya
+            if (selectedLocation) {
+                map.panTo(selectedLocation);
+            }
+        }
+    }, 300);
+    
+    console.log('Mode fullscreen diaktifkan');
+}
+
+// Fungsi untuk mengecilkan peta (kembali ke normal)
+function exitFullscreen() {
+    isFullscreen = false;
+    
+    // Hapus class fullscreen
+    document.body.classList.remove('fullscreen-mode');
+    document.getElementById('contentWrapper').classList.remove('fullscreen');
+    
+    // Sembunyikan notifikasi jika masih tampil
+    document.getElementById('fullscreenNotification').classList.remove('show');
+    
+    // Toggle tombol
+    document.getElementById('btnFullscreen').style.display = 'flex';
+    document.getElementById('btnExitFullscreen').style.display = 'none';
+    
+    // Resize peta setelah transisi
+    setTimeout(() => {
+        if (map) {
+            google.maps.event.trigger(map, 'resize');
+            // Kembalikan ke posisi sebelumnya
+            if (selectedLocation) {
+                map.panTo(selectedLocation);
+            }
+        }
+    }, 300);
+    
+    console.log('Mode fullscreen dinonaktifkan');
+}
+
 // Inisialisasi event listeners
 function initEventListeners() {
     // Event listener untuk dropdown kecamatan
@@ -572,6 +644,12 @@ function initEventListeners() {
         }
     });
     
+    // Event listener untuk tombol fullscreen
+    document.getElementById('btnFullscreen').addEventListener('click', enterFullscreen);
+    
+    // Event listener untuk tombol exit fullscreen
+    document.getElementById('btnExitFullscreen').addEventListener('click', exitFullscreen);
+    
     // Event listener untuk enter di textarea
     document.getElementById('keteranganInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
@@ -581,10 +659,16 @@ function initEventListeners() {
             }
         }
     });
+    
+    // Event listener untuk tombol ESC (sudah ditambahkan di initMap)
 }
 
 // Expose initMap ke window
 window.initMap = initMap;
+
+// Expose fungsi fullscreen untuk debugging
+window.enterFullscreen = enterFullscreen;
+window.exitFullscreen = exitFullscreen;
 
 // Inisialisasi saat DOM siap
 document.addEventListener('DOMContentLoaded', function() {
