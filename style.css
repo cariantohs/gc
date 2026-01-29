@@ -1,0 +1,21 @@
+/* Tambahkan di style CSS */
+#usahaSelect {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+#usahaSelect:disabled {
+    background-color: #f8f9fa !important;
+    opacity: 0.7 !important;
+}
+
+#usahaSelect option {
+    color: #000 !important;
+    background-color: white !important;
+    padding: 8px 12px !important;
+}
+
+#usahaSelect option:checked {
+    background-color: #e3f2fd !important;
+}
