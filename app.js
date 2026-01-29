@@ -194,7 +194,7 @@ function showMarkerInfo(location) {
 }
 
 // ============================================
-// FUNGSI DROPDOWN DAN DATA
+// FUNGSI DROPDOWN DAN DATA - DIPERBAIKI
 // ============================================
 
 function populateKecamatanDropdown() {
@@ -210,10 +210,9 @@ function populateKecamatanDropdown() {
         return;
     }
     
-    // Ambil kecamatan unik
     const kecamatans = [...new Set(dataUsaha.map(usaha => usaha.kecamatan))].sort();
     
-    console.log('Kecamatan ditemukan:', kecamatans);
+    console.log('Kecamatan ditemukan:', kecamatans.length, 'item');
     
     kecamatans.forEach(kecamatan => {
         const option = document.createElement('option');
@@ -232,14 +231,13 @@ function populateDesaDropdown(kecamatan) {
     
     console.log('Mengisi dropdown desa untuk kecamatan:', kecamatan);
     
-    // Filter desa berdasarkan kecamatan
     const desas = [...new Set(
         dataUsaha
             .filter(usaha => usaha.kecamatan === kecamatan)
             .map(usaha => usaha.desa)
     )].sort();
     
-    console.log('Desa ditemukan untuk', kecamatan + ':', desas);
+    console.log('Desa ditemukan untuk', kecamatan + ':', desas.length, 'item');
     
     desas.forEach(desa => {
         const option = document.createElement('option');
@@ -258,9 +256,9 @@ function populateUsahaDropdown(kecamatan, desa) {
     
     console.log('Mengisi dropdown usaha untuk:', kecamatan, '-', desa);
     
-    // Cek apakah completedUsaha sudah diinisialisasi
+    // Pastikan completedUsaha sudah diinisialisasi
     if (!completedUsaha) {
-        console.error('completedUsaha belum diinisialisasi');
+        console.log('completedUsaha belum ada, menginisialisasi...');
         completedUsaha = new Set();
     }
     
@@ -269,29 +267,18 @@ function populateUsahaDropdown(kecamatan, desa) {
         usaha.kecamatan === kecamatan && usaha.desa === desa
     );
     
-    console.log('Semua usaha di area ini:', allUsahaForArea);
-    console.log('Total usaha di area ini:', allUsahaForArea.length);
-    console.log('completedUsaha saat ini:', completedUsaha);
+    console.log('Semua usaha di area ini:', allUsahaForArea.length);
     
     // Filter usaha yang belum selesai
-    const filteredUsaha = dataUsaha.filter(usaha => {
-        const matchArea = usaha.kecamatan === kecamatan && usaha.desa === desa;
-        if (!matchArea) return false;
-        
+    const filteredUsaha = allUsahaForArea.filter(usaha => {
         const key = `${usaha.kecamatan}|${usaha.desa}|${usaha.nama_usaha}`;
         const belumSelesai = !completedUsaha.has(key);
-        
-        if (!belumSelesai) {
-            console.log('Usaha sudah selesai:', usaha.nama_usaha);
-        }
-        
         return belumSelesai;
     }).sort((a, b) => a.nama_usaha.localeCompare(b.nama_usaha));
     
-    console.log('Usaha yang belum selesai:', filteredUsaha);
-    console.log('Jumlah usaha yang belum selesai:', filteredUsaha.length);
+    console.log('Usaha yang belum selesai:', filteredUsaha.length);
     
-    // Isi dropdown
+    // Isi dropdown dengan opsi yang benar
     filteredUsaha.forEach(usaha => {
         const option = document.createElement('option');
         option.value = usaha.nama_usaha;
@@ -301,15 +288,16 @@ function populateUsahaDropdown(kecamatan, desa) {
     });
     
     if (filteredUsaha.length === 0) {
-        const option = document.createElement('option');
-        option.value = "";
-        option.textContent = "Semua usaha sudah selesai";
-        usahaSelect.appendChild(option);
+        usahaSelect.innerHTML = '<option value="">Semua usaha sudah selesai</option>';
         usahaSelect.disabled = true;
         console.log('Semua usaha sudah selesai untuk', desa);
     }
     
     console.log('Dropdown usaha diisi dengan', filteredUsaha.length, 'item');
+    
+    // Debug: Cek apakah dropdown bisa diklik
+    console.log('Dropdown usaha disabled?', usahaSelect.disabled);
+    console.log('Dropdown usaha style:', usahaSelect.style);
 }
 
 function updateProgress() {
@@ -484,8 +472,13 @@ function resetFormPartial() {
     selectedLocation = null;
     
     document.getElementById('saveBtn').disabled = true;
-    document.getElementById('usahaSelect').value = '';
-    document.getElementById('usahaSelect').disabled = true;
+    
+    // Reset dropdown usaha TAPI jangan nonaktifkan jika sudah ada pilihan desa
+    const desa = document.getElementById('desaSelect').value;
+    if (!desa) {
+        document.getElementById('usahaSelect').value = '';
+        document.getElementById('usahaSelect').disabled = true;
+    }
 }
 
 function resetForm() {
@@ -596,7 +589,7 @@ function exitFullscreen() {
     
     document.body.classList.remove('fullscreen-mode');
     document.getElementById('contentWrapper').classList.remove('fullscreen');
-    document.getElementById('fullscreenNotification').classList.remove('show');
+    document.getElementById('fullscreenNotification').classlist.remove('show');
     
     document.getElementById('btnFullscreen').style.display = 'flex';
     document.getElementById('btnExitFullscreen').style.display = 'none';
@@ -613,14 +606,15 @@ function exitFullscreen() {
 }
 
 // ============================================
-// EVENT LISTENERS
+// EVENT LISTENERS - DIPERBAIKI
 // ============================================
 
 function initEventListeners() {
     console.log('Menginisialisasi event listeners...');
     
-    // Dropdown kecamatan
-    document.getElementById('kecamatanSelect').addEventListener('change', function() {
+    // 1. Event listener untuk dropdown kecamatan
+    const kecamatanSelect = document.getElementById('kecamatanSelect');
+    kecamatanSelect.addEventListener('change', function() {
         console.log('Kecamatan dipilih:', this.value);
         
         if (this.value) {
@@ -628,12 +622,15 @@ function initEventListeners() {
             resetFormPartial();
         } else {
             document.getElementById('desaSelect').disabled = true;
+            document.getElementById('desaSelect').innerHTML = '<option value="">Pilih Desa</option>';
             document.getElementById('usahaSelect').disabled = true;
+            document.getElementById('usahaSelect').innerHTML = '<option value="">Pilih Nama Usaha</option>';
         }
     });
     
-    // Dropdown desa
-    document.getElementById('desaSelect').addEventListener('change', function() {
+    // 2. Event listener untuk dropdown desa
+    const desaSelect = document.getElementById('desaSelect');
+    desaSelect.addEventListener('change', function() {
         console.log('Desa dipilih:', this.value);
         
         if (this.value) {
@@ -643,18 +640,27 @@ function initEventListeners() {
             resetFormPartial();
         } else {
             document.getElementById('usahaSelect').disabled = true;
+            document.getElementById('usahaSelect').innerHTML = '<option value="">Pilih Nama Usaha</option>';
         }
     });
     
-    // Dropdown usaha
-    document.getElementById('usahaSelect').addEventListener('change', function() {
-        console.log('Usaha dipilih:', this.value);
+    // 3. Event listener untuk dropdown usaha - DIPERBAIKI
+    const usahaSelect = document.getElementById('usahaSelect');
+    
+    // Gunakan event delegation untuk memastikan event listener bekerja
+    usahaSelect.addEventListener('change', function() {
+        console.log('====== DROPDOWN USAHA CHANGE EVENT ======');
+        console.log('Nilai yang dipilih:', this.value);
+        console.log('Selected index:', this.selectedIndex);
+        console.log('Jumlah opsi:', this.options.length);
         
-        if (this.value) {
+        // Cek apakah dropdown disabled
+        console.log('Dropdown disabled?', this.disabled);
+        
+        if (this.value && this.value !== "") {
             const kecamatan = document.getElementById('kecamatanSelect').value;
             const desa = document.getElementById('desaSelect').value;
             const namaUsaha = this.value;
-            const selectedOption = this.options[this.selectedIndex];
             
             console.log('Mencari data usaha:', { kecamatan, desa, namaUsaha });
             
@@ -666,21 +672,33 @@ function initEventListeners() {
             );
             
             if (selectedUsaha) {
-                console.log('Usaha ditemukan:', selectedUsaha);
+                console.log('Data usaha ditemukan:', selectedUsaha);
                 document.getElementById('alamatInput').value = selectedUsaha.alamat;
             } else {
-                console.error('Usaha tidak ditemukan dalam dataUsaha');
-                alert('Data usaha tidak ditemukan!');
+                console.error('Usaha tidak ditemukan dalam dataUsaha:', namaUsaha);
+                alert('Data usaha tidak ditemukan! Silakan pilih ulang.');
+                this.value = ""; // Reset dropdown
+                return;
             }
         } else {
-            console.log('Usaha tidak dipilih');
+            console.log('Tidak ada usaha yang dipilih atau nilai kosong');
             selectedUsaha = null;
             document.getElementById('alamatInput').value = '';
         }
+        
         checkSaveButton();
     });
     
-    // Status buttons
+    // 4. Tambahkan event listener untuk klik (untuk debugging)
+    usahaSelect.addEventListener('click', function(e) {
+        console.log('Dropdown usaha diklik', e.target.value);
+        console.log('Isi dropdown saat ini:');
+        Array.from(this.options).forEach((opt, i) => {
+            console.log(`  [${i}] ${opt.value} - ${opt.text}`);
+        });
+    });
+    
+    // 5. Status buttons
     document.querySelectorAll('.status-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const status = this.dataset.status;
@@ -698,16 +716,16 @@ function initEventListeners() {
         });
     });
     
-    // Save button
+    // 6. Save button
     document.getElementById('saveBtn').addEventListener('click', saveData);
     
-    // Reset button
+    // 7. Reset button
     document.getElementById('resetBtn').addEventListener('click', resetForm);
     
-    // Export button
+    // 8. Export button
     document.getElementById('exportBtn').addEventListener('click', exportData);
     
-    // My location button
+    // 9. My location button
     document.getElementById('btnMyLocation').addEventListener('click', () => {
         console.log('Tombol lokasi saya diklik');
         
@@ -739,7 +757,7 @@ function initEventListeners() {
         }
     });
     
-    // Reset marker button
+    // 10. Reset marker button
     document.getElementById('btnResetMarker').addEventListener('click', () => {
         console.log('Tombol reset marker diklik');
         
@@ -753,16 +771,42 @@ function initEventListeners() {
         }
     });
     
-    // Fullscreen buttons
+    // 11. Fullscreen buttons
     document.getElementById('btnFullscreen').addEventListener('click', enterFullscreen);
     document.getElementById('btnExitFullscreen').addEventListener('click', exitFullscreen);
     
-    // Enter key in textarea
+    // 12. Enter key in textarea
     document.getElementById('keteranganInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             if (!document.getElementById('saveBtn').disabled) {
                 saveData();
+            }
+        }
+    });
+    
+    // 13. Tambahkan event delegation untuk seluruh dokumen sebagai fallback
+    document.addEventListener('change', function(e) {
+        if (e.target && e.target.id === 'usahaSelect') {
+            console.log('Event delegation: usahaSelect changed to', e.target.value);
+            
+            // Panggil fungsi yang sama
+            if (e.target.value && e.target.value !== "") {
+                const kecamatan = document.getElementById('kecamatanSelect').value;
+                const desa = document.getElementById('desaSelect').value;
+                const namaUsaha = e.target.value;
+                
+                selectedUsaha = dataUsaha.find(usaha => 
+                    usaha.kecamatan === kecamatan && 
+                    usaha.desa === desa && 
+                    usaha.nama_usaha === namaUsaha
+                );
+                
+                if (selectedUsaha) {
+                    document.getElementById('alamatInput').value = selectedUsaha.alamat;
+                }
+                
+                checkSaveButton();
             }
         }
     });
