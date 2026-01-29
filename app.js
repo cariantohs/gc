@@ -7,52 +7,78 @@ let selectedStatus = "";
 let completedUsaha = new Set();
 let savedData = [];
 
+// Pastikan dataUsaha tersedia
+if (typeof dataUsaha === 'undefined') {
+    console.error('dataUsaha tidak ditemukan. Pastikan data.js dimuat dengan benar.');
+    // Fallback ke array kosong
+    var dataUsaha = [];
+}
+
+// Pastikan GOOGLE_SCRIPT_URL tersedia
+if (typeof GOOGLE_SCRIPT_URL === 'undefined') {
+    console.warn('GOOGLE_SCRIPT_URL tidak ditemukan. Data hanya akan disimpan di localStorage.');
+    var GOOGLE_SCRIPT_URL = null;
+}
+
 // Inisialisasi peta Google Maps
 function initMap() {
+    console.log('initMap dipanggil');
+    
+    // Cek apakah Google Maps API sudah dimuat
+    if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+        console.error('Google Maps API belum dimuat');
+        setTimeout(initMap, 100);
+        return;
+    }
+    
     // Lokasi default: Samosir
     const samosirLocation = { lat: 2.5833, lng: 98.7167 };
     
-    // Buat peta
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: samosirLocation,
-        zoom: 12,
-        mapTypeId: 'hybrid',
-        mapTypeControl: true,
-        streetViewControl: false,
-        fullscreenControl: true,
-        zoomControl: true,
-        styles: [
-            {
-                featureType: "poi",
-                elementType: "labels",
-                stylers: [{ visibility: "off" }]
+    try {
+        // Buat peta
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: samosirLocation,
+            zoom: 12,
+            mapTypeId: 'hybrid',
+            mapTypeControl: true,
+            streetViewControl: false,
+            fullscreenControl: true,
+            zoomControl: true,
+            styles: [
+                {
+                    featureType: "poi",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }]
+                }
+            ]
+        });
+        
+        console.log('Peta berhasil dibuat');
+        
+        // Tambahkan event listener untuk klik peta
+        map.addListener('click', (event) => {
+            if (!selectedUsaha) {
+                alert('Pilih usaha terlebih dahulu!');
+                return;
             }
-        ]
-    });
-    
-    // Tambahkan event listener untuk klik peta
-    map.addListener('click', (event) => {
-        if (!selectedUsaha) {
-            alert('Pilih usaha terlebih dahulu!');
-            return;
-        }
-        setMarker(event.latLng);
-        updateCoordinates(event.latLng);
-    });
-    
-    // Tambahkan event listener untuk drag marker
-    google.maps.event.addListener(map, 'idle', () => {
-        if (marker) {
-            updateCoordinates(marker.getPosition());
-        }
-    });
-    
-    // Load data yang sudah disimpan
-    loadSavedData();
-    
-    // Inisialisasi dropdown
-    populateKecamatanDropdown();
-    updateProgress();
+            setMarker(event.latLng);
+            updateCoordinates(event.latLng);
+        });
+        
+        // Load data yang sudah disimpan
+        loadSavedData();
+        
+        // Inisialisasi dropdown
+        populateKecamatanDropdown();
+        updateProgress();
+        
+        // Inisialisasi event listeners
+        initEventListeners();
+        
+    } catch (error) {
+        console.error('Error saat membuat peta:', error);
+        alert('Gagal memuat peta. Periksa koneksi internet dan API key.');
+    }
 }
 
 // Set marker di peta
@@ -123,6 +149,15 @@ function saveToLocalStorage(data) {
 // Populate dropdown kecamatan
 function populateKecamatanDropdown() {
     const kecamatanSelect = document.getElementById('kecamatanSelect');
+    
+    // Kosongkan dropdown
+    kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+    
+    if (!dataUsaha || dataUsaha.length === 0) {
+        console.error('Data usaha kosong');
+        return;
+    }
+    
     const kecamatans = new Set(dataUsaha.map(usaha => usaha.kecamatan));
     
     // Urutkan berdasarkan abjad
@@ -250,17 +285,23 @@ async function saveData() {
         // Simpan ke localStorage terlebih dahulu
         saveToLocalStorage(data);
         
-        // Coba kirim ke Google Sheets
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
+        // Coba kirim ke Google Sheets jika URL tersedia
+        if (GOOGLE_SCRIPT_URL) {
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            // Karena no-cors, kita anggap selalu berhasil
+            console.log('Data dikirim ke Google Sheets');
+        } else {
+            console.log('GOOGLE_SCRIPT_URL tidak tersedia, data hanya disimpan di localStorage');
+        }
         
-        // Karena no-cors, kita anggap selalu berhasil
         showSuccessMessage(data);
         
         // Update progress
@@ -366,9 +407,11 @@ function resetForm() {
         }
         
         // Reset ke lokasi default
-        const defaultLocation = { lat: 2.5833, lng: 98.7167 };
-        map.panTo(defaultLocation);
-        map.setZoom(12);
+        if (map) {
+            const defaultLocation = { lat: 2.5833, lng: 98.7167 };
+            map.panTo(defaultLocation);
+            map.setZoom(12);
+        }
         
         // Sembunyikan alert sukses
         document.getElementById('successAlert').classList.remove('show');
@@ -414,7 +457,7 @@ function exportData() {
 }
 
 // Inisialisasi event listeners
-document.addEventListener('DOMContentLoaded', () => {
+function initEventListeners() {
     // Event listener untuk dropdown kecamatan
     document.getElementById('kecamatanSelect').addEventListener('change', function() {
         if (this.value) {
@@ -538,10 +581,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    
-    // Update progress awal
-    updateProgress();
-});
+}
 
 // Expose initMap ke window
 window.initMap = initMap;
+
+// Inisialisasi saat DOM siap
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM siap, menunggu Google Maps API...');
+    // Event listeners akan diinisialisasi di initMap
+});
