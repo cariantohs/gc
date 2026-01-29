@@ -11,6 +11,7 @@ let selectedStatus = "";
 let completedUsaha = null;
 let savedData = null;
 let isFullscreen = false;
+let fullscreenBtn = null;
 
 // Pengecekan apakah variabel dari data.js sudah tersedia
 function checkRequiredData() {
@@ -34,28 +35,37 @@ function checkRequiredData() {
 function initApp() {
     console.log('Memulai aplikasi Geotagging Samosir...');
     
-    // Cek data yang diperlukan
-    if (!checkRequiredData()) {
-        alert('Data usaha tidak ditemukan. Periksa file data.js');
-        return;
+    try {
+        // Cek data yang diperlukan
+        if (!checkRequiredData()) {
+            alert('Data usaha tidak ditemukan. Periksa file data.js');
+            return;
+        }
+        
+        // Inisialisasi variabel dari localStorage
+        initLocalStorage();
+        
+        // Inisialisasi peta
+        initMap();
+        
+        // Inisialisasi tombol fullscreen
+        initFullscreenButton();
+        
+        // Inisialisasi event listeners
+        initEventListeners();
+        
+        // Inisialisasi dropdown kecamatan
+        populateKecamatanDropdown();
+        
+        // Update progress
+        updateProgress();
+        
+        console.log('Aplikasi siap digunakan');
+        
+    } catch (error) {
+        console.error('Error dalam initApp:', error);
+        alert('Terjadi kesalahan saat menginisialisasi aplikasi. Periksa console untuk detail.');
     }
-    
-    // Inisialisasi variabel dari localStorage
-    initLocalStorage();
-    
-    // Inisialisasi peta
-    initMap();
-    
-    // Inisialisasi event listeners
-    initEventListeners();
-    
-    // Inisialisasi dropdown kecamatan
-    populateKecamatanDropdown();
-    
-    // Update progress
-    updateProgress();
-    
-    console.log('Aplikasi siap digunakan');
 }
 
 // Inisialisasi data dari localStorage
@@ -90,16 +100,23 @@ function initMap() {
     const samosirLocation = { lat: 2.5833, lng: 98.7167 };
     
     try {
-        // Buat peta
+        // Buat peta dengan kontrol bawaan Google Maps
         map = new google.maps.Map(document.getElementById("map"), {
             center: samosirLocation,
             zoom: 12,
             mapTypeId: 'hybrid',
             mapTypeControl: true,
-            streetViewControl: false,
-            fullscreenControl: false,
+            streetViewControl: true,
+            fullscreenControl: true, // Aktifkan kontrol fullscreen bawaan Google Maps
             zoomControl: true,
             gestureHandling: 'greedy',
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_CENTER
+            },
             styles: [
                 {
                     featureType: "poi",
@@ -110,6 +127,71 @@ function initMap() {
         });
         
         console.log('Peta berhasil dibuat');
+        
+        // Tambahkan kontrol lokasi saya (tombol bawaan Google Maps)
+        const locationButton = document.createElement("button");
+        locationButton.innerHTML = '<i class="fas fa-location-crosshairs"></i>';
+        locationButton.style.cssText = `
+            background-color: white;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        `;
+        
+        locationButton.title = "Lokasi Saya";
+        
+        // Tambahkan event listener untuk tombol lokasi
+        locationButton.addEventListener("click", () => {
+            console.log('Tombol lokasi bawaan Google Maps diklik');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        
+                        console.log('Lokasi pengguna ditemukan:', pos);
+                        
+                        // Tampilkan marker di lokasi pengguna
+                        if (!selectedUsaha) {
+                            // Jika belum ada usaha yang dipilih, tetap pindah ke lokasi
+                            map.setCenter(pos);
+                            map.setZoom(16);
+                            
+                            // Tampilkan info lokasi
+                            const infoWindow = new google.maps.InfoWindow({
+                                content: "Lokasi Anda: " + pos.lat.toFixed(6) + ", " + pos.lng.toFixed(6),
+                                position: pos,
+                            });
+                            infoWindow.open(map);
+                            
+                            // Tutup info window setelah 3 detik
+                            setTimeout(() => infoWindow.close(), 3000);
+                            
+                        } else {
+                            // Jika sudah ada usaha yang dipilih, set marker dan update koordinat
+                            setMarker(pos);
+                            updateCoordinates(pos);
+                            map.setZoom(16);
+                        }
+                    },
+                    () => {
+                        console.error('Error: Gagal mendapatkan lokasi pengguna');
+                        alert("Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.");
+                    }
+                );
+            } else {
+                alert("Browser tidak mendukung geolocation");
+            }
+        });
+        
+        // Tambahkan tombol ke kontrol peta
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(locationButton);
         
         // Tambahkan event listener untuk klik peta
         map.addListener('click', (event) => {
@@ -136,6 +218,146 @@ function initMap() {
     }
 }
 
+// Inisialisasi tombol fullscreen custom
+function initFullscreenButton() {
+    fullscreenBtn = document.getElementById('btnFullscreenMap');
+    if (!fullscreenBtn) {
+        console.error('Tombol fullscreen tidak ditemukan');
+        return;
+    }
+    
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+    
+    // Tambahkan event listener untuk perubahan fullscreen
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+}
+
+// Handle perubahan state fullscreen
+function handleFullscreenChange() {
+    const isFullscreenNow = !!(document.fullscreenElement || 
+                              document.webkitFullscreenElement || 
+                              document.mozFullScreenElement || 
+                              document.msFullscreenElement);
+    
+    if (isFullscreenNow !== isFullscreen) {
+        isFullscreen = isFullscreenNow;
+        updateFullscreenButton();
+        toggleFullscreenMode(isFullscreenNow);
+    }
+}
+
+// Update tampilan tombol fullscreen
+function updateFullscreenButton() {
+    if (!fullscreenBtn) return;
+    
+    if (isFullscreen) {
+        fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i> Kecilkan Peta';
+        fullscreenBtn.title = 'Kecilkan Peta';
+    } else {
+        fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i> Perbesar Peta';
+        fullscreenBtn.title = 'Perbesar Peta';
+    }
+}
+
+// Toggle fullscreen mode
+function toggleFullscreen() {
+    const mapContainer = document.querySelector('.map-container');
+    
+    if (!isFullscreen) {
+        // Masuk ke mode fullscreen
+        if (mapContainer.requestFullscreen) {
+            mapContainer.requestFullscreen();
+        } else if (mapContainer.webkitRequestFullscreen) {
+            mapContainer.webkitRequestFullscreen();
+        } else if (mapContainer.mozRequestFullScreen) {
+            mapContainer.mozRequestFullScreen();
+        } else if (mapContainer.msRequestFullscreen) {
+            mapContainer.msRequestFullscreen();
+        } else {
+            // Fallback ke CSS fullscreen jika browser tidak support
+            enterFullscreen();
+        }
+    } else {
+        // Keluar dari mode fullscreen
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        } else {
+            exitFullscreen();
+        }
+    }
+}
+
+// Toggle fullscreen mode (CSS-based)
+function toggleFullscreenMode(enable) {
+    const contentWrapper = document.getElementById('contentWrapper');
+    const formContainer = document.getElementById('formContainer');
+    const notification = document.getElementById('fullscreenNotification');
+    
+    if (enable) {
+        // Masuk mode fullscreen
+        document.body.classList.add('fullscreen-mode');
+        contentWrapper.classList.add('fullscreen');
+        formContainer.style.display = 'none';
+        
+        // Tampilkan notifikasi
+        if (notification) {
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        console.log('Mode fullscreen diaktifkan');
+    } else {
+        // Keluar mode fullscreen
+        document.body.classList.remove('fullscreen-mode');
+        contentWrapper.classList.remove('fullscreen');
+        formContainer.style.display = 'flex';
+        
+        // Sembunyikan notifikasi
+        if (notification) {
+            notification.classList.remove('show');
+        }
+        
+        console.log('Mode fullscreen dinonaktifkan');
+    }
+    
+    // Update state
+    isFullscreen = enable;
+    updateFullscreenButton();
+    
+    // Resize map setelah transisi
+    setTimeout(() => {
+        if (map) {
+            google.maps.event.trigger(map, 'resize');
+            if (selectedLocation) {
+                map.panTo(selectedLocation);
+            }
+        }
+    }, 300);
+}
+
+// Fungsi untuk masuk ke fullscreen (CSS-based fallback)
+function enterFullscreen() {
+    console.log('Masuk mode fullscreen (fallback)');
+    toggleFullscreenMode(true);
+}
+
+// Fungsi untuk keluar dari fullscreen (CSS-based fallback)
+function exitFullscreen() {
+    console.log('Keluar mode fullscreen (fallback)');
+    toggleFullscreenMode(false);
+}
+
 // ============================================
 // FUNGSI PETA DAN MARKER
 // ============================================
@@ -151,7 +373,11 @@ function setMarker(location) {
             map: map,
             draggable: true,
             title: "Lokasi usaha",
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP,
+            icon: {
+                url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                scaledSize: new google.maps.Size(40, 40)
+            }
         });
         
         // Event ketika marker didrag
@@ -175,26 +401,36 @@ function updateCoordinates(latlng) {
     
     console.log('Koordinat diperbarui:', lat, lng);
     
-    document.getElementById('latDisplay').textContent = lat.toFixed(6);
-    document.getElementById('lngDisplay').textContent = lng.toFixed(6);
+    // Update display di form
+    const latDisplay = document.getElementById('latDisplay');
+    const lngDisplay = document.getElementById('lngDisplay');
     
-    document.getElementById('infoLat').textContent = lat.toFixed(6);
-    document.getElementById('infoLng').textContent = lng.toFixed(6);
+    if (latDisplay) latDisplay.textContent = lat.toFixed(6);
+    if (lngDisplay) lngDisplay.textContent = lng.toFixed(6);
+    
+    // Update info marker
+    const infoLat = document.getElementById('infoLat');
+    const infoLng = document.getElementById('infoLng');
+    
+    if (infoLat) infoLat.textContent = lat.toFixed(6);
+    if (infoLng) infoLng.textContent = lng.toFixed(6);
     
     checkSaveButton();
 }
 
 function showMarkerInfo(location) {
     const markerInfo = document.getElementById('markerInfo');
-    markerInfo.style.display = 'block';
-    
-    setTimeout(() => {
-        markerInfo.style.display = 'none';
-    }, 3000);
+    if (markerInfo) {
+        markerInfo.style.display = 'block';
+        
+        setTimeout(() => {
+            markerInfo.style.display = 'none';
+        }, 3000);
+    }
 }
 
 // ============================================
-// FUNGSI DROPDOWN DAN DATA - DIPERBAIKI
+// FUNGSI DROPDOWN DAN DATA
 // ============================================
 
 function populateKecamatanDropdown() {
@@ -203,130 +439,139 @@ function populateKecamatanDropdown() {
     console.log('Mengisi dropdown kecamatan...');
     
     // Kosongkan dropdown
-    kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
-    
-    if (!dataUsaha || dataUsaha.length === 0) {
-        console.error('Data usaha kosong');
-        return;
+    if (kecamatanSelect) {
+        kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+        
+        if (!dataUsaha || dataUsaha.length === 0) {
+            console.error('Data usaha kosong');
+            return;
+        }
+        
+        const kecamatans = [...new Set(dataUsaha.map(usaha => usaha.kecamatan))].sort();
+        
+        console.log('Kecamatan ditemukan:', kecamatans.length, 'item');
+        
+        kecamatans.forEach(kecamatan => {
+            const option = document.createElement('option');
+            option.value = kecamatan;
+            option.textContent = kecamatan;
+            kecamatanSelect.appendChild(option);
+        });
+        
+        console.log('Dropdown kecamatan diisi dengan', kecamatans.length, 'item');
     }
-    
-    const kecamatans = [...new Set(dataUsaha.map(usaha => usaha.kecamatan))].sort();
-    
-    console.log('Kecamatan ditemukan:', kecamatans.length, 'item');
-    
-    kecamatans.forEach(kecamatan => {
-        const option = document.createElement('option');
-        option.value = kecamatan;
-        option.textContent = kecamatan;
-        kecamatanSelect.appendChild(option);
-    });
-    
-    console.log('Dropdown kecamatan diisi dengan', kecamatans.length, 'item');
 }
 
 function populateDesaDropdown(kecamatan) {
     const desaSelect = document.getElementById('desaSelect');
-    desaSelect.innerHTML = '<option value="">Pilih Desa</option>';
-    desaSelect.disabled = false;
-    
-    console.log('Mengisi dropdown desa untuk kecamatan:', kecamatan);
-    
-    const desas = [...new Set(
-        dataUsaha
-            .filter(usaha => usaha.kecamatan === kecamatan)
-            .map(usaha => usaha.desa)
-    )].sort();
-    
-    console.log('Desa ditemukan untuk', kecamatan + ':', desas.length, 'item');
-    
-    desas.forEach(desa => {
-        const option = document.createElement('option');
-        option.value = desa;
-        option.textContent = desa;
-        desaSelect.appendChild(option);
-    });
-    
-    console.log('Dropdown desa diisi dengan', desas.length, 'item');
+    if (desaSelect) {
+        desaSelect.innerHTML = '<option value="">Pilih Desa</option>';
+        desaSelect.disabled = false;
+        
+        console.log('Mengisi dropdown desa untuk kecamatan:', kecamatan);
+        
+        const desas = [...new Set(
+            dataUsaha
+                .filter(usaha => usaha.kecamatan === kecamatan)
+                .map(usaha => usaha.desa)
+        )].sort();
+        
+        console.log('Desa ditemukan untuk', kecamatan + ':', desas.length, 'item');
+        
+        desas.forEach(desa => {
+            const option = document.createElement('option');
+            option.value = desa;
+            option.textContent = desa;
+            desaSelect.appendChild(option);
+        });
+        
+        console.log('Dropdown desa diisi dengan', desas.length, 'item');
+    }
 }
 
 function populateUsahaDropdown(kecamatan, desa) {
     const usahaSelect = document.getElementById('usahaSelect');
-    usahaSelect.innerHTML = '<option value="">Pilih Nama Usaha</option>';
-    usahaSelect.disabled = false;
-    
-    console.log('Mengisi dropdown usaha untuk:', kecamatan, '-', desa);
-    
-    // Pastikan completedUsaha sudah diinisialisasi
-    if (!completedUsaha) {
-        console.log('completedUsaha belum ada, menginisialisasi...');
-        completedUsaha = new Set();
+    if (usahaSelect) {
+        usahaSelect.innerHTML = '<option value="">Pilih Nama Usaha</option>';
+        usahaSelect.disabled = false;
+        
+        console.log('Mengisi dropdown usaha untuk:', kecamatan, '-', desa);
+        
+        // Pastikan completedUsaha sudah diinisialisasi
+        if (!completedUsaha) {
+            console.log('completedUsaha belum ada, menginisialisasi...');
+            completedUsaha = new Set();
+        }
+        
+        // Filter usaha berdasarkan kecamatan dan desa
+        const semuaUsahaDiArea = dataUsaha.filter(usaha => 
+            usaha.kecamatan === kecamatan && usaha.desa === desa
+        );
+        
+        console.log('Semua usaha di area ini:', semuaUsahaDiArea.length);
+        
+        // Filter usaha yang belum selesai
+        const filteredUsaha = semuaUsahaDiArea.filter(usaha => {
+            const key = `${usaha.kecamatan}|${usaha.desa}|${usaha.nama_usaha}`;
+            const belumSelesai = !completedUsaha.has(key);
+            return belumSelesai;
+        }).sort((a, b) => a.nama_usaha.localeCompare(b.nama_usaha));
+        
+        console.log('Usaha yang belum selesai:', filteredUsaha.length);
+        
+        // Isi dropdown dengan opsi yang benar
+        filteredUsaha.forEach(usaha => {
+            const option = document.createElement('option');
+            option.value = usaha.nama_usaha;
+            option.textContent = usaha.nama_usaha;
+            option.dataset.alamat = usaha.alamat;
+            usahaSelect.appendChild(option);
+        });
+        
+        if (filteredUsaha.length === 0) {
+            usahaSelect.innerHTML = '<option value="">Semua usaha sudah selesai</option>';
+            usahaSelect.disabled = true;
+            console.log('Semua usaha sudah selesai untuk', desa);
+        }
+        
+        console.log('Dropdown usaha diisi dengan', filteredUsaha.length, 'item');
     }
-    
-    // Debug: Tampilkan semua data untuk kecamatan dan desa ini
-    const allUsahaForArea = dataUsaha.filter(usaha => 
-        usaha.kecamatan === kecamatan && usaha.desa === desa
-    );
-    
-    console.log('Semua usaha di area ini:', allUsahaForArea.length);
-    
-    // Filter usaha yang belum selesai
-    const filteredUsaha = allUsahaForArea.filter(usaha => {
-        const key = `${usaha.kecamatan}|${usaha.desa}|${usaha.nama_usaha}`;
-        const belumSelesai = !completedUsaha.has(key);
-        return belumSelesai;
-    }).sort((a, b) => a.nama_usaha.localeCompare(b.nama_usaha));
-    
-    console.log('Usaha yang belum selesai:', filteredUsaha.length);
-    
-    // Isi dropdown dengan opsi yang benar
-    filteredUsaha.forEach(usaha => {
-        const option = document.createElement('option');
-        option.value = usaha.nama_usaha;
-        option.textContent = usaha.nama_usaha;
-        option.dataset.alamat = usaha.alamat;
-        usahaSelect.appendChild(option);
-    });
-    
-    if (filteredUsaha.length === 0) {
-        usahaSelect.innerHTML = '<option value="">Semua usaha sudah selesai</option>';
-        usahaSelect.disabled = true;
-        console.log('Semua usaha sudah selesai untuk', desa);
-    }
-    
-    console.log('Dropdown usaha diisi dengan', filteredUsaha.length, 'item');
-    
-    // Debug: Cek apakah dropdown bisa diklik
-    console.log('Dropdown usaha disabled?', usahaSelect.disabled);
-    console.log('Dropdown usaha style:', usahaSelect.style);
 }
 
 function updateProgress() {
-    const total = dataUsaha.length;
-    const completed = completedUsaha ? completedUsaha.size : 0;
-    const remaining = total - completed;
-    const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+    console.log('Memperbarui progress...');
     
-    console.log('Progress:', completed + '/' + total, '(', percentage, '%)');
-    
-    // Update counter
-    document.getElementById('totalUsaha').textContent = total;
-    document.getElementById('selesaiCount').textContent = completed;
-    document.getElementById('progressCount').textContent = `${completed}/${total}`;
-    document.getElementById('remainingCount').textContent = remaining;
-    
-    // Update progress info
-    const progressInfo = document.getElementById('progressInfo');
-    progressInfo.innerHTML = `
-        <i class="fas fa-chart-line me-2"></i> 
-        <strong>Progress: ${completed}/${total} (${percentage}%)</strong>
-        <div class="mt-1">
-            <small><span class="text-primary">${remaining}</span> data belum digeotag</small>
-        </div>
-    `;
+    try {
+        const total = dataUsaha ? dataUsaha.length : 0;
+        const completed = completedUsaha ? completedUsaha.size : 0;
+        const remaining = total - completed;
+        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+        
+        console.log('Progress:', completed + '/' + total, '(', percentage, '%)');
+        
+        // Update counter di header
+        const totalUsahaElement = document.getElementById('totalUsaha');
+        const selesaiCountElement = document.getElementById('selesaiCount');
+        
+        if (totalUsahaElement) totalUsahaElement.textContent = total;
+        if (selesaiCountElement) selesaiCountElement.textContent = completed;
+        
+        // Update progress info
+        const progressCountElement = document.getElementById('progressCount');
+        const remainingCountElement = document.getElementById('remainingCount');
+        
+        if (progressCountElement) progressCountElement.textContent = `${completed}/${total} (${percentage}%)`;
+        if (remainingCountElement) remainingCountElement.textContent = remaining;
+        
+    } catch (error) {
+        console.error('Error dalam updateProgress:', error);
+    }
 }
 
 function checkSaveButton() {
     const saveBtn = document.getElementById('saveBtn');
+    if (!saveBtn) return;
+    
     const isReady = selectedUsaha && selectedLocation && selectedStatus;
     
     console.log('Cek tombol simpan:', {
@@ -351,7 +596,14 @@ async function saveData() {
     
     console.log('Menyimpan data untuk:', selectedUsaha.nama_usaha);
     
-    showLoading(true, 'Menyimpan data ke Google Sheets...');
+    // Tampilkan loading
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const loadingText = document.getElementById('loadingText');
+    
+    if (loadingOverlay && loadingText) {
+        loadingText.textContent = 'Menyimpan data ke Google Sheets...';
+        loadingOverlay.classList.add('show');
+    }
     
     const data = {
         nama_usaha: selectedUsaha.nama_usaha,
@@ -361,7 +613,7 @@ async function saveData() {
         lat: selectedLocation.lat(),
         lng: selectedLocation.lng(),
         status: selectedStatus,
-        keterangan: document.getElementById('keteranganInput').value || '',
+        keterangan: document.getElementById('keteranganInput')?.value || '',
         timestamp: new Date().toISOString()
     };
     
@@ -391,19 +643,40 @@ async function saveData() {
                     },
                     body: JSON.stringify(data)
                 });
+                
                 console.log('Data berhasil dikirim ke Google Sheets');
             } catch (fetchError) {
                 console.warn('Gagal mengirim ke Google Sheets:', fetchError);
             }
         }
         
-        showSuccessMessage(data);
+        // Tampilkan pesan sukses
+        const successAlert = document.getElementById('successAlert');
+        const saveDetails = document.getElementById('saveDetails');
+        
+        if (successAlert && saveDetails) {
+            saveDetails.innerHTML = `
+                <strong>${data.nama_usaha}</strong><br>
+                ${data.kecamatan}, ${data.desa}<br>
+                Status: ${data.status} | ${new Date().toLocaleTimeString('id-ID')}
+            `;
+            successAlert.classList.add('show');
+            
+            // Auto hide setelah 5 detik
+            setTimeout(() => {
+                successAlert.classList.remove('show');
+            }, 5000);
+        }
+        
+        // Update progress
         updateProgress();
+        
+        // Reset form sebagian
         resetFormPartial();
         
         // Refresh dropdown usaha
-        const kecamatan = document.getElementById('kecamatanSelect').value;
-        const desa = document.getElementById('desaSelect').value;
+        const kecamatan = document.getElementById('kecamatanSelect')?.value;
+        const desa = document.getElementById('desaSelect')?.value;
         
         console.log('Refresh dropdown usaha untuk:', kecamatan, desa);
         
@@ -412,40 +685,31 @@ async function saveData() {
         }
         
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error dalam saveData:', error);
         alert('Gagal menyimpan data ke Google Sheets. Data disimpan sementara di browser.');
-        showSuccessMessage(data);
+        
+        // Tetap tampilkan sukses untuk localStorage
+        const successAlert = document.getElementById('successAlert');
+        const saveDetails = document.getElementById('saveDetails');
+        
+        if (successAlert && saveDetails && data) {
+            saveDetails.innerHTML = `
+                <strong>${data.nama_usaha}</strong><br>
+                ${data.kecamatan}, ${data.desa}<br>
+                Status: ${data.status} | ${new Date().toLocaleTimeString('id-ID')}<br>
+                <small><em>(Hanya disimpan di browser)</em></small>
+            `;
+            successAlert.classList.add('show');
+            
+            setTimeout(() => {
+                successAlert.classList.remove('show');
+            }, 5000);
+        }
     } finally {
-        showLoading(false);
-    }
-}
-
-function showSuccessMessage(data) {
-    const successAlert = document.getElementById('successAlert');
-    const saveDetails = document.getElementById('saveDetails');
-    
-    saveDetails.innerHTML = `
-        <strong>${data.nama_usaha}</strong><br>
-        ${data.kecamatan}, ${data.desa}<br>
-        Status: ${data.status} | ${new Date().toLocaleTimeString('id-ID')}
-    `;
-    
-    successAlert.classList.add('show');
-    
-    setTimeout(() => {
-        successAlert.classList.remove('show');
-    }, 5000);
-}
-
-function showLoading(show, text = 'Menyimpan data...') {
-    const loadingOverlay = document.getElementById('loadingOverlay');
-    const loadingText = document.getElementById('loadingText');
-    
-    if (show) {
-        loadingText.textContent = text;
-        loadingOverlay.classList.add('show');
-    } else {
-        loadingOverlay.classList.remove('show');
+        // Sembunyikan loading
+        if (loadingOverlay) {
+            loadingOverlay.classList.remove('show');
+        }
     }
 }
 
@@ -456,28 +720,40 @@ function showLoading(show, text = 'Menyimpan data...') {
 function resetFormPartial() {
     console.log('Reset form sebagian');
     
-    document.getElementById('alamatInput').value = '';
-    document.getElementById('keteranganInput').value = '';
-    
-    document.querySelectorAll('.status-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    selectedStatus = "";
-    document.getElementById('statusInput').value = "";
-    
-    document.getElementById('latDisplay').textContent = '-';
-    document.getElementById('lngDisplay').textContent = '-';
-    
-    selectedUsaha = null;
-    selectedLocation = null;
-    
-    document.getElementById('saveBtn').disabled = true;
-    
-    // Reset dropdown usaha TAPI jangan nonaktifkan jika sudah ada pilihan desa
-    const desa = document.getElementById('desaSelect').value;
-    if (!desa) {
-        document.getElementById('usahaSelect').value = '';
-        document.getElementById('usahaSelect').disabled = true;
+    try {
+        document.getElementById('alamatInput').value = '';
+        document.getElementById('keteranganInput').value = '';
+        
+        document.querySelectorAll('.status-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        selectedStatus = "";
+        
+        const statusInput = document.getElementById('statusInput');
+        if (statusInput) statusInput.value = "";
+        
+        document.getElementById('latDisplay').textContent = '-';
+        document.getElementById('lngDisplay').textContent = '-';
+        
+        selectedUsaha = null;
+        selectedLocation = null;
+        
+        document.getElementById('saveBtn').disabled = true;
+        
+        // Reset dropdown usaha TAPI jangan nonaktifkan jika sudah ada pilihan desa
+        const desa = document.getElementById('desaSelect')?.value;
+        const usahaSelect = document.getElementById('usahaSelect');
+        
+        if (usahaSelect) {
+            if (!desa) {
+                usahaSelect.value = '';
+                usahaSelect.disabled = true;
+            } else {
+                usahaSelect.value = '';
+            }
+        }
+    } catch (error) {
+        console.error('Error dalam resetFormPartial:', error);
     }
 }
 
@@ -550,268 +826,224 @@ function exportData() {
 }
 
 // ============================================
-// FUNGSI FULLSCREEN
-// ============================================
-
-function enterFullscreen() {
-    console.log('Masuk mode fullscreen');
-    
-    isFullscreen = true;
-    
-    document.body.classList.add('fullscreen-mode');
-    document.getElementById('contentWrapper').classList.add('fullscreen');
-    
-    const notification = document.getElementById('fullscreenNotification');
-    notification.classList.add('show');
-    
-    setTimeout(() => {
-        notification.classList.remove('show');
-    }, 3000);
-    
-    document.getElementById('btnFullscreen').style.display = 'none';
-    document.getElementById('btnExitFullscreen').style.display = 'flex';
-    
-    // Resize map
-    setTimeout(() => {
-        if (map) {
-            google.maps.event.trigger(map, 'resize');
-            if (selectedLocation) {
-                map.panTo(selectedLocation);
-            }
-        }
-    }, 300);
-}
-
-function exitFullscreen() {
-    console.log('Keluar mode fullscreen');
-    
-    isFullscreen = false;
-    
-    document.body.classList.remove('fullscreen-mode');
-    document.getElementById('contentWrapper').classList.remove('fullscreen');
-    document.getElementById('fullscreenNotification').classlist.remove('show');
-    
-    document.getElementById('btnFullscreen').style.display = 'flex';
-    document.getElementById('btnExitFullscreen').style.display = 'none';
-    
-    // Resize map
-    setTimeout(() => {
-        if (map) {
-            google.maps.event.trigger(map, 'resize');
-            if (selectedLocation) {
-                map.panTo(selectedLocation);
-            }
-        }
-    }, 300);
-}
-
-// ============================================
-// EVENT LISTENERS - DIPERBAIKI
+// EVENT LISTENERS
 // ============================================
 
 function initEventListeners() {
     console.log('Menginisialisasi event listeners...');
     
-    // 1. Event listener untuk dropdown kecamatan
-    const kecamatanSelect = document.getElementById('kecamatanSelect');
-    kecamatanSelect.addEventListener('change', function() {
-        console.log('Kecamatan dipilih:', this.value);
-        
-        if (this.value) {
-            populateDesaDropdown(this.value);
-            resetFormPartial();
-        } else {
-            document.getElementById('desaSelect').disabled = true;
-            document.getElementById('desaSelect').innerHTML = '<option value="">Pilih Desa</option>';
-            document.getElementById('usahaSelect').disabled = true;
-            document.getElementById('usahaSelect').innerHTML = '<option value="">Pilih Nama Usaha</option>';
-        }
-    });
-    
-    // 2. Event listener untuk dropdown desa
-    const desaSelect = document.getElementById('desaSelect');
-    desaSelect.addEventListener('change', function() {
-        console.log('Desa dipilih:', this.value);
-        
-        if (this.value) {
-            const kecamatan = document.getElementById('kecamatanSelect').value;
-            console.log('Memuat usaha untuk:', kecamatan, this.value);
-            populateUsahaDropdown(kecamatan, this.value);
-            resetFormPartial();
-        } else {
-            document.getElementById('usahaSelect').disabled = true;
-            document.getElementById('usahaSelect').innerHTML = '<option value="">Pilih Nama Usaha</option>';
-        }
-    });
-    
-    // 3. Event listener untuk dropdown usaha - DIPERBAIKI
-    const usahaSelect = document.getElementById('usahaSelect');
-    
-    // Gunakan event delegation untuk memastikan event listener bekerja
-    usahaSelect.addEventListener('change', function() {
-        console.log('====== DROPDOWN USAHA CHANGE EVENT ======');
-        console.log('Nilai yang dipilih:', this.value);
-        console.log('Selected index:', this.selectedIndex);
-        console.log('Jumlah opsi:', this.options.length);
-        
-        // Cek apakah dropdown disabled
-        console.log('Dropdown disabled?', this.disabled);
-        
-        if (this.value && this.value !== "") {
-            const kecamatan = document.getElementById('kecamatanSelect').value;
-            const desa = document.getElementById('desaSelect').value;
-            const namaUsaha = this.value;
-            
-            console.log('Mencari data usaha:', { kecamatan, desa, namaUsaha });
-            
-            // Cari data usaha
-            selectedUsaha = dataUsaha.find(usaha => 
-                usaha.kecamatan === kecamatan && 
-                usaha.desa === desa && 
-                usaha.nama_usaha === namaUsaha
-            );
-            
-            if (selectedUsaha) {
-                console.log('Data usaha ditemukan:', selectedUsaha);
-                document.getElementById('alamatInput').value = selectedUsaha.alamat;
-            } else {
-                console.error('Usaha tidak ditemukan dalam dataUsaha:', namaUsaha);
-                alert('Data usaha tidak ditemukan! Silakan pilih ulang.');
-                this.value = ""; // Reset dropdown
-                return;
-            }
-        } else {
-            console.log('Tidak ada usaha yang dipilih atau nilai kosong');
-            selectedUsaha = null;
-            document.getElementById('alamatInput').value = '';
-        }
-        
-        checkSaveButton();
-    });
-    
-    // 4. Tambahkan event listener untuk klik (untuk debugging)
-    usahaSelect.addEventListener('click', function(e) {
-        console.log('Dropdown usaha diklik', e.target.value);
-        console.log('Isi dropdown saat ini:');
-        Array.from(this.options).forEach((opt, i) => {
-            console.log(`  [${i}] ${opt.value} - ${opt.text}`);
-        });
-    });
-    
-    // 5. Status buttons
-    document.querySelectorAll('.status-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const status = this.dataset.status;
-            console.log('Status dipilih:', status);
-            
-            document.querySelectorAll('.status-btn').forEach(b => {
-                b.classList.remove('active');
+    try {
+        // 1. Event listener untuk dropdown kecamatan
+        const kecamatanSelect = document.getElementById('kecamatanSelect');
+        if (kecamatanSelect) {
+            kecamatanSelect.addEventListener('change', function() {
+                console.log('Kecamatan dipilih:', this.value);
+                
+                if (this.value) {
+                    populateDesaDropdown(this.value);
+                    resetFormPartial();
+                } else {
+                    const desaSelect = document.getElementById('desaSelect');
+                    if (desaSelect) {
+                        desaSelect.disabled = true;
+                        desaSelect.innerHTML = '<option value="">Pilih Desa</option>';
+                    }
+                    const usahaSelect = document.getElementById('usahaSelect');
+                    if (usahaSelect) {
+                        usahaSelect.disabled = true;
+                        usahaSelect.innerHTML = '<option value="">Pilih Nama Usaha</option>';
+                    }
+                }
             });
-            
-            this.classList.add('active');
-            selectedStatus = status;
-            document.getElementById('statusInput').value = selectedStatus;
-            
-            checkSaveButton();
-        });
-    });
-    
-    // 6. Save button
-    document.getElementById('saveBtn').addEventListener('click', saveData);
-    
-    // 7. Reset button
-    document.getElementById('resetBtn').addEventListener('click', resetForm);
-    
-    // 8. Export button
-    document.getElementById('exportBtn').addEventListener('click', exportData);
-    
-    // 9. My location button
-    document.getElementById('btnMyLocation').addEventListener('click', () => {
-        console.log('Tombol lokasi saya diklik');
+        }
         
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const userLocation = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
+        // 2. Event listener untuk dropdown desa
+        const desaSelect = document.getElementById('desaSelect');
+        if (desaSelect) {
+            desaSelect.addEventListener('change', function() {
+                console.log('Desa dipilih:', this.value);
+                
+                if (this.value) {
+                    const kecamatan = document.getElementById('kecamatanSelect')?.value;
+                    if (kecamatan) {
+                        console.log('Memuat usaha untuk:', kecamatan, this.value);
+                        populateUsahaDropdown(kecamatan, this.value);
+                        resetFormPartial();
+                    }
+                } else {
+                    const usahaSelect = document.getElementById('usahaSelect');
+                    if (usahaSelect) {
+                        usahaSelect.disabled = true;
+                        usahaSelect.innerHTML = '<option value="">Pilih Nama Usaha</option>';
+                    }
+                }
+            });
+        }
+        
+        // 3. Event listener untuk dropdown usaha
+        const usahaSelect = document.getElementById('usahaSelect');
+        if (usahaSelect) {
+            usahaSelect.addEventListener('change', function() {
+                console.log('====== DROPDOWN USAHA CHANGE EVENT ======');
+                console.log('Nilai yang dipilih:', this.value);
+                
+                if (this.value && this.value !== "") {
+                    const kecamatan = document.getElementById('kecamatanSelect')?.value;
+                    const desa = document.getElementById('desaSelect')?.value;
+                    const namaUsaha = this.value;
                     
-                    console.log('Lokasi pengguna:', userLocation);
+                    console.log('Mencari data usaha:', { kecamatan, desa, namaUsaha });
+                    
+                    // Cari data usaha
+                    selectedUsaha = dataUsaha.find(usaha => 
+                        usaha.kecamatan === kecamatan && 
+                        usaha.desa === desa && 
+                        usaha.nama_usaha === namaUsaha
+                    );
                     
                     if (selectedUsaha) {
-                        setMarker(userLocation);
-                        updateCoordinates(userLocation);
-                        map.setZoom(16);
+                        console.log('Data usaha ditemukan:', selectedUsaha);
+                        document.getElementById('alamatInput').value = selectedUsaha.alamat || '';
                     } else {
-                        alert('Pilih usaha terlebih dahulu!');
+                        console.error('Usaha tidak ditemukan dalam dataUsaha:', namaUsaha);
+                        alert('Data usaha tidak ditemukan! Silakan pilih ulang.');
+                        this.value = ""; // Reset dropdown
+                        return;
                     }
-                },
-                (error) => {
-                    console.error('Error geolocation:', error);
-                    alert('Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.');
-                }
-            );
-        } else {
-            alert('Browser tidak mendukung geolocation');
-        }
-    });
-    
-    // 10. Reset marker button
-    document.getElementById('btnResetMarker').addEventListener('click', () => {
-        console.log('Tombol reset marker diklik');
-        
-        if (marker) {
-            marker.setMap(null);
-            marker = null;
-            selectedLocation = null;
-            document.getElementById('latDisplay').textContent = '-';
-            document.getElementById('lngDisplay').textContent = '-';
-            checkSaveButton();
-        }
-    });
-    
-    // 11. Fullscreen buttons
-    document.getElementById('btnFullscreen').addEventListener('click', enterFullscreen);
-    document.getElementById('btnExitFullscreen').addEventListener('click', exitFullscreen);
-    
-    // 12. Enter key in textarea
-    document.getElementById('keteranganInput').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            if (!document.getElementById('saveBtn').disabled) {
-                saveData();
-            }
-        }
-    });
-    
-    // 13. Tambahkan event delegation untuk seluruh dokumen sebagai fallback
-    document.addEventListener('change', function(e) {
-        if (e.target && e.target.id === 'usahaSelect') {
-            console.log('Event delegation: usahaSelect changed to', e.target.value);
-            
-            // Panggil fungsi yang sama
-            if (e.target.value && e.target.value !== "") {
-                const kecamatan = document.getElementById('kecamatanSelect').value;
-                const desa = document.getElementById('desaSelect').value;
-                const namaUsaha = e.target.value;
-                
-                selectedUsaha = dataUsaha.find(usaha => 
-                    usaha.kecamatan === kecamatan && 
-                    usaha.desa === desa && 
-                    usaha.nama_usaha === namaUsaha
-                );
-                
-                if (selectedUsaha) {
-                    document.getElementById('alamatInput').value = selectedUsaha.alamat;
+                } else {
+                    console.log('Tidak ada usaha yang dipilih atau nilai kosong');
+                    selectedUsaha = null;
+                    document.getElementById('alamatInput').value = '';
                 }
                 
                 checkSaveButton();
-            }
+            });
         }
-    });
-    
-    console.log('Event listeners berhasil diinisialisasi');
+        
+        // 4. Status buttons
+        document.querySelectorAll('.status-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const status = this.dataset.status;
+                console.log('Status dipilih:', status);
+                
+                document.querySelectorAll('.status-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+                selectedStatus = status;
+                
+                const statusInput = document.getElementById('statusInput');
+                if (statusInput) statusInput.value = selectedStatus;
+                
+                checkSaveButton();
+            });
+        });
+        
+        // 5. Save button
+        const saveBtn = document.getElementById('saveBtn');
+        if (saveBtn) {
+            saveBtn.addEventListener('click', saveData);
+        }
+        
+        // 6. Reset button
+        const resetBtn = document.getElementById('resetBtn');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', resetForm);
+        }
+        
+        // 7. Export button
+        const exportBtn = document.getElementById('exportBtn');
+        if (exportBtn) {
+            exportBtn.addEventListener('click', exportData);
+        }
+        
+        // 8. Tombol "Lokasi Saya" di map-controls
+        const btnMyLocation = document.getElementById('btnMyLocation');
+        if (btnMyLocation) {
+            btnMyLocation.addEventListener('click', () => {
+                console.log('Tombol lokasi saya diklik');
+                
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const userLocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+                            
+                            console.log('Lokasi pengguna ditemukan:', userLocation);
+                            
+                            if (selectedUsaha) {
+                                // Jika sudah ada usaha yang dipilih, set marker dan update koordinat
+                                setMarker(userLocation);
+                                updateCoordinates(userLocation);
+                                if (map) map.setZoom(16);
+                            } else {
+                                // Jika belum ada usaha yang dipilih, hanya pindah ke lokasi
+                                if (map) {
+                                    map.setCenter(userLocation);
+                                    map.setZoom(16);
+                                    
+                                    // Tampilkan info lokasi
+                                    const infoWindow = new google.maps.InfoWindow({
+                                        content: "Lokasi Anda: " + userLocation.lat.toFixed(6) + ", " + userLocation.lng.toFixed(6),
+                                        position: userLocation,
+                                    });
+                                    infoWindow.open(map);
+                                    
+                                    // Tutup info window setelah 3 detik
+                                    setTimeout(() => infoWindow.close(), 3000);
+                                }
+                            }
+                        },
+                        (error) => {
+                            console.error('Error geolocation:', error);
+                            alert('Tidak dapat mengakses lokasi. Pastikan izin lokasi diaktifkan.');
+                        }
+                    );
+                } else {
+                    alert('Browser tidak mendukung geolocation');
+                }
+            });
+        }
+        
+        // 9. Reset marker button
+        const btnResetMarker = document.getElementById('btnResetMarker');
+        if (btnResetMarker) {
+            btnResetMarker.addEventListener('click', () => {
+                console.log('Tombol reset marker diklik');
+                
+                if (marker) {
+                    marker.setMap(null);
+                    marker = null;
+                    selectedLocation = null;
+                    document.getElementById('latDisplay').textContent = '-';
+                    document.getElementById('lngDisplay').textContent = '-';
+                    checkSaveButton();
+                }
+            });
+        }
+        
+        // 10. Enter key in textarea
+        const keteranganInput = document.getElementById('keteranganInput');
+        if (keteranganInput) {
+            keteranganInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    const saveBtn = document.getElementById('saveBtn');
+                    if (saveBtn && !saveBtn.disabled) {
+                        saveData();
+                    }
+                }
+            });
+        }
+        
+        console.log('Event listeners berhasil diinisialisasi');
+        
+    } catch (error) {
+        console.error('Error dalam initEventListeners:', error);
+    }
 }
 
 // ============================================
