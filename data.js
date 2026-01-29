@@ -34894,5 +34894,4 @@ const dataUsaha = [
 // URL Google Apps Script Web App
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQ2JFilll-VMhrVX90-9vReY4U_i6KQTa2yngvZWE6W7RaZP1CeoH46jU732N5CPTi/exec";
 
-// Catatan: savedData dan completedUsaha dipindahkan ke app.js
-// untuk menghindari konflik deklarasi
+console.log('data.js dimuat, total data:', dataUsaha.length);
