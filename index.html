@@ -108,6 +108,7 @@
             flex-direction: column;
             min-height: 400px;
             transition: all 0.3s;
+            position: relative;
         }
 
         .form-container {
@@ -190,6 +191,37 @@
 
         .btn-custom.btn-warning:hover {
             background: #e67e22;
+        }
+
+        /* Tombol Fullscreen di Kanan Atas Peta */
+        .fullscreen-toggle-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2c3e50;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .fullscreen-toggle-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .fullscreen-toggle-btn i {
+            font-size: 1rem;
         }
 
         .form-content {
@@ -574,12 +606,6 @@
                 <button class="btn btn-custom btn-outline-secondary" id="btnResetMarker">
                     <i class="fas fa-times"></i> Reset Marker
                 </button>
-                <button class="btn btn-custom btn-success" id="btnFullscreen">
-                    <i class="fas fa-expand"></i> Perbesar Peta
-                </button>
-                <button class="btn btn-custom btn-warning" id="btnExitFullscreen" style="display: none;">
-                    <i class="fas fa-compress"></i> Kecilkan Peta
-                </button>
                 <div class="ms-auto text-muted d-none d-md-block">
                     <small><i class="fas fa-mouse-pointer"></i> Klik peta untuk menentukan koordinat</small>
                 </div>
@@ -587,6 +613,11 @@
             
             <!-- Google Maps -->
             <div id="map"></div>
+            
+            <!-- Tombol Fullscreen di Kanan Atas Peta -->
+            <button class="fullscreen-toggle-btn" id="btnFullscreenMap">
+                <i class="fas fa-expand"></i> Perbesar Peta
+            </button>
             
             <!-- Marker Info -->
             <div class="marker-info" id="markerInfo">
@@ -615,11 +646,13 @@
                 </div>
 
                 <!-- Progress Info -->
-                <div class="progress-info" id="progressInfo">
+                <div class="progress-info">
                     <i class="fas fa-chart-line me-2"></i> 
-                    <strong>Progress: <span id="progressCount">0/0</span></strong>
-                    <div class="mt-1">
-                        <small><span id="remainingCount">0</span> data belum digeotag</small>
+                    <div>
+                        <strong>Progress: <span id="progressCount">0/0</span></strong>
+                        <div class="mt-1">
+                            <small><span id="remainingCount">0</span> data belum digeotag</small>
+                        </div>
                     </div>
                 </div>
 
