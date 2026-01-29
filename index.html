@@ -196,32 +196,32 @@
         /* Tombol Fullscreen di Kanan Atas Peta */
         .fullscreen-toggle-btn {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 10px;
+            right: 10px;
             z-index: 1000;
             background: white;
             border: 2px solid #e9ecef;
             border-radius: 5px;
-            padding: 10px 15px;
+            padding: 8px 12px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
             color: #2c3e50;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: all 0.3s;
         }
 
         .fullscreen-toggle-btn:hover {
             background: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
         }
 
         .fullscreen-toggle-btn i {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .form-content {
@@ -471,17 +471,16 @@
 
         .marker-info {
             position: absolute;
-            top: 15px;
-            right: 60px;
+            top: 10px;
+            right: 10px;
             background: white;
             padding: 10px 15px;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
             font-size: 0.85rem;
             max-width: 300px;
             display: none;
-            border-left: 4px solid #3498db;
         }
 
         .fullscreen-notification {
@@ -508,29 +507,7 @@
             to { opacity: 1; }
         }
 
-        /* Styling untuk marker lokasi pengguna */
-        .location-marker {
-            background-color: #4285F4;
-            border: 2px solid white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-
-        .location-marker::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background-color: white;
-            border-radius: 50%;
-        }
-
-        /* Fix untuk dropdown */
+        /* Fix untuk dropdown yang tidak bisa diklik */
         .form-select:not(:disabled) {
             cursor: pointer !important;
             pointer-events: auto !important;
@@ -539,6 +516,16 @@
         .form-select:disabled {
             cursor: not-allowed !important;
             background-color: #e9ecef !important;
+        }
+
+        .form-select option {
+            color: #212529;
+            background-color: white;
+            padding: 8px 12px;
+        }
+
+        .form-select option:hover {
+            background-color: #f8f9fa;
         }
 
         @media (max-width: 991px) {
@@ -563,13 +550,6 @@
             .content-wrapper.fullscreen {
                 height: calc(100vh - 70px);
             }
-
-            .fullscreen-toggle-btn {
-                top: 10px;
-                right: 10px;
-                padding: 8px 12px;
-                font-size: 0.8rem;
-            }
         }
 
         @media (max-width: 576px) {
@@ -593,12 +573,6 @@
             .btn-custom {
                 width: 100%;
                 justify-content: center;
-            }
-
-            .marker-info {
-                top: 10px;
-                right: 10px;
-                max-width: 200px;
             }
         }
     </style>
@@ -633,7 +607,7 @@
                     <i class="fas fa-times"></i> Reset Marker
                 </button>
                 <div class="ms-auto text-muted d-none d-md-block">
-                    <small><i class="fas fa-mouse-pointer"></i> Klik peta atau gunakan "Lokasi Saya" untuk menentukan koordinat</small>
+                    <small><i class="fas fa-mouse-pointer"></i> Klik peta untuk menentukan koordinat</small>
                 </div>
             </div>
             
@@ -647,7 +621,7 @@
             
             <!-- Marker Info -->
             <div class="marker-info" id="markerInfo">
-                <strong><i class="fas fa-map-pin me-1"></i> Lokasi dipilih</strong>
+                <strong><i class="fas fa-map-pin me-1"></i> Marker diposisikan</strong>
                 <div class="mt-1">
                     <small>Lat: <span id="infoLat">-</span></small><br>
                     <small>Lng: <span id="infoLng">-</span></small>
@@ -665,7 +639,7 @@
                         <li>Pilih <strong>Kecamatan</strong> dari dropdown</li>
                         <li>Pilih <strong>Desa</strong> yang tersedia</li>
                         <li>Pilih <strong>Nama Usaha</strong> dari daftar</li>
-                        <li><strong>Klik di peta</strong> atau gunakan <strong>"Lokasi Saya"</strong> untuk menentukan koordinat</li>
+                        <li><strong>Klik di peta</strong> untuk menentukan koordinat</li>
                         <li>Pilih <strong>status usaha</strong></li>
                         <li>Klik <strong>"Simpan Data"</strong> untuk menyimpan</li>
                     </ol>
@@ -715,7 +689,6 @@
                         <div>Latitude: <span id="latDisplay">-</span></div>
                         <div>Longitude: <span id="lngDisplay">-</span></div>
                     </div>
-                    <small class="text-muted mt-1 d-block">Koordinat akan terisi setelah mengklik peta atau menggunakan "Lokasi Saya"</small>
                 </div>
 
                 <div class="form-group">
@@ -803,8 +776,8 @@
                 }
                 
                 const script = document.createElement('script');
-                // Tambahkan callback ke initMap
-                script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&v=weekly&callback=initMap';
+                // Hapus callback dari URL untuk menghindari error
+                script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&v=weekly';
                 script.async = true;
                 script.defer = true;
                 
@@ -844,14 +817,22 @@
             try {
                 console.log('Memulai inisialisasi aplikasi...');
                 
-                // 1. Muat data.js terlebih dahulu
+                // 1. Muat Google Maps API terlebih dahulu
+                await loadGoogleMapsAPI();
+                
+                // 2. Muat data.js
                 await loadScript('data.js');
                 
-                // 2. Muat app.js
+                // 3. Muat app.js
                 await loadScript('app.js');
                 
-                // 3. Muat Google Maps API terakhir karena menggunakan callback
-                await loadGoogleMapsAPI();
+                // 4. Panggil fungsi initApp dari app.js jika ada
+                if (typeof initApp === 'function') {
+                    console.log('Memanggil initApp()...');
+                    initApp();
+                } else {
+                    console.error('Fungsi initApp tidak ditemukan di app.js');
+                }
                 
                 console.log('Aplikasi berhasil diinisialisasi');
                 
