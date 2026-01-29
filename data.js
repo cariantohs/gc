@@ -34894,7 +34894,3 @@ const dataUsaha = [
 
 // URL Google Apps Script Web App
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQ2JFilll-VMhrVX90-9vReY4U_i6KQTa2yngvZWE6W7RaZP1CeoH46jU732N5CPTi/exec";
-
-// Data sementara untuk penyimpanan lokal
-let savedData = JSON.parse(localStorage.getItem('geotagDataSamosir') || '[]');
-let completedUsaha = new Set(savedData.map(item => `${item.kecamatan}|${item.desa}|${item.nama_usaha}`));
