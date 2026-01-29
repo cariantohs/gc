@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geotagging Usaha - Kabupaten Samosir</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Load Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=Function.prototype" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-map-marker-alt"></i> Sistem Geotagging Usaha</h1>
+            <p class="subtitle">Kabupaten Samosir - Data Awal Usaha</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-data">0</span>
+                    <span class="stat-label">Total Data</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="remaining-data">0</span>
+                    <span class="stat-label">Belum Digeotag</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="completed-data">0</span>
+                    <span class="stat-label">Selesai</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="form-container">
+                    <h2><i class="fas fa-search-location"></i> Pilih Usaha</h2>
+                    
+                    <div class="form-group">
+                        <label for="kecamatan"><i class="fas fa-map"></i> Kecamatan</label>
+                        <select id="kecamatan" class="form-control">
+                            <option value="">Pilih Kecamatan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desa"><i class="fas fa-map-pin"></i> Desa</label>
+                        <select id="desa" class="form-control" disabled>
+                            <option value="">Pilih Desa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usaha"><i class="fas fa-store"></i> Nama Usaha</label>
+                        <select id="usaha" class="form-control" disabled>
+                            <option value="">Pilih Usaha</option>
+                        </select>
+                    </div>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> Info Usaha Terpilih</h3>
+                        <div id="usaha-info">
+                            <p><strong>Nama:</strong> <span id="selected-nama">-</span></p>
+                            <p><strong>Alamat:</strong> <span id="selected-alamat">-</span></p>
+                            <p><strong>Kecamatan:</strong> <span id="selected-kecamatan">-</span></p>
+                            <p><strong>Desa:</strong> <span id="selected-desa">-</span></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status"><i class="fas fa-clipboard-check"></i> Status</label>
+                        <select id="status" class="form-control">
+                            <option value="">Pilih Status</option>
+                            <option value="Ditemukan">✅ Ditemukan</option>
+                            <option value="Tutup">🚫 Tutup</option>
+                            <option value="Tidak Ditemukan">❌ Tidak Ditemukan</option>
+                            <option value="Pindah">📍 Pindah</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keterangan"><i class="fas fa-comment-alt"></i> Keterangan</label>
+                        <textarea id="keterangan" class="form-control" rows="3" placeholder="Tambahkan keterangan (opsional)"></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="btn-simpan" class="btn btn-primary" disabled>
+                            <i class="fas fa-save"></i> Simpan Geotag
+                        </button>
+                        <button id="btn-reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                        <button id="btn-refresh" class="btn btn-info">
+                            <i class="fas fa-sync"></i> Refresh Data
+                        </button>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Progress Geotagging</span>
+                            <span id="progress-percent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h3><i class="fas fa-question-circle"></i> Petunjuk Penggunaan</h3>
+                    <ol>
+                        <li>Pilih Kecamatan dari dropdown</li>
+                        <li>Pilih Desa berdasarkan Kecamatan</li>
+                        <li>Pilih Nama Usaha yang akan digeotag</li>
+                        <li>Tandai lokasi pada peta dengan mengklik</li>
+                        <li>Pilih status dan isi keterangan (opsional)</li>
+                        <li>Klik "Simpan Geotag" untuk menyimpan</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="map-container">
+                    <h2><i class="fas fa-map-marked-alt"></i> Peta Lokasi</h2>
+                    <div id="map"></div>
+                    <div class="map-controls">
+                        <button id="btn-locate" class="btn-map">
+                            <i class="fas fa-location-arrow"></i> Lokasi Saya
+                        </button>
+                        <button id="btn-clear-marker" class="btn-map">
+                            <i class="fas fa-times-circle"></i> Hapus Marker
+                        </button>
+                    </div>
+                    <div class="coordinates">
+                        <p><i class="fas fa-globe-americas"></i> Koordinat: 
+                            <span id="coordinates">Klik pada peta untuk menandai lokasi</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3><i class="fas fa-history"></i> Aktivitas Terbaru</h3>
+                    <div id="activity-log"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 Sistem Geotagging Usaha - Kabupaten Samosir | 
+                <span id="last-update">Terakhir update: -</span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal Loading -->
+    <div id="loading-modal" class="modal">
+        <div class="modal-content">
+            <div class="loader"></div>
+            <p>Memproses data...</p>
+        </div>
+    </div>
+
+    <!-- Modal Success -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success">
+            <i class="fas fa-check-circle"></i>
+            <h3>Berhasil Disimpan!</h3>
+            <p>Data geotag telah berhasil disimpan.</p>
+            <button id="btn-close-success" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
