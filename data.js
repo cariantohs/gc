@@ -1,12 +1,6 @@
 // Data usaha dalam format JSON
 const dataUsaha = [
   {
-    "nama_usaha": "KEPLER PONSEL",
-    "alamat": "JL KOL LIBERTY MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "POLINDES <SANTI>",
     "alamat": "BONAN DOLOK",
     "kecamatan": "Sianjur Mulamula",
@@ -43,12 +37,6 @@ const dataUsaha = [
     "desa": "Sigaol Simbolon"
   },
   {
-    "nama_usaha": "LOKET LISTRIK (BETTY)",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "PAUD BONA PASOGIT SIPIRA",
     "alamat": "HUTAGODANG",
     "kecamatan": "Onan Runggu",
@@ -73,22 +61,10 @@ const dataUsaha = [
     "desa": "Sigaol Marbun"
   },
   {
-    "nama_usaha": "TABO RESTAURANT",
-    "alamat": "JL LINGKAR TUKTUK SOSOR GALUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "SMK N 1 NAINGGOLAN",
     "alamat": "SIRUMAHOMBAR",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "TUKTUK TIMBUL BUNGALOWS",
-    "alamat": "JL LINGKAR TUKTUK SIA LLAGAN PINDARAYA",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
   },
   {
     "nama_usaha": "PUSTU SABUNGAN NIHUTA",
@@ -101,18 +77,6 @@ const dataUsaha = [
     "alamat": "HARIARA TOLU",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "VANESHA HOTEL",
-    "alamat": "TOLPING",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "BENGKEL CINTA KAWAN",
-    "alamat": "JL PUTRI LOPIAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "SD N 25",
@@ -151,22 +115,10 @@ const dataUsaha = [
     "desa": "Ambarita"
   },
   {
-    "nama_usaha": "BAGUS BAY hoME sTAY",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "MS, UD",
     "alamat": "KIOS NO 4-5 PEKAN INPRES",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "LEKJON RESTAURANT",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "PAUD TUNAS BANGS A",
@@ -191,18 +143,6 @@ const dataUsaha = [
     "alamat": "LUMBAN SIDAURUK",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "PAUD HONEY KIDS",
-    "alamat": "JL LINGKAR TUKTUK PIN DARAYA",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
-  },
-  {
-    "nama_usaha": "KILANG PADI OP EVA",
-    "alamat": "LONDUT DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "TOKO OBAT SEHATI <TOGA>",
@@ -283,12 +223,6 @@ const dataUsaha = [
     "desa": "Situngkir"
   },
   {
-    "nama_usaha": "UD.HARIS",
-    "alamat": "JL.DI. PANDJAITAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "KLINIK <HOTNIDA>",
     "alamat": "JL SIMANINDO DSN 3",
     "kecamatan": "Pangururan",
@@ -313,22 +247,10 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "APOTEK NASIONAL",
-    "alamat": "JL KOLONEL LIBERTY MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "TOKO SEMBAKO (TEMSI)",
     "alamat": "JALAN AEK RANGAT HUTA PARIK",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "SD SW. ADVENT LIMBONG",
-    "alamat": "DESA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
   },
   {
     "nama_usaha": "KILANG PADI (PITTA RAJA)",
@@ -415,12 +337,6 @@ const dataUsaha = [
     "desa": "Parmonangan"
   },
   {
-    "nama_usaha": "WARUNG KOPI <TOMU LASMA>",
-    "alamat": "SIBAGANDING",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "ASRAMA SANTA MARIA PALIPI",
     "alamat": "SOSOR NAING GOLAN",
     "kecamatan": "Palipi",
@@ -443,24 +359,6 @@ const dataUsaha = [
     "alamat": "KOMPLEK GEREJA BHETEL",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "SOPO TOBA HOTEL",
-    "alamat": "UNJUR AMBARITA, DESA AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
-  },
-  {
-    "nama_usaha": "TOLEDO INN",
-    "alamat": "Jl. RING ROAD",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "SILINTONG HOTEL",
-    "alamat": "Jl. RING ROAD",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "MARTUA RONA ULI, PT",
@@ -541,12 +439,6 @@ const dataUsaha = [
     "desa": "Sait Ni Huta"
   },
   {
-    "nama_usaha": "SD NEGERI 16 PASARAN I",
-    "alamat": "PASARAN 1",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
-  },
-  {
     "nama_usaha": "SD NEGERI 7 GAROGA",
     "alamat": "Garoga",
     "kecamatan": "Simanindo",
@@ -581,12 +473,6 @@ const dataUsaha = [
     "alamat": "Parsaoran I",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "SDN 174599 TAMBA",
-    "alamat": "Tamba",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "SDN 173736 SIMBOLON",
@@ -715,12 +601,6 @@ const dataUsaha = [
     "desa": "Pallombuan"
   },
   {
-    "nama_usaha": "SMPN 2 PALIPI",
-    "alamat": "Sitiotio",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "SMPN 3 PALIPI",
     "alamat": "Sitiotio",
     "kecamatan": "Sitio-tio",
@@ -743,12 +623,6 @@ const dataUsaha = [
     "alamat": "Nadeak Bariba",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Ronggur Ni Huta"
-  },
-  {
-    "nama_usaha": "SDN 177683 SIBOSA",
-    "alamat": "Sibosa",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "SD NEGERI 20 LUMBAN SUHISUHI DOLOK",
@@ -799,28 +673,10 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "TUMBA DISKOTIK",
-    "alamat": "JALAN PENDIDIKAN TUK TUK",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "JUAL LPG <SANTO>",
     "alamat": "JALAN LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Simanindo"
-  },
-  {
-    "nama_usaha": "ANKY PONSEL",
-    "alamat": "J L RONGGUR NIHUTA",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "RODEARNI, CV",
-    "alamat": "PARDOMUAN I",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "UD.KARINA",
@@ -835,18 +691,6 @@ const dataUsaha = [
     "desa": "Ginolat"
   },
   {
-    "nama_usaha": "GOKHON GUEST HOUSE",
-    "alamat": "JALAN LINGKAR TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "KM FELIX",
-    "alamat": "JALAN LING KAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "USAHA JET SKY <DONAL>",
     "alamat": "JALAN LINGKAR TUK TUK",
     "kecamatan": "Simanindo",
@@ -855,18 +699,6 @@ const dataUsaha = [
   {
     "nama_usaha": "PENJUAL SAYURAN <JAIT>",
     "alamat": "PASAR TRADISIONAL AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "SANGGAM BEACH HOTEL",
-    "alamat": "DESA UNJUR",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
-  },
-  {
-    "nama_usaha": "SUMBER PULO MAS HOTEL",
-    "alamat": "JL LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
   },
@@ -943,18 +775,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "KAPAL PENUMPANG <FRANS>",
-    "alamat": "KOMPLEK LOPO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "TOBA BEACH HOTEL",
-    "alamat": "JL. PANGAMBATAN TOMOK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "TOKO BRR",
     "alamat": "JLFL TOBING",
     "kecamatan": "Pangururan",
@@ -979,28 +799,10 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "SD NEGERI 9 CINTA MAJU",
-    "alamat": "TAMRA NAGODANG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "CU SAROHA SIARSAM",
     "alamat": "SIARSAM DESA HARIAN",
     "kecamatan": "Onan Runggu",
     "desa": "Harian"
-  },
-  {
-    "nama_usaha": "KINGS GUEST HOUSE",
-    "alamat": "TOLPING",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "SD NEGERI 2 MARTOBA",
-    "alamat": "TOLPING",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
   },
   {
     "nama_usaha": "AEK SIPITUDAI",
@@ -1051,28 +853,10 @@ const dataUsaha = [
     "desa": "Onanrunggu"
   },
   {
-    "nama_usaha": "RAYA JAYA TANI, CV",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "SD NEGERI 2 NAINGGOLAN",
-    "alamat": "DESA NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "CV BOY MAS <GORGA>",
     "alamat": "JL FL TOBING",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "ATK (UD RISARDO)",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "SHORUM MOTOR (GLOBAL/COY)",
@@ -1127,12 +911,6 @@ const dataUsaha = [
     "alamat": "LOS PASAR ONAN RUNGGU",
     "kecamatan": "Onan Runggu",
     "desa": "Onanrunggu"
-  },
-  {
-    "nama_usaha": "RUMAH MAKAN FAMILY (RM FAMILY)",
-    "alamat": "JALAN PELABUHAN NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "RM SIALAPIT <WALTER>",
@@ -1199,12 +977,6 @@ const dataUsaha = [
     "alamat": "JL DR HADRIANUS SINAGA",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "TOKO OBAT <ROTUA>",
-    "alamat": "JL RAYA AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
   },
   {
     "nama_usaha": "HORAS RESTAURANT",
@@ -1375,34 +1147,16 @@ const dataUsaha = [
     "desa": "Nainggolan"
   },
   {
-    "nama_usaha": "TOKO OBAT (DAUD/MARTA)",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "UKM KARYA TERAMPIL",
     "alamat": "KOMPLEK RS HKBP",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
   },
   {
-    "nama_usaha": "TOKO MADUMA <KASTORO>",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "POLINDES",
     "alamat": "HUTAGINJANG",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Huta Ginjang"
-  },
-  {
-    "nama_usaha": "MARS, UD (PUPUK DAN INSEKTISIDA)",
-    "alamat": "SIAUGA",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "TOKO EMAS RASOKI SIREGAR",
@@ -1441,22 +1195,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "POLINDES",
-    "alamat": "BANJAR DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
-  },
-  {
     "nama_usaha": "RIS ULI SITINJAK, CV",
     "alamat": "SITINJAK",
     "kecamatan": "Onan Runggu",
     "desa": "Sitinjak"
-  },
-  {
-    "nama_usaha": "JUDITA COTTAGE",
-    "alamat": "JLN LINGKAR TUKTUK LUMBAN MANURUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "AGEN GAS LPG KECIL <RIAOLO>",
@@ -1621,18 +1363,6 @@ const dataUsaha = [
     "desa": "Pallombuan"
   },
   {
-    "nama_usaha": "PANDU LIKESIDE",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "PENGINAPAN ROGANDA",
-    "alamat": "JL HORAS TOMOK PARSAORAN",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok Parsaoran"
-  },
-  {
     "nama_usaha": "JUAL BARANG KELONTONG SITANGGANG",
     "alamat": "PEKAN MOGANG",
     "kecamatan": "Palipi",
@@ -1675,12 +1405,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "CV JOSUA",
-    "alamat": "SITOHANG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "TRANSPORTASI BECAK <PARULIAN>",
     "alamat": "PINTU BATU DESA RIANIATE",
     "kecamatan": "Pangururan",
@@ -1691,12 +1415,6 @@ const dataUsaha = [
     "alamat": "JL USKUP AGUNG SUGIO PRANOTO",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "ROGATE BEACH HOTEL, CV",
-    "alamat": "DESA UNJUR",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
   },
   {
     "nama_usaha": "USAHA KILANG PADI <RUDOL>",
@@ -1837,40 +1555,16 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "TK SWASTA TUNAS HARAPAN AMBARITA",
-    "alamat": "JL ASPOL",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "PENGANGKUTAN <SIDABUTAR>",
     "alamat": "JALAN LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Garoga"
   },
   {
-    "nama_usaha": "APOTEK CARLOS",
-    "alamat": "JL.DI.PAND JAITAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "PENGANGKUTAN <MIKJEN>",
     "alamat": "TOLPING",
     "kecamatan": "Simanindo",
     "desa": "Garoga"
-  },
-  {
-    "nama_usaha": "SMA NEGERI 1 PANGURURAN",
-    "alamat": "KOMPLEK SMA NEGERI 1 PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "SD NEGERI 21 SIMANINDO",
-    "alamat": "DESA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "KSU KOZERO <KC BATAM>",
@@ -1981,22 +1675,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "VILLA LYLA CAFE RESTO",
-    "alamat": "PASIR PULO TOLPING",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
-  },
-  {
     "nama_usaha": "SUPIR ANGKUTAN <RUDOLF>",
     "alamat": "TOLPING",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "TYESZA HOTEL",
-    "alamat": "DESA UNJUR",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
   },
   {
     "nama_usaha": "SUPIR ANGKUTAN <FERI>",
@@ -2013,18 +1695,6 @@ const dataUsaha = [
   {
     "nama_usaha": "VANDU KARAOKE",
     "alamat": "JALAN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "ANJU COTTAGE",
-    "alamat": "JLN LINGKAR TUKTUK LUMBAN MANURUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "TOLEDO INN 2",
-    "alamat": "JL RINGROAD TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
   },
@@ -2087,12 +1757,6 @@ const dataUsaha = [
     "alamat": "JL DI PANJAITAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "FAEL, CV <JAMOSDEN>",
-    "alamat": "DESA SARIMARRIHIT, SIANJUR MULAMULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
   },
   {
     "nama_usaha": "KONTRAKTOR (RONNY CV)",
@@ -2197,12 +1861,6 @@ const dataUsaha = [
     "desa": "Huta Tinggi"
   },
   {
-    "nama_usaha": "DEPOT AIR ISIULANG <MALAKA>",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "MC 2001 ENTERTAINMENT",
     "alamat": "JL PUTRI LOPIAN GG BERSAMA",
     "kecamatan": "Pangururan",
@@ -2225,12 +1883,6 @@ const dataUsaha = [
     "alamat": "JL PELABUHAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "PUPUK KIMIA (LUKMAN), UD",
-    "alamat": "ONAN SIBAGANDING",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "SDN 2 SABUNGAN NIHUTA",
@@ -2275,12 +1927,6 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "SD NEGERI 24 CINTA DAME",
-    "alamat": "LUMBAN PASIR",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "TOKO OBAT <VISTRO>",
     "alamat": "PASAR UNJUR",
     "kecamatan": "Simanindo",
@@ -2305,28 +1951,10 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "SAMOSIR COTTAGEs",
-    "alamat": "JLN LINGKAR TUKTUK LUMBAN MANURUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "PAUD SITOBU KIDS",
     "alamat": "JL SITOBU NO 12",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "ROMLAN ACCOMODATION",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "MARYSCA ART SHOP",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "DUMASARI HOTEL, CV",
@@ -2339,12 +1967,6 @@ const dataUsaha = [
     "alamat": "JL LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Simanindo Sangkal"
-  },
-  {
-    "nama_usaha": "SARTIKA CATERING",
-    "alamat": "JL RAYA AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
   },
   {
     "nama_usaha": "PANGLONG <DEDI>",
@@ -2363,12 +1985,6 @@ const dataUsaha = [
     "alamat": "JALAN PUSUK BUHIT",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "AMBAROBA HOTEL",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "CAHAYA CV (ROBET)",
@@ -2455,12 +2071,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "KB WELIPA",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "ANGKUTAN UMUM<TIGOR>",
     "alamat": "SIAHAAN BALIAN",
     "kecamatan": "Pangururan",
@@ -2497,12 +2107,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "BEENVENIOOS AMIGOS, CV",
-    "alamat": "JALAN DR HADRIANUS PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "WARUNG KOPI (MARIA)",
     "alamat": "JL. KANTOR CAMAT",
     "kecamatan": "Ronggur Nihuta",
@@ -2525,12 +2129,6 @@ const dataUsaha = [
     "alamat": "LUMBAN BOLAK DUSUN 2",
     "kecamatan": "Pangururan",
     "desa": "Situngkir"
-  },
-  {
-    "nama_usaha": "SEDAR GROUP, CV",
-    "alamat": "PASAR NAINGOOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "BECAK MOTOR <ROBIN>",
@@ -2653,12 +2251,6 @@ const dataUsaha = [
     "desa": "Parmonangan"
   },
   {
-    "nama_usaha": "NARIK BECAK <ABNER>",
-    "alamat": "JALAN RAYA RIANIATE",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "BECAK MOTOR <LAMASI>",
     "alamat": "JALAN RAYA RIANIATE",
     "kecamatan": "Pangururan",
@@ -2677,12 +2269,6 @@ const dataUsaha = [
     "desa": "Sarimarrihit"
   },
   {
-    "nama_usaha": "SD NEGERI 15 BUNTU MAULI",
-    "alamat": "BUNTU MAULI",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
     "nama_usaha": "NARIK BECAK <RENHARD>",
     "alamat": "SABUNGAN NIHUTA DUSUN 1",
     "kecamatan": "Pangururan",
@@ -2697,14 +2283,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KARYA VANY KONSTRUKSI, PT",
     "alamat": "Sosor I Desa Sigaol Marbun, Kec. Palipi",
-    "kecamatan": "",
-    "desa": ""
-  },
-  {
-    "nama_usaha": "SD NEGERI 11 TAMBA DOLOK",
-    "alamat": "SIMPANG IMPRES",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SAMUEL LPG",
@@ -2917,18 +2497,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "KSP MAKMUR MANDIRI",
-    "alamat": "JL DI PANJAITAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "KM NAINGGOLAN 8",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "ANGKUTAN UMUM (MANAOR)",
     "alamat": "SIAHAAN BALIAN",
     "kecamatan": "Pangururan",
@@ -3055,12 +2623,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "IDA <SALON>",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "JUAL DAGING BABI ECERAN <LIAN>",
     "alamat": "SIMPANG 4 DUSUN 3",
     "kecamatan": "Pangururan",
@@ -3083,12 +2645,6 @@ const dataUsaha = [
     "alamat": "JALAN",
     "kecamatan": "Onan Runggu",
     "desa": "Onanrunggu"
-  },
-  {
-    "nama_usaha": "SD NEGERI 14 JANJI MARIA",
-    "alamat": "JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
   },
   {
     "nama_usaha": "STEVEN SARAH CV (PASTI)",
@@ -3271,40 +2827,16 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "PISANG <DOSLEN SIMBOLON>",
-    "alamat": "JALAN DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "ANJU MANGASI, CV",
     "alamat": "JL FL TOBING",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "KB CITRA NAINGGOLAN",
-    "alamat": "DOLOK MARTAHAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "KB KASIH",
-    "alamat": "SIMPANG IMPRES",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "RIMMA ALDO, CV",
     "alamat": "HUTALUNG DUSUN 3",
     "kecamatan": "Harian",
     "desa": "Hutagalung"
-  },
-  {
-    "nama_usaha": "PUSKESMAS SITIO TIO",
-    "alamat": "SITIOTIO",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "SD NEGERI 6 SIMARMATA",
@@ -3339,12 +2871,6 @@ const dataUsaha = [
   {
     "nama_usaha": "PENJUAL BENSIN <SIDABUTAR>",
     "alamat": "JL BESAR TOMOK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "TERAS BRI UNIT AMBARITA",
-    "alamat": "JL HORAS TOMOK PARSAORAN",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
   },
@@ -3391,18 +2917,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "PAUD WISATA SAMOSIR",
-    "alamat": "DUSUN 2 LUMBAN TONGATONGA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "JIMMY, UD",
-    "alamat": "JL SITOB U",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "UD GUNAWAN LS",
     "alamat": "JL DI PANJAITAN",
     "kecamatan": "Pangururan",
@@ -3445,12 +2959,6 @@ const dataUsaha = [
     "desa": "Turpuk Sagala"
   },
   {
-    "nama_usaha": "ANJU RESTAURANT",
-    "alamat": "JL LINGKAR TUKTUK LUMBAN MANURUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "PAUD TAMAN FIRDAUS",
     "alamat": "JL LINGKAR TUKTUK SI ADONG",
     "kecamatan": "Simanindo",
@@ -3459,12 +2967,6 @@ const dataUsaha = [
   {
     "nama_usaha": "PONDOK BULU RESTAURANT",
     "alamat": "JALAN LINGKAR TUK TUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "KM CAROLINA",
-    "alamat": "JALAN LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Tomok"
   },
@@ -3487,22 +2989,10 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "MARSIURUPAN SIMANINDO, CV",
-    "alamat": "JALAN LINTAS SAMOSIR DES A CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "TOKO OBAT <GEBI>",
     "alamat": "JL LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "PRAKTEK BIDAN (LAMRIA)",
-    "alamat": "TOLPING",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
   },
   {
     "nama_usaha": "LEO`S RESTAURANT",
@@ -3545,12 +3035,6 @@ const dataUsaha = [
     "alamat": "JL PUTRILOPIAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "POLINDES SINAGA URUK PANDIANGAN",
-    "alamat": "NASUMANDAR",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
   },
   {
     "nama_usaha": "MENJUAL GAS 3KG <UD TIMBUL>",
@@ -3643,12 +3127,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "PENGEPUL HASIL TANI <ROMANTO>",
-    "alamat": "RAUTBOSI",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "LASRITA,UD",
     "alamat": "Jl Diponegoro (Terminal Bawah)",
     "kecamatan": "Pangururan",
@@ -3659,12 +3137,6 @@ const dataUsaha = [
     "alamat": "JL SITOBU",
     "kecamatan": "Simanindo",
     "desa": "Cinta Dame"
-  },
-  {
-    "nama_usaha": "SIBIGO GUEST HOUSE",
-    "alamat": "J L N LING KAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "SD NEGERI 13 PARMONANGAN",
@@ -3757,12 +3229,6 @@ const dataUsaha = [
     "desa": "Martoba"
   },
   {
-    "nama_usaha": "PT BANK RAKYAT INDONESIA <PERSERO>",
-    "alamat": "JL PELABUHAN NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "CV ASIDO STAR (DERMAWAN)",
     "alamat": "JL DR FL LUMBANTOBING",
     "kecamatan": "Pangururan",
@@ -3815,18 +3281,6 @@ const dataUsaha = [
     "alamat": "JL PELABUHAN MOGANG",
     "kecamatan": "Palipi",
     "desa": "Pallombuan"
-  },
-  {
-    "nama_usaha": "ECERAN PUPUK (ANTONIUS)",
-    "alamat": "HUTA GINJANG",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Huta Ginjang"
-  },
-  {
-    "nama_usaha": "GILBERT PERMATA",
-    "alamat": "JL USKUP AGUNG SUGIO PRANOTO",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "TRANSPORTASI <WAHYUDIN>",
@@ -3991,12 +3445,6 @@ const dataUsaha = [
     "desa": "Nainggolan"
   },
   {
-    "nama_usaha": "AKOMODASI ANGKUTAN <LUKMAN>",
-    "alamat": "ONAN SIBAGANDING",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "BECAK MOTOR <RAMSES>",
     "alamat": "JALAN RAYA RIANIATE",
     "kecamatan": "Pangururan",
@@ -4015,22 +3463,10 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "CU DAME",
-    "alamat": "JL RONGGURNIHUTA",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "PERSEWAAN JET SKY <BUNGHOT>",
     "alamat": "JALAN LINGKAR TUK TUK",
     "kecamatan": "Simanindo",
     "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "LEKJON COTTAGES",
-    "alamat": "JLN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "RUMAH MAKAN MARIHOT",
@@ -4123,12 +3559,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "MENJUAL ATK <SAMOSIR JAYA>",
-    "alamat": "KOMPLEK HKBP NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "PENGINAPAN SINAR SAMOSIR",
     "alamat": "SIRUMAHOMBAR",
     "kecamatan": "Nainggolan",
@@ -4189,12 +3619,6 @@ const dataUsaha = [
     "desa": "Onanrunggu"
   },
   {
-    "nama_usaha": "GROSIR S.S",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "SHAEK MUAL CV",
     "alamat": "JALAN SIMANINDO DUSUN 3",
     "kecamatan": "Pangururan",
@@ -4225,12 +3649,6 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "BARBARA GUEST HOUSE",
-    "alamat": "DESA UNJUR",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
-  },
-  {
     "nama_usaha": "ANGKUTAN KAPAL DOSROHA",
     "alamat": "JALAN PELABUHAN",
     "kecamatan": "Simanindo",
@@ -4241,18 +3659,6 @@ const dataUsaha = [
     "alamat": "JALAN KOLONEL LIBERTY MALAU",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "TOKO OBAT (NASIONAL)",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "MUAL NATIO, CV",
-    "alamat": "JL DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "AEK TINJO CAHAYA CV",
@@ -4375,12 +3781,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "CAROLINA COTTAGE",
-    "alamat": "JALAN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "BRATA NET, UD",
     "alamat": "JALAN BARU SITANGGANG BAU",
     "kecamatan": "Pangururan",
@@ -4495,12 +3895,6 @@ const dataUsaha = [
     "desa": "Parsaoran I"
   },
   {
-    "nama_usaha": "BPJS KESEHATAN",
-    "alamat": "JL DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SAHAT TUA, UD",
     "alamat": "PASAR NAINGGOLAN",
     "kecamatan": "Nainggolan",
@@ -4523,12 +3917,6 @@ const dataUsaha = [
     "alamat": "JLN LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "HORAS FAMILY HOME",
-    "alamat": "JALAN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "SEKOLAH MENENGAH PERTAMA N 1 RONGGURNIHUTA",
@@ -4627,12 +4015,6 @@ const dataUsaha = [
     "desa": "Parsaoran I"
   },
   {
-    "nama_usaha": "TABO COTTAGE",
-    "alamat": "JL LINGKAR TUKTUK SOSOR GALUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "SD NEGERI 12 HUTA GINJANG",
     "alamat": "HUTA GINJANG",
     "kecamatan": "Palipi",
@@ -4649,24 +4031,6 @@ const dataUsaha = [
     "alamat": "LUMBAN BULU",
     "kecamatan": "Harian",
     "desa": "Sosor Dolok"
-  },
-  {
-    "nama_usaha": "PUSKESMAS LIMBONG",
-    "alamat": "AEK SIPITUDAI DUSUN 1",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Aek Sipitudai"
-  },
-  {
-    "nama_usaha": "TOKO KELONTONG RAJAGUKGUK",
-    "alamat": "KOMPLEK INPRES",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
-    "nama_usaha": "SAMOSIR VILLA RESORT",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "AC MILAN, UD",
@@ -4879,12 +4243,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "Warung MIE GORENG <MIDA>",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "OBJEK DESA WISATA SIGALE GALE",
     "alamat": "JL. MAKAM RAJA SIDABUTAR",
     "kecamatan": "Simanindo",
@@ -4915,12 +4273,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "HOTEL HOLONG MARSANGAP",
-    "alamat": "DESA HUTANAMORA PANGIURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "PENGINAPAN EDIYS DAYANTO",
     "alamat": "JL. AEK RANGAT",
     "kecamatan": "Pangururan",
@@ -4939,22 +4291,10 @@ const dataUsaha = [
     "desa": "Huta Bolon"
   },
   {
-    "nama_usaha": "MARISKA PENGINAPAN",
-    "alamat": "JL LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "RAMOS INN",
     "alamat": "DUSUN 2 SIMPANG SOSOR NANGKA DESA DOSROHA",
     "kecamatan": "Simanindo",
     "desa": "Dosroha"
-  },
-  {
-    "nama_usaha": "DUMASARI HOTEL",
-    "alamat": "JL. RING ROAD TUK-TUK  KELURAHAN TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "HOTEL ANUGERAH",
@@ -4987,12 +4327,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "BUKIT/GUNUNG SIPATUNGAN",
-    "alamat": "SIPATUNGAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "BLESS HOMESTAY",
     "alamat": "PARBABA SIMARAEK",
     "kecamatan": "Pangururan",
@@ -5009,30 +4343,6 @@ const dataUsaha = [
     "alamat": "AEK RANGAT",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "wisata PANTAI PASIR PUTIH PANDUA",
-    "alamat": "JL. OP. TARA TUNGGAL NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "SOPO GURU TATEA BULAN",
-    "alamat": "SIANJUR MULAMULA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "BATU SAWAN",
-    "alamat": "BATU SAWAN PARIK SABUNGAN DUSUN 3 DESA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "AIR TERJUN HADABUAN NAISOGOP",
-    "alamat": "SOSSOK DUSUN 1 SIANJUR MULAMULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
   },
   {
     "nama_usaha": "VANTAS HOTEL",
@@ -5263,16 +4573,10 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "KELOMPOK TANI SAROHA SIAMBALO",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "KELOMPOK TANI HASADAON",
     "alamat": "SARIMARIHIT",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SUMBER KARYA SAKTI",
@@ -5405,12 +4709,6 @@ const dataUsaha = [
     "alamat": "JL SM. RAJA",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "KELOMPOK TANI MARSIURUPAN",
-    "alamat": "DS JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "RIZKY ATMA MULYA",
@@ -5667,8 +4965,8 @@ const dataUsaha = [
   {
     "nama_usaha": "BINTANG FAJAR LESTARI",
     "alamat": "DESA SARI MARIHIT",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TANGGA BATU",
@@ -5695,12 +4993,6 @@ const dataUsaha = [
     "desa": "Rianiate"
   },
   {
-    "nama_usaha": "YAYASAN PENDIDIKAN TUNAS JAYA AMBARITA",
-    "alamat": "ASPOL NOMOR 1",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "CALISTA PUTRI MANDIRI",
     "alamat": "KOMPLEK PERKANTORAN PARBABA",
     "kecamatan": "Pangururan",
@@ -5725,16 +5017,10 @@ const dataUsaha = [
     "desa": "Sianting - Anting"
   },
   {
-    "nama_usaha": "KB GIHON",
-    "alamat": "SIAMBALO, HUTANAMORA PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "DMANIX MULTI KARYA",
     "alamat": "JLN PANDULANGAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KARYA BENTENG PERKASA",
@@ -5765,12 +5051,6 @@ const dataUsaha = [
     "alamat": "DINAS PENDIDIKAN SAMOSIR KOMP. PERKANTORAN PARBABA",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "BUMDES HAROAN NAULI",
-    "alamat": "DS SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "TAO TOBA NAULI",
@@ -5953,16 +5233,10 @@ const dataUsaha = [
     "desa": "Sianting - Anting"
   },
   {
-    "nama_usaha": "HOLONG NI ROHA",
-    "alamat": 0,
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "KELOMPOK TANI MARSIURUPAN",
     "alamat": "DUSUN I BONAN DOLOK",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "RALIS DWI PUTRI",
@@ -6005,12 +5279,6 @@ const dataUsaha = [
     "alamat": "DESA HUTA TINGGI",
     "kecamatan": "Pangururan",
     "desa": "Huta Tinggi"
-  },
-  {
-    "nama_usaha": "DATAR",
-    "alamat": "JALAN SIANTING ANTING",
-    "kecamatan": "Pangururan",
-    "desa": "Sianting - Anting"
   },
   {
     "nama_usaha": "SAMOSIR SKY",
@@ -6149,12 +5417,6 @@ const dataUsaha = [
     "alamat": "JALAN OP RAJA NAULI",
     "kecamatan": "Nainggolan",
     "desa": "Sipinggan Lumban Siantar"
-  },
-  {
-    "nama_usaha": "cv SOSOR TIKKA NAULI",
-    "alamat": "DESA SIBONOR OMPURATUS RT.00 RW.00",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
   },
   {
     "nama_usaha": "TRI HENRY",
@@ -6405,8 +5667,8 @@ const dataUsaha = [
   {
     "nama_usaha": "GOLANG MAS",
     "alamat": "DS SIANJUR MULA MULA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "HASIAN BINTANG PERSADA",
@@ -6541,12 +5803,6 @@ const dataUsaha = [
     "desa": "Urat II"
   },
   {
-    "nama_usaha": "JOSUA",
-    "alamat": "SABULAN RT.000 RW.000",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "LSM CINTA DAMAI",
     "alamat": "SINAGA URUK",
     "kecamatan": "Palipi",
@@ -6611,12 +5867,6 @@ const dataUsaha = [
     "alamat": "JALAN HUTAGALUNG",
     "kecamatan": "Harian",
     "desa": "Partungko Naginjang"
-  },
-  {
-    "nama_usaha": "RODEARNI",
-    "alamat": "JL. DI. PANJAITAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "ANJU MANGASI",
@@ -6699,8 +5949,8 @@ const dataUsaha = [
   {
     "nama_usaha": "HARA",
     "alamat": "DS LIMBONG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK TANI MAWAR",
@@ -6731,12 +5981,6 @@ const dataUsaha = [
     "alamat": "JL.HAIRI NO.01",
     "kecamatan": "Nainggolan",
     "desa": "Pangaloan"
-  },
-  {
-    "nama_usaha": "YAYASAN RAJA PANUALANG SIDAURUK",
-    "alamat": "DS HUTABOLON",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "ROMA ULI",
@@ -6829,28 +6073,10 @@ const dataUsaha = [
     "desa": "Onanrunggu"
   },
   {
-    "nama_usaha": "kb MAWAR MEKAR",
-    "alamat": "DUSUN III PARRAUAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "KB HELLO KIDS",
-    "alamat": "DS JANJIRAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
-  },
-  {
     "nama_usaha": "PAUD BINA KASIH",
     "alamat": "DOLOK MARTAHAN",
     "kecamatan": "Sitio-tio",
     "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "KB IMMANUEL",
-    "alamat": "DS HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "TAKE TAMA GRUP",
@@ -6931,12 +6157,6 @@ const dataUsaha = [
     "desa": "Parsaoran I"
   },
   {
-    "nama_usaha": "KB BERKAT",
-    "alamat": "DESA SINAGA URUK PANDIANGAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "SEPAKAT",
     "alamat": "LUMBAN SIANTAR",
     "kecamatan": "Nainggolan",
@@ -6959,12 +6179,6 @@ const dataUsaha = [
     "alamat": "JALAN DESA SIANTING ANTING",
     "kecamatan": "Pangururan",
     "desa": "Sianting - Anting"
-  },
-  {
-    "nama_usaha": "DUMA SARI",
-    "alamat": "DESA TUK-TUK SONAK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "NEW RO MIAN ARTHA, CV",
@@ -7105,12 +6319,6 @@ const dataUsaha = [
     "desa": "Ronggur Ni Huta"
   },
   {
-    "nama_usaha": "KB SAYANG ANAK SAMOSIR",
-    "alamat": "DS SIBONOR OMPURATUS",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "PERMATA SABUNGAN",
     "alamat": "JALAN SIMANINDO PANGURURAN",
     "kecamatan": "Pangururan",
@@ -7123,12 +6331,6 @@ const dataUsaha = [
     "desa": "Turpuk Sihotang"
   },
   {
-    "nama_usaha": "PANGIHUTAN JAYA",
-    "alamat": "JALAN JANJI MARIA SITIOTIO",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "SIMALUNGUN ENGINEERING PERKASA",
     "alamat": "KOMPLEK PERKANTORAN DESA SIOPAT SOSOR PANGURURAN",
     "kecamatan": "Pangururan",
@@ -7139,12 +6341,6 @@ const dataUsaha = [
     "alamat": "PINTUBATU",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "MERDI SIHOMBING",
-    "alamat": "LUMBAN NAINGGOLAN",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "P3A USAHA TANI",
@@ -7179,8 +6375,8 @@ const dataUsaha = [
   {
     "nama_usaha": "REYHAN GEMILANG",
     "alamat": "LIMBONG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PASADA UTAMA",
@@ -7193,12 +6389,6 @@ const dataUsaha = [
     "alamat": "DESA PASARAN I",
     "kecamatan": "Nainggolan",
     "desa": "Pasaran I"
-  },
-  {
-    "nama_usaha": "P3A SIBALUHAT",
-    "alamat": 0,
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "KELOMPOK TANI RAP HITA",
@@ -7223,12 +6413,6 @@ const dataUsaha = [
     "alamat": "JALAN SIPULO-PULO",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Sabungan Ni Huta"
-  },
-  {
-    "nama_usaha": "KELOMPOK SEPAKAT",
-    "alamat": "SINGKAM, DESA SINGKAM, KECAMATAN SIANJUR MULA MULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Singkam"
   },
   {
     "nama_usaha": "KELOMPOK TANI MITRA BERMAKNA",
@@ -7491,8 +6675,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KELOMPOK TANI DOSTANI",
     "alamat": "BONAN DOLOK",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK TANI TUMPANG SARI",
@@ -7503,14 +6687,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KELOMPOK TANI SAUDURAN",
     "alamat": "BATU-BATU SITABO-TABO",
-    "kecamatan": "",
-    "desa": ""
-  },
-  {
-    "nama_usaha": "ANAK TAO",
-    "alamat": "JALAN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK TANI SAURDOT",
@@ -7523,12 +6701,6 @@ const dataUsaha = [
     "alamat": "D.I PANJAITAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "KB SOLI DEO HKBP",
-    "alamat": "JL. RAYA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "PANIARAN NAULI NALAGU",
@@ -7553,12 +6725,6 @@ const dataUsaha = [
     "alamat": "LUMBAN SIHOMBING",
     "kecamatan": "Palipi",
     "desa": "Hatoguan"
-  },
-  {
-    "nama_usaha": "KB SABULAN KIDS",
-    "alamat": "ONAN SIBAGANDING",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "PUTRA",
@@ -7645,22 +6811,10 @@ const dataUsaha = [
     "desa": "Sitinjak"
   },
   {
-    "nama_usaha": "KB AYU ARTA",
-    "alamat": "PASAR DAME",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "KB SION KIDS",
     "alamat": "JL. TOMOK LONTUNG",
     "kecamatan": "Simanindo",
     "desa": "Hutaginjang"
-  },
-  {
-    "nama_usaha": "BERKAT TONER 7",
-    "alamat": "JL. DOKTOR HADRIANUS SINAGA RT. 00 RW. 00",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "KOPERASI SIMPAN PINJAM MANDIRI RAKYAT SAMOSIR, CV",
@@ -7691,12 +6845,6 @@ const dataUsaha = [
     "alamat": "PELABUHAN NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "HORIS JAYA MANDIRI, CV",
-    "alamat": "DESA GAROGA RT. 000 RW. 000",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "PEGAWAI REPUBLIK INDONESIA AMAL KASIH",
@@ -7773,8 +6921,8 @@ const dataUsaha = [
   {
     "nama_usaha": "GIRO GROUP",
     "alamat": "DESA HUTAGINJANG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BONTOR PARULIAN",
@@ -7787,12 +6935,6 @@ const dataUsaha = [
     "alamat": "DESA GINOLAT",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Ginolat"
-  },
-  {
-    "nama_usaha": "POLTEN SINAR AGATHA",
-    "alamat": "JALAN DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "RUDI HARTONO SITUNGKIR",
@@ -7827,8 +6969,8 @@ const dataUsaha = [
   {
     "nama_usaha": "LEMBAGA PENDIDIKAN HARAPAN RAYA",
     "alamat": "LINTONGNIHUTA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK USAHA BERSAMA SENTOSA",
@@ -7881,20 +7023,14 @@ const dataUsaha = [
   {
     "nama_usaha": "PERMATA HIJAU GASINDO",
     "alamat": "JALAN BATU NAPAL",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "RANDOS JG",
     "alamat": "DUSUN III PERBATASAN",
     "kecamatan": "Harian",
     "desa": "Partungko Naginjang"
-  },
-  {
-    "nama_usaha": "KELOMPOK BERMAIN ANAGKAZO",
-    "alamat": "ONAN RIHIT",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "CV. LAMTORANG",
@@ -7923,8 +7059,8 @@ const dataUsaha = [
   {
     "nama_usaha": "RUMAH NABOLON",
     "alamat": "JALAN LIMBONG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PARTOPI DOLOK",
@@ -7955,12 +7091,6 @@ const dataUsaha = [
     "alamat": "JL. DOLOK SANGGUL SIMPANG SMP N 3 HARIAN",
     "kecamatan": "Harian",
     "desa": "Partungko Naginjang"
-  },
-  {
-    "nama_usaha": "WARREN RAJA, CV",
-    "alamat": "JALAN TANAH LAPANG",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "MADIARTI, CV",
@@ -8041,16 +7171,10 @@ const dataUsaha = [
     "desa": "Pardomuan"
   },
   {
-    "nama_usaha": "PAUD MATA TIMUR",
-    "alamat": "PARHORASAN",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "KELOMPOK TANI SETIA KERJA",
     "alamat": "SIANJUR MULA MULA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "HORAS HITA JAYA",
@@ -8113,12 +7237,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "CINTA MAJU",
-    "alamat": "SITANDOBA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "SIMPAN PINJAM CREDIT UNION PARSAORAN SIMBOLON",
     "alamat": "DESA SIMBOLON PURBA",
     "kecamatan": "Palipi",
@@ -8127,8 +7245,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KB HARAPAN RAYA",
     "alamat": "DS LINTONG NIHUTA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "HAUMA SEJATINYA RASA",
@@ -8191,12 +7309,6 @@ const dataUsaha = [
     "desa": "Salaon Dolok"
   },
   {
-    "nama_usaha": "PAUD KASIH",
-    "alamat": "TAMBADOLOK, IMPRES",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "KSP CREDIT UNION MARSIURUPAN SIMANINDO",
     "alamat": "JALAN SIRUNDI",
     "kecamatan": "Simanindo",
@@ -8219,12 +7331,6 @@ const dataUsaha = [
     "alamat": "PANAHATAN",
     "kecamatan": "Palipi",
     "desa": "Simbolon Purba"
-  },
-  {
-    "nama_usaha": "KB INDAH",
-    "alamat": "DUSUN 3",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
   },
   {
     "nama_usaha": "TAMAN PENITIPAN ANAK (TPA) SITOBU KIDS",
@@ -8253,20 +7359,14 @@ const dataUsaha = [
   {
     "nama_usaha": "NEWS 2010",
     "alamat": "LINTONG NIHUTA RT.0 RW.0",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PAUD PEDULI RAKYAT",
     "alamat": "BATU BOLON RT.0 RW.0",
-    "kecamatan": "",
-    "desa": ""
-  },
-  {
-    "nama_usaha": "ARGHA GRACIA SAROHA, CV",
-    "alamat": "JL. RAYA RIANIATE RT. --- RW. ---",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "NAGA MC 2001",
@@ -8387,12 +7487,6 @@ const dataUsaha = [
     "alamat": "AEK LIANG RT.000 RW.000",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Paraduan"
-  },
-  {
-    "nama_usaha": "SAMOSIR JAYA",
-    "alamat": "JALAN PARLUATAN LORONG III",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "ATHALIA JURO",
@@ -8827,12 +7921,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "BINTANG GENERASI INTERNASIONAL",
-    "alamat": "JL. RONGGUR NIHUTA, DUSUN I PARLIMUTAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "KB ANAK NI RAJA",
     "alamat": "SINABULAN RT.0 RW.0",
     "kecamatan": "Pangururan",
@@ -9007,12 +8095,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "PAGAR BATU",
-    "alamat": "JALAN PAGAR BATU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "SANGGAR SENI BUDAYA SARI ULI SAMOSIR",
     "alamat": "SALAON TOBA",
     "kecamatan": "Ronggur Nihuta",
@@ -9037,34 +8119,16 @@ const dataUsaha = [
     "desa": "Sigaol Marbun"
   },
   {
-    "nama_usaha": "VANCHA",
-    "alamat": "SIRUMA HOMBAR",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "MENANTI VARIASI",
     "alamat": "JL. DR. HADRIANUS",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "ROGATE BEACH",
-    "alamat": "JL AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "PERKUMPULAN PETANI PEMAKAI AIR (P3A) TARULI",
     "alamat": "TURPUK LIMBONG",
     "kecamatan": "Harian",
     "desa": "Turpuk Limbong"
-  },
-  {
-    "nama_usaha": "TPA SERGIO JAYA",
-    "alamat": "JALAN RIANI ATE",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "ADHIKARYA TEKNIK PERKASA",
@@ -9081,8 +8145,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KELOMPOK TANI MADUMA",
     "alamat": "DESA BONAN DOLOK",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "P3A AEK MATIO",
@@ -9117,8 +8181,8 @@ const dataUsaha = [
   {
     "nama_usaha": "PERKUMPULAN PETANI PEMAKAI AIR (P3A) HUTA URAT HUTA BALIAN",
     "alamat": "HUTA URAT",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MANULLANG JAYA SERVICE",
@@ -9157,12 +8221,6 @@ const dataUsaha = [
     "desa": "Palipi"
   },
   {
-    "nama_usaha": "PENDIDIKAN TUNAS HARAPAN",
-    "alamat": "JALAN ASPOL",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "NADA KARYA BANGUN PERSADA",
     "alamat": "JALAN SIMANINDO",
     "kecamatan": "Pangururan",
@@ -9175,12 +8233,6 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "EDY JAYA",
-    "alamat": "JALAN PASAR DAME",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "PKG CERI",
     "alamat": "LINTONG NIHUTA RT. 0 RW. 0",
     "kecamatan": "Harian",
@@ -9191,12 +8243,6 @@ const dataUsaha = [
     "alamat": "SALAON DOLOK",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Ronggur Ni Huta"
-  },
-  {
-    "nama_usaha": "KELOMPOK TANI AEK MUAL",
-    "alamat": "SINGKAM",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Singkam"
   },
   {
     "nama_usaha": "PULO SAMOSIR NAULI",
@@ -9257,12 +8303,6 @@ const dataUsaha = [
     "alamat": "JL.AEK RANGAT",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "MEGA MARS",
-    "alamat": "SIRUMAHOMBAR",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "SAUR DO NAULI",
@@ -9393,8 +8433,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KELOMPOK TANI SUKA MAJU",
     "alamat": "DESA BONAN DOLOK",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SAMOSIR ANUGRAH",
@@ -9411,8 +8451,8 @@ const dataUsaha = [
   {
     "nama_usaha": "KELOMPOK TANI SAURDOT",
     "alamat": "SARI MARRIHIT",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK TANI PASORBA",
@@ -9471,20 +8511,20 @@ const dataUsaha = [
   {
     "nama_usaha": "BALAI BENIH IKAN",
     "alamat": "DUSUN 2 SIGANJANGM DESA JANJI MARTAHAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PERTANIAN SEJAHTERA SAMOSIR,PT",
     "alamat": "DESA SIALANGUAN, KECAMATAN PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KELOMPOK TANI SITOLUHUTA",
     "alamat": "JL HADRIANUS SINAGA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PENGGALIAN PASIR <MARTOGI>",
@@ -9577,18 +8617,6 @@ const dataUsaha = [
     "desa": "Cinta Maju"
   },
   {
-    "nama_usaha": "TUKANG JAHIT <RITA>",
-    "alamat": "PASIR BUNTU MAULI",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "TUKANG PERAHU <OLOAN>",
-    "alamat": "RAPUSAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
-  },
-  {
     "nama_usaha": "KILANG PADI BERJALAN",
     "alamat": "SIARSAM DESA HARIAN",
     "kecamatan": "Onan Runggu",
@@ -9641,18 +8669,6 @@ const dataUsaha = [
     "alamat": "SITAHUAN",
     "kecamatan": "Onan Runggu",
     "desa": "Rinabolak"
-  },
-  {
-    "nama_usaha": "TUKANG JAHIT <LASTIAR>",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "PANDE BESI <TAMBUNAN>",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "KILANG PADI SINUR",
@@ -9737,12 +8753,6 @@ const dataUsaha = [
     "alamat": "KAMENTE",
     "kecamatan": "Palipi",
     "desa": "Sigaol Marbun"
-  },
-  {
-    "nama_usaha": "TUKANG FOTO SITUMORANG <Ambang situmorang>",
-    "alamat": "JL PELABUHAN MOGANG",
-    "kecamatan": "Palipi",
-    "desa": "Pallombuan"
   },
   {
     "nama_usaha": "PENJAHIT (SABAR)",
@@ -9853,12 +8863,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "BATU BATA <BAKTIAR>",
-    "alamat": "JALAN SIAMBALO PARADUAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "PENJAHIT PAKAIAN <MOSTER>",
     "alamat": "JALAN RAYA RIANIATE",
     "kecamatan": "Pangururan",
@@ -9913,20 +8917,8 @@ const dataUsaha = [
     "desa": "Pintusona"
   },
   {
-    "nama_usaha": "TUKANG JAHIT SAKTI",
-    "alamat": "LUMBAN TINGGIR",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "PENGANYAM TIKAR PANDAN",
     "alamat": "SOSOR HOLANG-HOLANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "PENGUPAS KEMIRI <BERTA>",
-    "alamat": "LUMBAN SILALAHI",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -9962,12 +8954,6 @@ const dataUsaha = [
   },
   {
     "nama_usaha": "TUKANG JAHIT <SINAGA>",
-    "alamat": "JL PUTRI LOPIAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "FLORA FLORIST <LETGIONO>",
     "alamat": "JL PUTRI LOPIAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
@@ -10309,12 +9295,6 @@ const dataUsaha = [
     "desa": "Parhorasan"
   },
   {
-    "nama_usaha": "PENGGERGAJI KAYU <BUE>",
-    "alamat": "SUKARAME",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "TENUN ULOS <REMINTA>",
     "alamat": "LUMBAN SIMBOLON",
     "kecamatan": "Pangururan",
@@ -10433,12 +9413,6 @@ const dataUsaha = [
     "alamat": "SIGARANTUNG",
     "kecamatan": "Simanindo",
     "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "JUAL UMPAN <SARMOLINA>",
-    "alamat": "KOMPLEK PELABUHAN LOPO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "PENJAHIT <RUSPITA>",
@@ -10585,18 +9559,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "MC BAKERY",
-    "alamat": "JL KOLONEL LIBERTY MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "DENNY TAYLOR",
-    "alamat": "JL KOLONEL LIBERTY MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "PENJUAL KUE <ANITA>",
     "alamat": "JALAN TELE SIMANGONDING",
     "kecamatan": "Pangururan",
@@ -10619,12 +9581,6 @@ const dataUsaha = [
     "alamat": "DUSUN 1 BINANGBORTA",
     "kecamatan": "Pangururan",
     "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "KILANG PADI BERJALAN <SINAGA>",
-    "alamat": "JL RAYA AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
   },
   {
     "nama_usaha": "OGY PUTRA PENJAHIT",
@@ -10699,12 +9655,6 @@ const dataUsaha = [
     "desa": "Aek Sipitudai"
   },
   {
-    "nama_usaha": "BENGKEL LAS <PANDU>",
-    "alamat": "SOSOR PASIR",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "KONSTRUKSI PERORANGAN <HETBIN>",
     "alamat": "HUTA HOTANG",
     "kecamatan": "Onan Runggu",
@@ -10765,18 +9715,6 @@ const dataUsaha = [
     "desa": "Simanindo"
   },
   {
-    "nama_usaha": "PEDAGANG PISANG <DOSLEN>",
-    "alamat": "JL. DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "PEDAGANG PENGEPUL HASIL TANI <ROMANTO>",
-    "alamat": "RAUT BOSI",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "JUAL BENSIN <JERMAN>",
     "alamat": "AEK SIPITUDAI DUSUN 1",
     "kecamatan": "Sianjur Mulamula",
@@ -10796,30 +9734,6 @@ const dataUsaha = [
   },
   {
     "nama_usaha": "JUAL GAS ELPIJI <DARWIN>",
-    "alamat": "DESA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "BENGKEL MOTOR <JAMSER>",
-    "alamat": "DESA SARIMARIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "PENGUMPUL DAN MENJUAL BERAS <ANITA NAINGGOLAN>",
-    "alamat": "DESA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <SASTRA>",
-    "alamat": "DESA SARIMARRIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "PENGUMPUL BERAS <SARLINA>",
     "alamat": "DESA SARIMARRIHIT",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Sarimarrihit"
@@ -10871,18 +9785,6 @@ const dataUsaha = [
     "alamat": "LUMBAN RAJA",
     "kecamatan": "Harian",
     "desa": "Turpuk Limbong"
-  },
-  {
-    "nama_usaha": "TOKE KOPI <SAUDIN>",
-    "alamat": "BAHAL",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "BENGKEL <ADARMAN>",
-    "alamat": "LUMBAN PANDE",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "WARUNG JAJANAN <JENTINA>",
@@ -10957,12 +9859,6 @@ const dataUsaha = [
     "desa": "Sibonor Ompu Ratus"
   },
   {
-    "nama_usaha": "BENGKEL SEPEDA MOTOR <NOFRI>",
-    "alamat": "NASUMANDAR",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "PERDAGANGAN ECERAN SEMBAKO <DARWIN>",
     "alamat": "PASAR NAINGGOLAN",
     "kecamatan": "Nainggolan",
@@ -10995,12 +9891,6 @@ const dataUsaha = [
   {
     "nama_usaha": "JUAL ULOS <MUTIARA>",
     "alamat": "LOS PASAR",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "MENJUAL ATK <HENDRA>",
-    "alamat": "PASAR NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Nainggolan"
   },
@@ -11221,20 +10111,8 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "BENGKEL NAIBAHO",
-    "alamat": "JALAN DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "DAGANG KERBAU <JUANDA>",
     "alamat": "SOSOR SIMBOLON",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "KEDAI RABOL SIMBOLON",
-    "alamat": "KOMPLEKS SMA NEGERI 1 PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -11253,24 +10131,6 @@ const dataUsaha = [
   {
     "nama_usaha": "DOORSMER DAN TEMPEL BAN",
     "alamat": "HOLANG-HOLANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "DAGANG JAGUNG <HERMIN>",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "PENJUAL PISANG <ROSMAIDA>",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "PENJUAL KERUPUK <ROMAIDA>",
-    "alamat": "LUMBAN SILALAHI",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -11677,12 +10537,6 @@ const dataUsaha = [
     "desa": "Parhorasan"
   },
   {
-    "nama_usaha": "WARUNG <MAROLOAN>",
-    "alamat": "LBN PEA",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "TOKE KOPI <MARULAM>",
     "alamat": "DUSUN 3 lumban sinaga",
     "kecamatan": "Pangururan",
@@ -11693,12 +10547,6 @@ const dataUsaha = [
     "alamat": "SIGARANTUNG",
     "kecamatan": "Simanindo",
     "desa": "Hutaginjang"
-  },
-  {
-    "nama_usaha": "WARUNG JAJANAN <NIAN>",
-    "alamat": "KOMPLEK PELABUHAN LOPO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "DOOR SMEER <DOYOK>",
@@ -11753,12 +10601,6 @@ const dataUsaha = [
     "alamat": "JL LINGKAR TUKTUK",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "IAN SERVICE",
-    "alamat": "JALAN INPRES TUK TUK",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "SAMUEL SOUVENIR SHOP",
@@ -12073,12 +10915,6 @@ const dataUsaha = [
     "desa": "Sianting - Anting"
   },
   {
-    "nama_usaha": "PENGUMPUL IKAN <JOY>",
-    "alamat": "DUSUN 2 LUMBAN SINABANG",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "JUAL TIKAR <AGUS>",
     "alamat": "DES A SIMANINDO",
     "kecamatan": "Simanindo",
@@ -12089,30 +10925,6 @@ const dataUsaha = [
     "alamat": "DUSUN 2 BOHO",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Boho"
-  },
-  {
-    "nama_usaha": "WARUNG <SITOR>",
-    "alamat": "TAMBA GODANG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
-    "nama_usaha": "AKOMODASI ANGKUTAN KAPAL <KARDIMAN>",
-    "alamat": "BAHAL",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "AKOMODASI ANGKUTAN <BUHA>",
-    "alamat": "SOSOR PASIR",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
-    "nama_usaha": "AKOMODASI ANGKUTAN <PATAR>",
-    "alamat": "PAGAR ONAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "TUKANG BECAK SAUT",
@@ -12175,19 +10987,7 @@ const dataUsaha = [
     "desa": "Pintusona"
   },
   {
-    "nama_usaha": "BECAK MISA",
-    "alamat": "SOSOR SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SUPIR MOBIL",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "BECA MOTOR DIAN",
     "alamat": "LUMBAN SILALAHI",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
@@ -12331,12 +11131,6 @@ const dataUsaha = [
     "desa": "Hutagalung"
   },
   {
-    "nama_usaha": "LAPO TUAK DUKSI",
-    "alamat": "LONDUT",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "WARUNG KOPI <REMANJUR>",
     "alamat": "SIARSAM",
     "kecamatan": "Onan Runggu",
@@ -12385,32 +11179,14 @@ const dataUsaha = [
     "desa": "Sinaga Uruk Pandiangan"
   },
   {
-    "nama_usaha": "WARUNG KOPI <WILLY>",
-    "alamat": "PELABUHAN NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "MENJUAL MI SOUP <SAMSUDIN SARAGIH>",
     "alamat": "LOS PASAR NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Nainggolan"
   },
   {
-    "nama_usaha": "CATERING PANGARIBUAN",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "SEWA RUMAH <SINAGA>",
     "alamat": "LORONG 3 PARLUASAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "JUALAN MIE GOMAK<RACHEL>",
-    "alamat": "JALAN PELABUHAN NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
   },
@@ -12429,12 +11205,6 @@ const dataUsaha = [
   {
     "nama_usaha": "PENGINAPAN MIHAT",
     "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "RUMAH MAKAN <SAMOSIR>",
-    "alamat": "SIRUMAHOMBAR",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
   },
@@ -12559,32 +11329,8 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "KEDAI KOPI <PARTAHI>",
-    "alamat": "JALAN RAYA RIANIATE",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "MENJUAL BUBUR <SRI>",
-    "alamat": "PARLIMUTAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "GUNA OBOS 3, UD",
-    "alamat": "JALAN DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "PENYEWAAN KAMAR KOS",
     "alamat": "JL.DR.HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "KEDAI TUAK <MARUDUT>",
-    "alamat": "SOSOR SIMBOLON",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -12597,12 +11343,6 @@ const dataUsaha = [
   {
     "nama_usaha": "USAHA MENJUAL MIE GORENG",
     "alamat": "KOMPLEKS GEREJA HKBP",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "KEDAI TUAK <MARIZEN>",
-    "alamat": "SOSOR HOLANG-HOLANG",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -12853,12 +11593,6 @@ const dataUsaha = [
     "desa": "Sialanguan"
   },
   {
-    "nama_usaha": "KEDAI TUAK <FRENGKI>",
-    "alamat": "LUMBAN MANIK TORUAN",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "MIE SOP ZULKARNAEN",
     "alamat": "DUSUN 2 LUMBAN SITOHANG",
     "kecamatan": "Pangururan",
@@ -12899,18 +11633,6 @@ const dataUsaha = [
     "alamat": "JL SITOBU",
     "kecamatan": "Simanindo",
     "desa": "Garoga"
-  },
-  {
-    "nama_usaha": "AMAN GUEST HOUSE",
-    "alamat": "JLN LINGAKAR TUKTUK PANDAN",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "SAMUEL RESTAURANT",
-    "alamat": "JLN LINGKAR TUKTUK LUMBAN MANURUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "EMMANUEL GUEST HOUSE",
@@ -13003,12 +11725,6 @@ const dataUsaha = [
     "desa": "Simanindo"
   },
   {
-    "nama_usaha": "WARUNG MAKAN <DINARTO>",
-    "alamat": "DESA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "WARUNG MAKAN <HERAWATI>",
     "alamat": "HARIARAPINTU DUSUN 3 PERBATASAN",
     "kecamatan": "Harian",
@@ -13051,12 +11767,6 @@ const dataUsaha = [
     "desa": "Simanindo"
   },
   {
-    "nama_usaha": "WARUNG MAKAN <MATUEL>",
-    "alamat": "PASAR SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "KEDAI MINUMAN <AILEND>",
     "alamat": "DESA SIMANINDO",
     "kecamatan": "Simanindo",
@@ -13085,12 +11795,6 @@ const dataUsaha = [
     "alamat": "SIPAPAN",
     "kecamatan": "Harian",
     "desa": "Turpuk Sihotang"
-  },
-  {
-    "nama_usaha": "JUAL PULSA <MASDA>",
-    "alamat": "BAHAL",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
   },
   {
     "nama_usaha": "JUAL PULSA <JT>",
@@ -13303,12 +12007,6 @@ const dataUsaha = [
     "desa": "Aek Sipitudai"
   },
   {
-    "nama_usaha": "SEWA TENDA <ROMMEL>",
-    "alamat": "AEK SIPITUDAI DUSUN I",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Aek Sipitudai"
-  },
-  {
     "nama_usaha": "FOTO COPI <JONNER>",
     "alamat": "ONAN LIMBONG, DESA AEK SIPITUDAI",
     "kecamatan": "Sianjur Mulamula",
@@ -13319,12 +12017,6 @@ const dataUsaha = [
     "alamat": "ONAN RUNGGU",
     "kecamatan": "Onan Runggu",
     "desa": "Onanrunggu"
-  },
-  {
-    "nama_usaha": "RENTAL MOBIL <SABAS>",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "SEWA TENDA DAN KURSI <MANULLANG>",
@@ -13355,12 +12047,6 @@ const dataUsaha = [
     "alamat": "JALAN RAYA MOGANG",
     "kecamatan": "Palipi",
     "desa": "Pallombuan"
-  },
-  {
-    "nama_usaha": "UD.BENRO FOTOCOPY",
-    "alamat": "JL DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "MARVEL MUSIC",
@@ -13409,12 +12095,6 @@ const dataUsaha = [
     "alamat": "JL HORAS TOMOK PARSAORAN",
     "kecamatan": "Simanindo",
     "desa": "Simarmata"
-  },
-  {
-    "nama_usaha": "USAHA PEMANDU WISATA <ROHANDI>",
-    "alamat": "PELABUHAN WISATA",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
   },
   {
     "nama_usaha": "ROXY <LEYDER>",
@@ -13531,24 +12211,6 @@ const dataUsaha = [
     "desa": "Aek Sipitudai"
   },
   {
-    "nama_usaha": "USAHA SALON<RISMA>",
-    "alamat": "LUMBAN NAHOR",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
-    "nama_usaha": "JASA URUT <SERTI>",
-    "alamat": "SIBAGANDING",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
-    "nama_usaha": "DERBY PONSEL",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "NAGA PANGKAS",
     "alamat": "DESA NAINGGOLAN",
     "kecamatan": "Nainggolan",
@@ -13559,12 +12221,6 @@ const dataUsaha = [
     "alamat": "PASAR NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "SERVIS ELEKTRONIK <RUBEN>",
-    "alamat": "TANAH LAPANG",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "TUKANG SOLDER KELILING",
@@ -13593,12 +12249,6 @@ const dataUsaha = [
   {
     "nama_usaha": "INA SALON <INA>",
     "alamat": "JL DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "PENGUPAS KEMIRI <RESEMINA>",
-    "alamat": "LUMBAN SILALAHI",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
   },
@@ -13687,12 +12337,6 @@ const dataUsaha = [
     "desa": "Sialanguan"
   },
   {
-    "nama_usaha": "JUY SALON",
-    "alamat": "DUSUN 2 LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "TUKANG BANGUNAN <PARDI>",
     "alamat": "DUSUN 2 LUMBAN SITOHANG",
     "kecamatan": "Pangururan",
@@ -13743,20 +12387,20 @@ const dataUsaha = [
   {
     "nama_usaha": "TOKO MAS SURABAYA \"FREDDI",
     "alamat": "JL. DI. PANJAITAN SIMPANG 3 ONAN BARU",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "UD. TAMBOK JAYA",
     "alamat": "JL. D.I PANJAITAN BAWAH",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "UD. TUMPAK",
     "alamat": "JL. SUGIO PRONOTO ONAN BARU PANGURURAN KODEPOS 22392",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "LAKE TOBA NET, UD",
@@ -13765,28 +12409,10 @@ const dataUsaha = [
     "desa": "Silima Lombu"
   },
   {
-    "nama_usaha": "USAHA DESA WISATA GADING BATU KURSI",
-    "alamat": "Jl Raya Pindaraya Huta Siallagan Rt. -  Rw. -  Kode Pos 22395",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "ANNAS PENGINAPAN",
-    "alamat": "LINGKAR TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "PENGINAPAN YOGI PUTRA JAYA",
     "alamat": "SIMULLOP",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "PENGINAPAN SABAS",
-    "alamat": "JL PELABUHAN NAINGGOLAN NO 50",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "PENGINAPAN KOTA SIMULLOP",
@@ -13803,14 +12429,14 @@ const dataUsaha = [
   {
     "nama_usaha": "LAKE TOBA GIVEN TOUR",
     "alamat": "JL. LINGKAR TUKTUK SIADONG SIMANINDO 22395",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KOPERASI SIMPAN PINJAM PERSATUAN WREDATAMA REPUBLIK INDONESIA",
     "alamat": "JL SIANJUR MULAMULA, PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MARSIURUPAN, CU",
@@ -13833,8 +12459,8 @@ const dataUsaha = [
   {
     "nama_usaha": "PERIKANAN TANGKAP <LISKEN SAMOSIR>",
     "alamat": "MORJA, DESA ONAN RUNGGU, KEC. ONAN RUNGGU, KAB. SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "UD. FAJAR REKLAME",
@@ -13851,68 +12477,68 @@ const dataUsaha = [
   {
     "nama_usaha": "UD PARSAORAN",
     "alamat": "JL. PANGURURAN SIMANINDO, DESA PARSAORAN I, KEC. PANGURURAN, KAB.SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PEMBUAT BATU BATA <BARINGIN SITANGGANG>",
     "alamat": "DESA PANAMPANGAN, KEC. PANGURURAN, KAB. SAMOSIR/085361336306",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SAULINA RESORT HOTEL",
     "alamat": "JL. AEK RANGAT, KELURAHAN SIOGUNG-OGUNG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PENJUAL PAKAIAN <POSMELITA SINAGA>",
     "alamat": "PEKAN INPRES BALERONG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TENUN ULOS (FERIANTI)",
     "alamat": "DESA SIOPAT SOSOR, DUSUN III, KEC. PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "USAHA 3T",
     "alamat": "PARJONGGI, DESA PARDOMUAN I, KEC. PANGURURAN, KAB. SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PARTOPI DOLOK, CV",
     "alamat": "DESA HUTA TINGGI, KEC. PANGURURAN, KAB.SAMOSIR/082168504349",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PENGGILINGAN PADI <PIRHOT SILALAHI>",
     "alamat": "TAO SIDIHONI, DESA LINTONG NIHUTA, KEC. RONGGUR NIHUTA, SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TRIA, CV",
     "alamat": "DESA SIPINGGAN, KEC.NAINGGOLAN,KAB.SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TENUN SONGKET (TARULI)",
     "alamat": "SITAKARAEN, DESA PARDOMUAN I, KEC.PANGURURAN,KAB.SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "DORULI, CV",
     "alamat": "JL. PELABUHAN ONAN RUNGGU, DESA ONAN RUNGGU, KEC.ONAN RUNGGU, KAB.SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TRYA LUMBAN LINTONG, PT",
@@ -14317,12 +12943,6 @@ const dataUsaha = [
     "desa": "Hutaginjang"
   },
   {
-    "nama_usaha": "MARYSKA ARTSHOP",
-    "alamat": "TUK TUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "CENTRAL HANDCRAFT",
     "alamat": "TUK TUK SIADONG",
     "kecamatan": "Simanindo",
@@ -14623,12 +13243,6 @@ const dataUsaha = [
     "desa": "Siallagan Pindaraya"
   },
   {
-    "nama_usaha": "USAHA PEMBUAT ROTI <SYAHRUL>",
-    "alamat": "TOMOK PARSAROAN DUSUN",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok Parsaoran"
-  },
-  {
     "nama_usaha": "PENJAHIT <ANSARI>",
     "alamat": "TOMOK PARSAORAN DUSUN 2",
     "kecamatan": "Simanindo",
@@ -14677,58 +13291,46 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Toruan"
   },
   {
-    "nama_usaha": "BERTENUN ULOS <DENNI>",
-    "alamat": "LUMBAN PASIR",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "BENGKEL LAS <TUMPAL>",
-    "alamat": "DUSUN 3 PARSAROAN",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "DINAS PERHUBUNGAN",
     "alamat": "JL. PUTRI LOPIAN, DESA PARDOMUAN I, KEC. PANGURURAN, KAB. SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KANTOR SAMSAT PANGURURAN",
     "alamat": "JL. PANGURURAN SIMANINDO, DESA PARSAORAN I, KEC. PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "DINAS PENANAMAN MODAL DAN PELAYANAN PERIZINAN TERPADU SATU PINTU",
     "alamat": "KOMPLEK PERKANTORAN RIANIATE KM 6, DESA RIANIATE",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "DINAS PERTANIAN (HORTIKULTURA)",
     "alamat": "KOMPLEK PERKANTORAN PEMKAB SAMOSIR, DESA SIOPAT SOSOR, KEC. PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "DINAS PERTANIAN (PERKEBUNAN)",
     "alamat": "KOMPLEK PERKANTORAN PEMKAB SAMOSIR, DESA SIOPAT SOSOR, KEC. PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "DINAS PERTANIAN (HEWAN)",
     "alamat": "KOMPLEK PERKANTORAN PEMKAB SAMOSIR, DESA SIOPAT SOSOR, KEC. PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BADAN PENGELOLAAN KEUANGAN DAN ASET DAERAH (BPKAD)",
     "alamat": "JL. RIANIATE KM 5,5 KEC. PANGURURAN-22392",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BAWANG MERAH ELLIS NAIBAH0",
@@ -14755,28 +13357,10 @@ const dataUsaha = [
     "desa": "Tanjung Bunga"
   },
   {
-    "nama_usaha": "APOTEK MARULI",
-    "alamat": "JL.KOL.LIBERTY MALAU ( DEPAN MC BAKERY) PARDOMUAN 1, PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "APOTEK PANGONDIAN <SIHOTANG>",
-    "alamat": "JL. HADRIANUS SINAGA, KELURAHAN PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "RUMAH NABOLON, CV",
     "alamat": "DUSUN 1",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "JOSUA, CV",
-    "alamat": "SITOHANG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "DORULI, CV",
@@ -14911,12 +13495,6 @@ const dataUsaha = [
     "desa": "Sarimarrihit"
   },
   {
-    "nama_usaha": "GOLANG MAS, CV",
-    "alamat": "HUTA URAT KEL. SIANJUR MULA MULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
-  },
-  {
     "nama_usaha": "SAUD BOY PRATAMA, UD",
     "alamat": "GINOLAT",
     "kecamatan": "Sianjur Mulamula",
@@ -14977,12 +13555,6 @@ const dataUsaha = [
     "desa": "Turpuk Limbong"
   },
   {
-    "nama_usaha": "PAGAR BATU, CV",
-    "alamat": "TAMBA DOLOK, SITIOTIO",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "INDRAMEDO, CV",
     "alamat": "JL PROTOKOL",
     "kecamatan": "Onan Runggu",
@@ -14990,7 +13562,7 @@ const dataUsaha = [
   },
   {
     "nama_usaha": "MARTABE PERSADA, CV",
-    "alamat": "#NAME?",
+    "alamat": "-sitinjak",
     "kecamatan": "Onan Runggu",
     "desa": "Sitinjak"
   },
@@ -14999,12 +13571,6 @@ const dataUsaha = [
     "alamat": "sitinjak",
     "kecamatan": "Onan Runggu",
     "desa": "Sitinjak"
-  },
-  {
-    "nama_usaha": "VOLTAMAS, CV",
-    "alamat": "JL RAYA LINKAR SAMOSIR KEC. NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
   },
   {
     "nama_usaha": "GITA PRATAMA, CV",
@@ -15217,12 +13783,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "INDAH NATAMA, CV",
-    "alamat": "JL RIANIATE KEC. PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "LOBUAN, CV",
     "alamat": "hutanamora, pangururan",
     "kecamatan": "Pangururan",
@@ -15271,12 +13831,6 @@ const dataUsaha = [
     "desa": "Pintusona"
   },
   {
-    "nama_usaha": "LINSA, UD",
-    "alamat": "PALLIMUTAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "MANATAP, CV",
     "alamat": "JALAN DR. HADRIANUS SINAGA",
     "kecamatan": "Pangururan",
@@ -15315,12 +13869,6 @@ const dataUsaha = [
   {
     "nama_usaha": "ACI BIBIN, CV",
     "alamat": "JL USKUP AGUNG SUGIO PRANOTO PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "ATN, CV",
-    "alamat": "JL DI. PANJAITAN PARDOMUAN I PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
   },
@@ -15669,62 +14217,56 @@ const dataUsaha = [
   {
     "nama_usaha": "ADINA, CV",
     "alamat": "JL SIANJUR MULA-MULA NO 31, PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MONAMAS JAYA, CV",
     "alamat": "JL SIANJUR MULA-MULA NO 31, PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MONANG JAYA, CV",
     "alamat": "JL SIANJUR MULA-MULA PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MUFAKAT, CV",
     "alamat": "DESA PON KEC SEI BAMBAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PEMBANGUNAN SAMOSIR, CV",
     "alamat": "JL SIMANINDO KM. 7 PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SIGULUAN, CV",
     "alamat": "JL SIMPANG PANAHATAN KEC. PALIPI",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TOTAMA GROUP, CV",
     "alamat": "JL PATUAN ANGGI DESA PASAR SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TUNAS, CV",
     "alamat": "JL SIAHAAN BALIAN NO 1 PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BANGUN JAYA, CV",
     "alamat": "BANGUN PURBA KEL. SIMBOLON",
     "kecamatan": "Palipi",
     "desa": "Simbolon Purba"
-  },
-  {
-    "nama_usaha": "TRIRAMA AGUNG, CV",
-    "alamat": "SIDALUDALU DSN 2",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
   },
   {
     "nama_usaha": "TIMBAS, CV",
@@ -15811,12 +14353,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "KILANG PADI <Daniel T.a. Sagala>",
-    "alamat": "Ginolat",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Ginolat"
-  },
-  {
     "nama_usaha": "Geneng Sirimbang, UD",
     "alamat": "LUMBAN HARIARA",
     "kecamatan": "Pangururan",
@@ -15825,26 +14361,26 @@ const dataUsaha = [
   {
     "nama_usaha": "RM, CV",
     "alamat": "sosor II desa sigaol marbun. kec palipi. kab. samosir",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "PINTALAN GROUP, CV",
     "alamat": "Desa Paraduan Kec.Ronggur Nihuta Kab.Samosir",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "Bangun dongoran persada",
     "alamat": "Sosor silinjuang",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "TOKO EMAS DAN BERLIAN GILBERT",
     "alamat": "JL. FL. TOBING PANGURURAN",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "RITA PARBORAS",
@@ -15861,14 +14397,14 @@ const dataUsaha = [
   {
     "nama_usaha": "KARAOKE RUMAH HOLI",
     "alamat": "JL. AEK RANGAT",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "ENI SALON",
     "alamat": "DESA LUMBAN SUHI SUHI TORUAN DUSUN 2",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KILANG PADI JAHIM",
@@ -15931,30 +14467,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "USAHA TENUN ULOS KARO MONIKA SIMBOLON",
-    "alamat": "GALUNG",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "USAHA ISI ULANG BERTUAH WATER",
-    "alamat": "GALUNG",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "USAHA TIKAR PANDAN ERNATA NAIBAHO",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "USAHA TIKAR PANDAN HOTNI SIMBOLON",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "USAHA JAHIT EVI RAJAGUKGUK",
     "alamat": "SIAMBALO",
     "kecamatan": "Pangururan",
@@ -15962,12 +14474,6 @@ const dataUsaha = [
   },
   {
     "nama_usaha": "USAHA  BATU BATA OLOAN SIMBOLON",
-    "alamat": "HUTA BARU",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "USAHA BATU BATA LAMBOK SIMBOLON",
     "alamat": "HUTA BARU",
     "kecamatan": "Pangururan",
     "desa": "Huta Namora"
@@ -16003,12 +14509,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "USAHA BATU BATA FIRMAN WAO",
-    "alamat": "DOLOK NADUA",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "USAHA BATU BATA RIANTO SILABAN",
     "alamat": "HUTA BARU",
     "kecamatan": "Pangururan",
@@ -16039,12 +14539,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "USHA KUE DONAT RESENDI SIMBOLON",
-    "alamat": "TANO HUDON",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "TIKAR PANDAN RUMINTA SIMBOLON",
     "alamat": "PINTU SONA",
     "kecamatan": "Pangururan",
@@ -16052,24 +14546,6 @@ const dataUsaha = [
   },
   {
     "nama_usaha": "TENUN KASUSSAK SETIA ARNIELLI NDRAHA",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "TENUN KASUSSAK LESNA SIMANIHURUK",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "USAHA JAHIT NOVIA PRETTY SIMBOLON",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "TIKAR PANDAN NURLIDA SINAGA",
     "alamat": "PINTU SONA",
     "kecamatan": "Pangururan",
     "desa": "Pintusona"
@@ -16291,12 +14767,6 @@ const dataUsaha = [
     "desa": "Aek Nauli"
   },
   {
-    "nama_usaha": "USAHA TENUN ULOS <SARTIKA MALAU>",
-    "alamat": "LUMBAN SITANGGANG",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "USAHA TENUN ULOS <ANITA SINURAT>",
     "alamat": "LUMBAN SINURAT",
     "kecamatan": "Pangururan",
@@ -16323,30 +14793,6 @@ const dataUsaha = [
   {
     "nama_usaha": "USAHA ANYAMAN TIKAR <RELI SIMARMATA>",
     "alamat": "NAGA TIMBUL",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "USAHA JAHIT PAKAIAN <MAROLOAN NAINGGOLAN>",
-    "alamat": "LUMBAN PEA",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "USAHA TENUN ULOS <HOTMAULI SINURAT>",
-    "alamat": "LUMBAN PEA",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "USAHA TENUN ULOS <EMI HUTAPEA>",
-    "alamat": "LUMBAN PEA",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "USAHA TENUN ULOS <GOK RIA MANIK>",
-    "alamat": "LUMBAN PEA",
     "kecamatan": "Pangururan",
     "desa": "Parhorasan"
   },
@@ -16591,12 +15037,6 @@ const dataUsaha = [
     "desa": "Situngkir"
   },
   {
-    "nama_usaha": "TIO BOLON HOMESTAY",
-    "alamat": "DUSUN I, SIOPAT SOSOR",
-    "kecamatan": "Pangururan",
-    "desa": "Siopat Sosor"
-  },
-  {
     "nama_usaha": "SARI HOMESTAY",
     "alamat": "JL. RAYA SIMANINDO DESA SIOPAT SOSOR DUSUN 1",
     "kecamatan": "Pangururan",
@@ -16613,12 +15053,6 @@ const dataUsaha = [
     "alamat": "JALAN RAYA SIMANINDO DESA SITUNGKIR",
     "kecamatan": "Pangururan",
     "desa": "Situngkir"
-  },
-  {
-    "nama_usaha": "ABADI COTTAGE",
-    "alamat": "JL. LINGKAR TUKTUK, KELURAHAN TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "SITIOTIO RESORT",
@@ -16663,18 +15097,6 @@ const dataUsaha = [
     "desa": "Turpuk Sihotang"
   },
   {
-    "nama_usaha": "EBIKEL PENGINAPAN",
-    "alamat": "Jl.Lingkar Tuktuk Siadong Kelurahan Tuktuk Siadong Kecamatan Simanindo Kabupaten Samosir",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "JUMA COTTAGES",
-    "alamat": "JLN GEREJA TUKTUL SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "BETA MARTABE RESORT",
     "alamat": "JL. HARIAN BOHO, DESA TURPUK SIHOTANG, KECAMATAN HARIAN",
     "kecamatan": "Harian",
@@ -16717,12 +15139,6 @@ const dataUsaha = [
     "desa": "Simarmata"
   },
   {
-    "nama_usaha": "TUK TUK TIMBUL BUNGALOW DAN RESTAURAN",
-    "alamat": "Pindaraya",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
-  },
-  {
     "nama_usaha": "PENGINAPAN SIBEA-BEA",
     "alamat": "HARIAN BOHO-TURPUK SIHOTANG, KABUPATEN SAMOSIR",
     "kecamatan": "Harian",
@@ -16733,12 +15149,6 @@ const dataUsaha = [
     "alamat": "Jl.Lingkar Tuktuk Siadong",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "HOMESTAY NAGARATUS",
-    "alamat": "Lape, Aek Sipitu Dai, Kecamatan Sianjur mula mula, Kabupaten Samosir",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Aek Sipitudai"
   },
   {
     "nama_usaha": "SURABAYA RESSORT",
@@ -16785,8 +15195,8 @@ const dataUsaha = [
   {
     "nama_usaha": "Cabang Rutan Pangururan",
     "alamat": "Jl.Kejaksaan No.18 Pangururan",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "USAHA WARUNG JAJANAN <ROSNA SIGIRO>",
@@ -16855,12 +15265,6 @@ const dataUsaha = [
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "INTICOM, PERCETAKAN  <LAMMIAN NAIBAHO>",
-    "alamat": "Jl Kolonel Liberty Malau",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "Salon Jonathan <Winda Silalahi>",
     "alamat": "Desa Boho",
     "kecamatan": "Sianjur Mulamula",
@@ -16873,12 +15277,6 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Dolok"
   },
   {
-    "nama_usaha": "Bertenun Ulos <Mery> <Mery Clirent Sitanggang>",
-    "alamat": "Naga Timbul",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "Bertenun Ulos <Reminta> <Reminta Manik>",
     "alamat": "Lumban Simbolon",
     "kecamatan": "Pangururan",
@@ -16887,14 +15285,14 @@ const dataUsaha = [
   {
     "nama_usaha": "DAKA MEGAPERKASA",
     "alamat": "PARTUNGKO NAGINJANG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BANGUN MITRA ABADI",
     "alamat": "SAIT NIHUTA",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KEDAI NASI CAMPUR(TIMORIA PASARIBU) <TIMORIA PASARIBU>",
@@ -16905,38 +15303,32 @@ const dataUsaha = [
   {
     "nama_usaha": "RONNY, CV",
     "alamat": "JL. BESAR DESA URAT II KEC PALIPI",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "LINTAS JARINGAN NUSANTARA",
     "alamat": "JL. Sitanggang Bau No.69, RT.000 RW.000, Parsaroan I, Kec. Pangururan, Kab. Samosir, Provinsi Sumatera Utara",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "ARGATEK TORSADA GUNA",
     "alamat": "Desa Rianiate Kecmatan Pangururan",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MARIANNA RESORT INTERNATIONAL, PT",
     "alamat": "JL. PUD KELURAHAN TUKTUK SIADONG, SIMANINDO, SAMOSIR",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "BANEARA HOTEL",
     "alamat": "BANEARA DESA PARTUNGKO NAGINJANG",
     "kecamatan": "Harian",
     "desa": "Partungko Naginjang"
-  },
-  {
-    "nama_usaha": "MAFIR RESTAURANT DAN PENGINAPAN",
-    "alamat": "JL. LINGKAR TUK TUK, KELURAHAN TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "PARNAS PENGINAPAN",
@@ -16951,34 +15343,10 @@ const dataUsaha = [
     "desa": "Tanjungan"
   },
   {
-    "nama_usaha": "HAMIDAH PENGINAPAN",
-    "alamat": "JLN BESAR TOMOK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "DPOS HOMESTAY",
-    "alamat": "JLN LINGKAR TUKTUK",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "MANIK GARDEN INN",
     "alamat": "PARBABA DESA HUTA BOLON",
     "kecamatan": "Pangururan",
     "desa": "Huta Bolon"
-  },
-  {
-    "nama_usaha": "SIBAYAK HOMESTAY",
-    "alamat": "JL LINGKAR TUK TUK, KELURAHAN TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "PENGINAPAN PERMATA",
-    "alamat": "PELABUHAN NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
   },
   {
     "nama_usaha": "SHARON HOMESTAY",
@@ -17017,12 +15385,6 @@ const dataUsaha = [
     "desa": "Pardomuan Nauli"
   },
   {
-    "nama_usaha": "KB MUAL TAMBA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "Kelompok bermain FRIENDLY",
     "alamat": "Jl. Nainggolan-Onanrunggu Pangaloan",
     "kecamatan": "Nainggolan",
@@ -17033,30 +15395,6 @@ const dataUsaha = [
     "alamat": "PANANGGANGAN",
     "kecamatan": "Nainggolan",
     "desa": "Pananggangan I"
-  },
-  {
-    "nama_usaha": "SD NEGERI 18 PARHUSIP III",
-    "alamat": "PARHORASAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Parhusip"
-  },
-  {
-    "nama_usaha": "KB KASIH",
-    "alamat": "SISANGKIL",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "SD NEGERI 13 PARSAORAN",
-    "alamat": "PARSAORAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "SD NEGERI 7 SIANJUR MULAMULA",
-    "alamat": "SIANJUR MULAMULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
   },
   {
     "nama_usaha": "POLINDES DESA SAMPUR TOBA",
@@ -17075,18 +15413,6 @@ const dataUsaha = [
     "alamat": "DESA SIPIRA",
     "kecamatan": "Onan Runggu",
     "desa": "Sipira"
-  },
-  {
-    "nama_usaha": "POSKESDES SARIMARRIHIT",
-    "alamat": "Sarimarrihit",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "POLINDES HARIAN",
-    "alamat": "DESA HARIAN",
-    "kecamatan": "Onan Runggu",
-    "desa": "Harian"
   },
   {
     "nama_usaha": "PUSKESMAS PEMBANTU PARMONANGAN",
@@ -17113,12 +15439,6 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "SMP SW. KARYA MURNI SIDIHONI",
-    "alamat": "DESA SIJAMBUR",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "PRAKTIK BIDAN KATARINA SIAGIAN",
     "alamat": "SIOPAT SOSOR",
     "kecamatan": "Pangururan",
@@ -17135,12 +15455,6 @@ const dataUsaha = [
     "alamat": "DESA JANJIMATOGU",
     "kecamatan": "Onan Runggu",
     "desa": "Janji Matogu"
-  },
-  {
-    "nama_usaha": "PUSTU SIDIHONI",
-    "alamat": "SABUNGAN NIHUTA",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sabungan Ni Huta"
   },
   {
     "nama_usaha": "APOTIK ANUGRAH",
@@ -17161,12 +15475,6 @@ const dataUsaha = [
     "desa": "Sitinjak"
   },
   {
-    "nama_usaha": "POLINDES LUMBAN SUHI SUHI",
-    "alamat": "LUMBAN SUHI SUHI",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "POLINDES DESA PALIPI",
     "alamat": "DESA PALIPI",
     "kecamatan": "Palipi",
@@ -17183,12 +15491,6 @@ const dataUsaha = [
     "alamat": "TANJUNG BUNGA",
     "kecamatan": "Pangururan",
     "desa": "Tanjung Bunga"
-  },
-  {
-    "nama_usaha": "PUSTU BOLOBOLO",
-    "alamat": "CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "POLINDES HATOGUAN",
@@ -17227,12 +15529,6 @@ const dataUsaha = [
     "desa": "Huta Hotang"
   },
   {
-    "nama_usaha": "SD NEGERI 3 NAINGGOLAN",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "SD NEGERI 10 SIGAOL SIMBOLON",
     "alamat": "SIGAOL SIIMBOLON",
     "kecamatan": "Palipi",
@@ -17251,34 +15547,16 @@ const dataUsaha = [
     "desa": "Bonan Dolok"
   },
   {
-    "nama_usaha": "PUSTU SABULAN",
-    "alamat": "DESA SABULAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "POSKESDES DESA BOHO",
     "alamat": "DESA BOHO",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Boho"
   },
   {
-    "nama_usaha": "POSKESDES DESA SIANJUR MULAMULA",
-    "alamat": "DESA SIANJUR MULAMULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
-  },
-  {
     "nama_usaha": "BIDAN BR NAIBAHO",
     "alamat": "DESA AEK SIPITUDAI",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Aek Sipitudai"
-  },
-  {
-    "nama_usaha": "POSKESDES JANJI RAJA",
-    "alamat": "DESA JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "POSKESDES AEKNAULI",
@@ -17291,12 +15569,6 @@ const dataUsaha = [
     "alamat": "DESA HARIAN",
     "kecamatan": "Onan Runggu",
     "desa": "Harian"
-  },
-  {
-    "nama_usaha": "PUSTU CINTA DAME",
-    "alamat": "CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "POLINDES SALAON DOLOK",
@@ -17343,8 +15615,8 @@ const dataUsaha = [
   {
     "nama_usaha": "BATU SOKKAL GROUP, CV",
     "alamat": "Jl. Kol. Liberty Malau, Pangururan",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "KB LAMTAMA",
@@ -17357,12 +15629,6 @@ const dataUsaha = [
     "alamat": "HARIAN, DESA TURPUKN LIMBONG",
     "kecamatan": "Harian",
     "desa": "Turpuk Limbong"
-  },
-  {
-    "nama_usaha": "KB MELATI",
-    "alamat": "TAMBA, CINTA MAJU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "TK SWASTA ASSISI",
@@ -17395,34 +15661,10 @@ const dataUsaha = [
     "desa": "Hasinggahan"
   },
   {
-    "nama_usaha": "SD NEGERI 4 JANJI RAJA",
-    "alamat": "JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
-  },
-  {
     "nama_usaha": "PUSKESMAS PEMBANTU PARTUNGKONAGINJANG",
     "alamat": "DESA  PARTUNGKO NAGINJANG",
     "kecamatan": "Harian",
     "desa": "Partungko Naginjang"
-  },
-  {
-    "nama_usaha": "POSKESDES DESA SINGKAM",
-    "alamat": "DESA SINGKAM",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Singkam"
-  },
-  {
-    "nama_usaha": "SD NEGERI 9 SIJAMBUR",
-    "alamat": "DESA SIJAMBUR",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
-    "nama_usaha": "PUSTU CINTA MAJU",
-    "alamat": "DESA CINTA MAJU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "POSKESDES MADUMA",
@@ -17443,12 +15685,6 @@ const dataUsaha = [
     "desa": "Sitolu Huta"
   },
   {
-    "nama_usaha": "POSKESDES PARHORASAN",
-    "alamat": "PARHORASAN",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "POSKESDES SIMANINDO SANGKAL",
     "alamat": "SIMANINDO SANGKAL",
     "kecamatan": "Simanindo",
@@ -17459,12 +15695,6 @@ const dataUsaha = [
     "alamat": "PASARAN PARSAORAN",
     "kecamatan": "Nainggolan",
     "desa": "Pasaran Parsaoran"
-  },
-  {
-    "nama_usaha": "PUSKESMAS SITIOTIO",
-    "alamat": "DESA SABULAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "KB LOGOS",
@@ -17489,24 +15719,6 @@ const dataUsaha = [
     "alamat": "SIMANGONDNING",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "TPA MITERA SPITI INDONESIA",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "BIDAN SARIATI SITINJAK",
-    "alamat": "Sarimarrihit",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "SD NEGERI 7 SALAON DOLOK",
-    "alamat": "SALAON DOLOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "PUSTU GINOLAT",
@@ -17545,12 +15757,6 @@ const dataUsaha = [
     "desa": "Urat II"
   },
   {
-    "nama_usaha": "PRAKTEK BIDAN TETTY M PANJAITAN",
-    "alamat": "DESA HUTANAMORA",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "POSKESDES SIHUSAPI",
     "alamat": "DESA SIHUSAPI",
     "kecamatan": "Simanindo",
@@ -17563,12 +15769,6 @@ const dataUsaha = [
     "desa": "Hutagalung"
   },
   {
-    "nama_usaha": "POLINDES TOMOK",
-    "alamat": "DESA TOMOK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "APOTEK GABE",
     "alamat": "TOMOK PARSAORAN",
     "kecamatan": "Simanindo",
@@ -17579,12 +15779,6 @@ const dataUsaha = [
     "alamat": "DESA SITAMIANG",
     "kecamatan": "Onan Runggu",
     "desa": "Sitamiang"
-  },
-  {
-    "nama_usaha": "POLINDES SIMANINDO",
-    "alamat": "SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "PUSTU SIMBOLON PURBA",
@@ -17617,12 +15811,6 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "KB NORLAN",
-    "alamat": "Lumban Siantar, Nainggolan",
-    "kecamatan": "Nainggolan",
-    "desa": "Sipinggan Lumban Siantar"
-  },
-  {
     "nama_usaha": "KB LESTARI",
     "alamat": "PANANGGANGAN II",
     "kecamatan": "Nainggolan",
@@ -17651,12 +15839,6 @@ const dataUsaha = [
     "alamat": "SOSOR NANGKA",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Habeahan Naburahan"
-  },
-  {
-    "nama_usaha": "PUSTU TAMBA DOLOK",
-    "alamat": "DESA TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "POLINDES DESA JANJI MARTAHAN",
@@ -17737,18 +15919,6 @@ const dataUsaha = [
     "desa": "Pangaloan"
   },
   {
-    "nama_usaha": "PUSKESMAS SIRAIT",
-    "alamat": "DESA SIRAIT",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
-  },
-  {
-    "nama_usaha": "POLINDES JANJI MARIA",
-    "alamat": "JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
-  },
-  {
     "nama_usaha": "BIDAN GINOLAT",
     "alamat": "DESA GINOLAT",
     "kecamatan": "Sianjur Mulamula",
@@ -17783,12 +15953,6 @@ const dataUsaha = [
     "alamat": "SAOR NAULI",
     "kecamatan": "Palipi",
     "desa": "Saornauli Hatoguan"
-  },
-  {
-    "nama_usaha": "KB KASIH BUNDA",
-    "alamat": "SABUNGAN NIHUTA",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sabungan Ni Huta"
   },
   {
     "nama_usaha": "POLINDES HARIARAPINTU",
@@ -17881,12 +16045,6 @@ const dataUsaha = [
     "desa": "Huta Rihit"
   },
   {
-    "nama_usaha": "Pondok Bersalin Desa (POLINDES) PARHUSIP  III",
-    "alamat": "PARHUSIP 3",
-    "kecamatan": "Nainggolan",
-    "desa": "Parhusip"
-  },
-  {
     "nama_usaha": "KB ANUGRAH KID",
     "alamat": "PALIPI, DESA HATOGUAN",
     "kecamatan": "Palipi",
@@ -17897,12 +16055,6 @@ const dataUsaha = [
     "alamat": "SILIMALOMBU",
     "kecamatan": "Onan Runggu",
     "desa": "Silima Lombu"
-  },
-  {
-    "nama_usaha": "KB SEHATI",
-    "alamat": "JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
   },
   {
     "nama_usaha": "KB SIHOBON",
@@ -17959,12 +16111,6 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "PRAKTEK DOKTER UMUM DR. MANGGALA GULTOM",
-    "alamat": "DESA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "PUSTU DESA SIDEAK",
     "alamat": "DESA SIDEAK",
     "kecamatan": "Palipi",
@@ -17995,18 +16141,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "PRAKTEK DOKTER UMUM DR. LABORA SAMOSIR",
-    "alamat": "LUMBAN SUHI-SUHI",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "POSKESDES HUTANAMORA",
-    "alamat": "DESA HUTANAMORA",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "POLINDES PANANGGANGAN 2",
     "alamat": "PANANGGANGAN 2",
     "kecamatan": "Nainggolan",
@@ -18019,22 +16153,10 @@ const dataUsaha = [
     "desa": "Partungko Naginjang"
   },
   {
-    "nama_usaha": "PRAKTEK BIDAN M. SIANIPAR",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "TK NEGERI 1 SIANJUR MULA-MULA",
     "alamat": "Limbong, Desa Sarimarrihit",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "KB PRIMA KIDS",
-    "alamat": "DESA SINGKAM",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Singkam"
   },
   {
     "nama_usaha": "KB NATHANIA",
@@ -18049,22 +16171,10 @@ const dataUsaha = [
     "desa": "Janji Marapot"
   },
   {
-    "nama_usaha": "KB EBEN HAEZER",
-    "alamat": "CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "SD NEGERI 5 HUTAHOTANG",
     "alamat": "BARINGIN",
     "kecamatan": "Onan Runggu",
     "desa": "Huta Hotang"
-  },
-  {
-    "nama_usaha": "TPA SARAH",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "SMP SATU ATAP NEGERI 2 ONANRUNGGU",
@@ -18079,28 +16189,10 @@ const dataUsaha = [
     "desa": "Salaon Tonga Tonga"
   },
   {
-    "nama_usaha": "POSKESDES PARSAORAN",
-    "alamat": "DESA PARSAORAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "POSKESDES BUNTU MAULI",
-    "alamat": "DESA BUNTU MAULI",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
     "nama_usaha": "PRAKTEK BIDAN MELI ANTI SIPIRA",
     "alamat": "DESA SIPIRA",
     "kecamatan": "Onan Runggu",
     "desa": "Sipira"
-  },
-  {
-    "nama_usaha": "POSKESDES DESA HOLBUNG",
-    "alamat": "DESA HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "KLINIK PRATAMA DR.MASNUR RAJAGUKGUK",
@@ -18119,12 +16211,6 @@ const dataUsaha = [
     "alamat": "DESA SITUNGKIR",
     "kecamatan": "Pangururan",
     "desa": "Situngkir"
-  },
-  {
-    "nama_usaha": "PRAKTEK BERSAMA DOKTER SPESIALIS DAN UMUM PANGONDIAN",
-    "alamat": "DESA PINTUSONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "POSKESDES PARBABA DOLOK",
@@ -18163,22 +16249,10 @@ const dataUsaha = [
     "desa": "Sipinggan"
   },
   {
-    "nama_usaha": "PRAKTIK BIDAN ERITA PURBA",
-    "alamat": "DESA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "POLINDES PAMUTARAN",
     "alamat": "DESA PAMUTARAN",
     "kecamatan": "Palipi",
     "desa": "Pamutaran"
-  },
-  {
-    "nama_usaha": "POSKESDES DESA PASARAN 1",
-    "alamat": "DESA PASARAN 1",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
   },
   {
     "nama_usaha": "KB SYALOM",
@@ -18209,12 +16283,6 @@ const dataUsaha = [
     "alamat": "DESA URAT II",
     "kecamatan": "Palipi",
     "desa": "Urat II"
-  },
-  {
-    "nama_usaha": "SD NEGERI 6 PARSAORAN",
-    "alamat": "PARSAORAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "POSKESDES DESA SIPARMAHAN",
@@ -18251,12 +16319,6 @@ const dataUsaha = [
     "alamat": "GORAT PALLOMBUAN",
     "kecamatan": "Palipi",
     "desa": "Gorat Pallombuan"
-  },
-  {
-    "nama_usaha": "APOTEK DAUD",
-    "alamat": "SINAGA URUK PANDIANGAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
   },
   {
     "nama_usaha": "PRAKTEK BIDAN MINARDA GURNING",
@@ -18305,12 +16367,6 @@ const dataUsaha = [
     "alamat": "DESA SIALANGUAN",
     "kecamatan": "Pangururan",
     "desa": "Sialanguan"
-  },
-  {
-    "nama_usaha": "PUSKESMAS PEMBANTU SIJAMBUR",
-    "alamat": "DESA SIJAMBUR",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "APOTEK SIBORO FARMA",
@@ -18385,22 +16441,16 @@ const dataUsaha = [
     "desa": "Saornauli Hatoguan"
   },
   {
-    "nama_usaha": "BIDAN MANDIRI NURISWATI NADEAK",
-    "alamat": "SARIMARIHIT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
     "nama_usaha": "ROMAULI, CV",
     "alamat": "JL. KOL. LIBERTY MALAU",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "ALUS, CV",
     "alamat": "Jl.Sisingamanagaraja No.28 Pasar Pangururan Kab.Samosir",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "HERLINAWATY ARITONANG",
@@ -18421,22 +16471,10 @@ const dataUsaha = [
     "desa": "Turpuk Sihotang"
   },
   {
-    "nama_usaha": "SARAH SIDAURUK",
-    "alamat": "TUK-TUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "PETRA LIDWINA NAINGGOLAN",
     "alamat": "TAPIAN NAULI",
     "kecamatan": "Palipi",
     "desa": "Pardomuan Nauli"
-  },
-  {
-    "nama_usaha": "MANATAP SIHOMBING",
-    "alamat": "JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "INDUSTRI IKAN PANGGANG <RETIMA SIMARMATA>",
@@ -18467,18 +16505,6 @@ const dataUsaha = [
     "alamat": "HUTA RAJA, DUSUN I RIANIATE",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "KEDAI MINUM <TIMUR MARUBA SIMBOLON>",
-    "alamat": "PINTU SONA PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "INDUSTRI KUE <DIANCE HUTAURUK>",
-    "alamat": "HOLANG - HOLANG PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "PARNINGOTAN LUBIS",
@@ -18515,24 +16541,6 @@ const dataUsaha = [
     "alamat": "MARIA RAJA DUSUN III",
     "kecamatan": "Onan Runggu",
     "desa": "Janji Matogu"
-  },
-  {
-    "nama_usaha": "MERLINA SINURAT",
-    "alamat": "SIGUMBANG",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "ROY WIJAYA MANIK",
-    "alamat": "UNJUR",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
-  },
-  {
-    "nama_usaha": "CLARENSIA MENDE SIMALANGO",
-    "alamat": "LUMBAN POKKI",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "MANGOLOI MANURUNG",
@@ -18589,34 +16597,16 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "SADAR ROBINSON GURNING",
-    "alamat": "SIBANE BANE",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Paraduan"
-  },
-  {
     "nama_usaha": "ROPENDI SITUMORANG",
     "alamat": "SIGARANTUNG",
     "kecamatan": "Simanindo",
     "desa": "Hutaginjang"
   },
   {
-    "nama_usaha": "LORISTA H. LIMBONG",
-    "alamat": "SINGKAM",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Singkam"
-  },
-  {
     "nama_usaha": "HOTMIAN SINAGA",
     "alamat": "SAITNIHUTA",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "IMMANUEL TAMBA",
-    "alamat": "SIAJAMBUR",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "WARUNG MAKAN <NINA EFRIANTI MALAU>",
@@ -18673,24 +16663,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "BONDAN SURADI",
-    "alamat": "MARTOBA",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "JURI POLA SIMBOLON",
-    "alamat": "LUMBAN DOLOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
-    "nama_usaha": "PENJAHIT <DESI SASTIKA SIREGAR>",
-    "alamat": "PINTU SONA PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "MAYA R. SIDABUTAR",
     "alamat": "JL. LURUS SITOBU",
     "kecamatan": "Simanindo",
@@ -18703,22 +16675,10 @@ const dataUsaha = [
     "desa": "Garoga"
   },
   {
-    "nama_usaha": "JAHADIN TAMBA",
-    "alamat": "LUMBAN TAMBA",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "INDUSTRI KOSMETIK <DUMARISMA SIMBOLON>",
     "alamat": "UPA HODA, HUTA NAMORA, PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "DELPIKA SIMAMORA",
-    "alamat": "AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "JUAL BUAH <MARTOGI MALAU>",
@@ -18821,12 +16781,6 @@ const dataUsaha = [
     "alamat": "SAIT NIHUTA SIANTING ANTING",
     "kecamatan": "Pangururan",
     "desa": "Sianting - Anting"
-  },
-  {
-    "nama_usaha": "SASMARITA PURBA",
-    "alamat": "TIMBUL NAULI",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
   },
   {
     "nama_usaha": "ANNA MARIA HT HAEAN",
@@ -19009,12 +16963,6 @@ const dataUsaha = [
     "desa": "Siboro"
   },
   {
-    "nama_usaha": "FERNANDO SITANGGANG",
-    "alamat": "PULO PULO",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
-  },
-  {
     "nama_usaha": "HANDA SIPAYUNG",
     "alamat": "GINOLAT, GINOLAT, SIANJUR MULA-MULA",
     "kecamatan": "Sianjur Mulamula",
@@ -19093,18 +17041,6 @@ const dataUsaha = [
     "desa": "Marlumba"
   },
   {
-    "nama_usaha": "PERONIKA EPARIAMA PAKPAHAN",
-    "alamat": "SOSOR SILO",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
-  },
-  {
-    "nama_usaha": "NARLITUA SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "OSBAL SITANGGANG",
     "alamat": "HUTABARAT DESA SITINJAK",
     "kecamatan": "Onan Runggu",
@@ -19147,12 +17083,6 @@ const dataUsaha = [
     "desa": "Hariara Pintu"
   },
   {
-    "nama_usaha": "JUAL PLASTIK <SIMSON HITLER SINAGA>",
-    "alamat": "JL. DR.HADRIANUS SINAGA PINTUSONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "RUMAH MAKAN <MELLI ELIDA LABA RIA SIHITE>",
     "alamat": "JL. FL. TOBING PARDOMUAN I",
     "kecamatan": "Pangururan",
@@ -19169,12 +17099,6 @@ const dataUsaha = [
     "alamat": "JLN INPRES NO. 3",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "DIMHOT SITUMORANG",
-    "alamat": "SIBAGAS",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
   },
   {
     "nama_usaha": "JUAL ELEKTRONIK <MAKDIN NADEAK>",
@@ -19271,12 +17195,6 @@ const dataUsaha = [
     "alamat": "SIMPANG TAMBA",
     "kecamatan": "Palipi",
     "desa": "Simbolon Purba"
-  },
-  {
-    "nama_usaha": "RUMAH MAKAN <RANTONIUS LAOLI>",
-    "alamat": "Jl. Dr. Hadrianus Sinaga PINTUSONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "RUMAH MAKAN <NURMERITA SITORUS>",
@@ -19393,12 +17311,6 @@ const dataUsaha = [
     "desa": "Lintong Ni Huta"
   },
   {
-    "nama_usaha": "ERISKO TAMBA",
-    "alamat": "PANGOMBILAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "DANTON SITINJAK",
     "alamat": "SITAHURU",
     "kecamatan": "Onan Runggu",
@@ -19501,12 +17413,6 @@ const dataUsaha = [
     "desa": "Garoga"
   },
   {
-    "nama_usaha": "TANGGUH D TAMBA",
-    "alamat": "PEGE-PEGE",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "LAMTARIDA HUTASOIT",
     "alamat": "JL HORAS GG DANAU TOBA",
     "kecamatan": "Simanindo",
@@ -19541,12 +17447,6 @@ const dataUsaha = [
     "alamat": "LUMBAN BARAGAS DESA PANGALOAN KEC. NAINGGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Pangaloan"
-  },
-  {
-    "nama_usaha": "PISTA A SITANGGANG",
-    "alamat": "SIPONGGOL TANDUK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "SUNDAY MARANAP SINAGA",
@@ -19589,12 +17489,6 @@ const dataUsaha = [
     "alamat": "HUTA TINGGI",
     "kecamatan": "Pangururan",
     "desa": "Huta Tinggi"
-  },
-  {
-    "nama_usaha": "T. H. DUMA FRIDAYANTI SITANGGANG",
-    "alamat": "DUSUN 3",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
   },
   {
     "nama_usaha": "LENNY RUMAHORBO",
@@ -19657,12 +17551,6 @@ const dataUsaha = [
     "desa": "Hutaginjang"
   },
   {
-    "nama_usaha": "DIANA SIMARMATA",
-    "alamat": "HUTA RAJA DUSUN II",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "TENUN ULOS <DORMAULI NAINGGOLAN>",
     "alamat": "LUMBAN NAINGGOLAN, LUMBAN SUHI",
     "kecamatan": "Pangururan",
@@ -19693,12 +17581,6 @@ const dataUsaha = [
     "desa": "Dosroha"
   },
   {
-    "nama_usaha": "RIJON NASIP LADIOPTA SIMANGUNSONG",
-    "alamat": "SUHUT NIHUTA",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "GENSIUS SIHOMBING",
     "alamat": "JALAN DIPONEGORO",
     "kecamatan": "Pangururan",
@@ -19721,12 +17603,6 @@ const dataUsaha = [
     "alamat": "HARIANBOHO",
     "kecamatan": "Harian",
     "desa": "Turpuk Malau"
-  },
-  {
-    "nama_usaha": "CATERING <NOVITA DEWI PURBA>",
-    "alamat": "HUTA NAMORA PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "FRIENDCIUS NAINGGOLAN",
@@ -19771,18 +17647,6 @@ const dataUsaha = [
     "desa": "Sianting - Anting"
   },
   {
-    "nama_usaha": "FINA ANSISFA PANGGABEAN",
-    "alamat": "JL. PASAR BARU",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "HOT PAIAN SIJABAT",
-    "alamat": "TOMOK",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "HAPOSAN BUTAR BUTAR",
     "alamat": "JL RAYA SIMANINDO",
     "kecamatan": "Pangururan",
@@ -19795,12 +17659,6 @@ const dataUsaha = [
     "desa": "Garoga"
   },
   {
-    "nama_usaha": "BUNGA SOFIANA",
-    "alamat": "SAITNIHUTA",
-    "kecamatan": "Pangururan",
-    "desa": "Sait Ni Huta"
-  },
-  {
     "nama_usaha": "TOTOAN SITUMORANG",
     "alamat": "JL. RAYA SIMANINDO",
     "kecamatan": "Pangururan",
@@ -19811,12 +17669,6 @@ const dataUsaha = [
     "alamat": "LBN SINAPITU",
     "kecamatan": "Pangururan",
     "desa": "Lumban Suhi Suhi Dolok"
-  },
-  {
-    "nama_usaha": "DARNA NAIBAHO",
-    "alamat": "SOSOR HOLANG-HOLANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "KIRISMAN SINAGA",
@@ -19901,12 +17753,6 @@ const dataUsaha = [
     "alamat": "LIMBONG",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "MAROJAHAN MARIANUS NAIBAHO",
-    "alamat": "PASAR BENGKOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "NURSELINA SIRINGORINGO",
@@ -19999,12 +17845,6 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "REMIKA MANIK - KEDAI KOPI",
-    "alamat": "PEATABU",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sabungan Ni Huta"
-  },
-  {
     "nama_usaha": "TRIVOR SINAGA",
     "alamat": "LBN SINAGA, PALIPI, PALIPI, ,",
     "kecamatan": "Palipi",
@@ -20045,12 +17885,6 @@ const dataUsaha = [
     "alamat": "SIULOK",
     "kecamatan": "Simanindo",
     "desa": "Maduma"
-  },
-  {
-    "nama_usaha": "DEWI H.R. SIDAURUK",
-    "alamat": "CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "MANAN SIMANJORANG",
@@ -20101,22 +17935,10 @@ const dataUsaha = [
     "desa": "Siogung - Ogung"
   },
   {
-    "nama_usaha": "JULISMEN TAMBA",
-    "alamat": "LUMBAN HASAHATAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "MIDUK MIKAEL LUMBANSIANTAR",
     "alamat": "SIALAMAN",
     "kecamatan": "Nainggolan",
     "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
-    "nama_usaha": "AHMAD NAIBAHO",
-    "alamat": "PALLIMUTAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "HILDA CLARITA MANURUNG",
@@ -20159,12 +17981,6 @@ const dataUsaha = [
     "alamat": "LUMBAN GANDA",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "FARIA DANDA SAGALA",
-    "alamat": "DESA GINOLAT",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Ginolat"
   },
   {
     "nama_usaha": "SWANDI SINAGA",
@@ -20219,12 +18035,6 @@ const dataUsaha = [
     "alamat": "PAMINGGIRAN",
     "kecamatan": "Simanindo",
     "desa": "Hutaginjang"
-  },
-  {
-    "nama_usaha": "KELOMPOK BERMAIN MELATI",
-    "alamat": "sialaman",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
   },
   {
     "nama_usaha": "HEPPI SIMBOLON",
@@ -20287,12 +18097,6 @@ const dataUsaha = [
     "desa": "Bonan Dolok"
   },
   {
-    "nama_usaha": "ELMINA NAIBAHO",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SAMPETUA PANDIANGAN",
     "alamat": "SIANTAR ANTAR PANDIANGAN",
     "kecamatan": "Palipi",
@@ -20315,12 +18119,6 @@ const dataUsaha = [
     "alamat": "SOSOR GALUNG",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "ISPAYER NAINGGOLAN",
-    "alamat": "SOSOR PEA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "HUNTAL TP. HUTAJULU",
@@ -20353,12 +18151,6 @@ const dataUsaha = [
     "desa": "Situngkir"
   },
   {
-    "nama_usaha": "ROBERTUS SINURAT - KELONTONG",
-    "alamat": "PARADUAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Paraduan"
-  },
-  {
     "nama_usaha": "BENGET ROJAYA GROUP",
     "alamat": "Pantai Indah Situngkir (PIS) Dusun II",
     "kecamatan": "Pangururan",
@@ -20375,12 +18167,6 @@ const dataUsaha = [
     "alamat": "JL. SOSOR GALUNG",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "LOGITO SITINJAK",
-    "alamat": "SOSOR BARU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "PAROHON SIMARMATA",
@@ -20473,12 +18259,6 @@ const dataUsaha = [
     "desa": "Tomok"
   },
   {
-    "nama_usaha": "ANDI F. SIJABAT",
-    "alamat": "PARHUDONAN, TOMOK, SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "GODLIF TAMPUBOLON",
     "alamat": "LUMBAN RAJA",
     "kecamatan": "Palipi",
@@ -20521,12 +18301,6 @@ const dataUsaha = [
     "desa": "Unjur"
   },
   {
-    "nama_usaha": "RUMISTEN SIBATUARA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "INRAWATI  MALAU",
     "alamat": "SIBORONG BORONG",
     "kecamatan": "Onan Runggu",
@@ -20557,12 +18331,6 @@ const dataUsaha = [
     "desa": "Hariara Pintu"
   },
   {
-    "nama_usaha": "UNDO SITUMORANG",
-    "alamat": "RASANG BOSI",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
     "nama_usaha": "RAMADIA, CV",
     "alamat": "Jalan Lingkar Tuktuk",
     "kecamatan": "Simanindo",
@@ -20581,18 +18349,6 @@ const dataUsaha = [
     "desa": "Pangaloan"
   },
   {
-    "nama_usaha": "RODEAR GIRANATA SINAGA",
-    "alamat": "JL. HANDRIANUS KM. 4 HUTANAMORA",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "DINA SITUMORANG",
-    "alamat": "SITAPONGAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "FERNANDO SITINJAK",
     "alamat": "HUTAGALUNG,HUTAGALUNG,HARIAN,",
     "kecamatan": "Harian",
@@ -20603,12 +18359,6 @@ const dataUsaha = [
     "alamat": "TINGGI TINGGI, NAINGOLAN",
     "kecamatan": "Nainggolan",
     "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "PENJAHIT <LAMRINA LUMBANSIANTAR>",
-    "alamat": "PARLUASAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sipinggan Lumban Siantar"
   },
   {
     "nama_usaha": "SARMAULI MANIHURUK",
@@ -20719,12 +18469,6 @@ const dataUsaha = [
     "desa": "Siruma Hombar"
   },
   {
-    "nama_usaha": "RATNA SRI BUNGA PURBA",
-    "alamat": "PEKAN SIMANINDO, DESA SIMANINDO, KEC SIMANINDO, KAB SAMOSIR, SUMATERA UTARA",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "RENIA SIMALANGO",
     "alamat": "JL. RONGGUR",
     "kecamatan": "Pangururan",
@@ -20753,12 +18497,6 @@ const dataUsaha = [
     "alamat": "SOSOR SINAGA",
     "kecamatan": "Palipi",
     "desa": "Palipi"
-  },
-  {
-    "nama_usaha": "GIRA ANDRY SUPRIANTO SIRINGORINGO",
-    "alamat": "SIGIRAGIRA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
   },
   {
     "nama_usaha": "FREDDY TUA SINABUTAR",
@@ -20827,12 +18565,6 @@ const dataUsaha = [
     "desa": "Parsaoran I"
   },
   {
-    "nama_usaha": "JUNITA SIRINGORINGO",
-    "alamat": "PANGAMBATAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "RASMITA",
     "alamat": "PALIPI",
     "kecamatan": "Palipi",
@@ -20843,12 +18575,6 @@ const dataUsaha = [
     "alamat": "HATOGUAN, HATOGUAN, PALIPI,",
     "kecamatan": "Palipi",
     "desa": "Hatoguan"
-  },
-  {
-    "nama_usaha": "AYU ARTA SARI NAIBAHO",
-    "alamat": "PASAR BENGKOK, SIJAMBUR, RONGGUR NIHUTA",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "PRANATA PASURANTA GURNING",
@@ -21037,12 +18763,6 @@ const dataUsaha = [
     "desa": "Ambarita"
   },
   {
-    "nama_usaha": "ASINI ROHANA",
-    "alamat": "LUMBAN LINTONG",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "Yanti hutauruk",
     "alamat": "Hariara Pintu",
     "kecamatan": "Harian",
@@ -21173,12 +18893,6 @@ const dataUsaha = [
     "alamat": "TOMOK BOLON",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "ERISKA ERIKA SIREGAR",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "ARISMAN LASE",
@@ -21385,12 +19099,6 @@ const dataUsaha = [
     "desa": "Hasinggahan"
   },
   {
-    "nama_usaha": "DOISI SITUMORANG - PESAN MAKANAN KUE AYAM",
-    "alamat": "SIMANAMPANG TORUAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sabungan Ni Huta"
-  },
-  {
     "nama_usaha": "DEWI SARTIKA FITRI YANI",
     "alamat": "LUMBANG SINAGA, HUTA GINJANG,SIMANINDO",
     "kecamatan": "Simanindo",
@@ -21401,12 +19109,6 @@ const dataUsaha = [
     "alamat": "SIDEAK",
     "kecamatan": "Palipi",
     "desa": "Sideak"
-  },
-  {
-    "nama_usaha": "RIRIS HASIBUAN",
-    "alamat": "HUTABOLON",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "BINTARA NAIBAHO",
@@ -21431,12 +19133,6 @@ const dataUsaha = [
     "alamat": "SOSOR DOLOK",
     "kecamatan": "Harian",
     "desa": "Sosor Dolok"
-  },
-  {
-    "nama_usaha": "Janter Malau",
-    "alamat": "Si batu-batu",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Lintong Ni Huta"
   },
   {
     "nama_usaha": "WR NALUMRA, CV",
@@ -21547,18 +19243,6 @@ const dataUsaha = [
     "desa": "Pardomuan Nauli"
   },
   {
-    "nama_usaha": "DELIMA R HUTABALIAN",
-    "alamat": "PANGIRINGAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
-    "nama_usaha": "JUMALAN TAMBA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "DORLAN SIMANGUNSONG",
     "alamat": "SIMANGABANG",
     "kecamatan": "Nainggolan",
@@ -21575,12 +19259,6 @@ const dataUsaha = [
     "alamat": "JLN.KEJAKSAAN",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "BUHA SIRINGORINGO",
-    "alamat": "SABULAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "HANA KRISTINE HUTABALIAN",
@@ -21613,12 +19291,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "CHARLES PETRUS JULIAN SIMBOLON",
-    "alamat": "JL. KOL LIBERTI MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "PESTARIA PANDIANGAN",
     "alamat": "SIMULLOP",
     "kecamatan": "Pangururan",
@@ -21637,12 +19309,6 @@ const dataUsaha = [
     "desa": "Sitinjak"
   },
   {
-    "nama_usaha": "FERONIKA PANJAITAN",
-    "alamat": "LUMBAN MANIK",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "RIWIDA AMELYA NAIBAHO",
     "alamat": "JL. SISINGAMANGARAJA",
     "kecamatan": "Pangururan",
@@ -21659,12 +19325,6 @@ const dataUsaha = [
     "alamat": "SITATAR",
     "kecamatan": "Palipi",
     "desa": "Pardomuan Nauli"
-  },
-  {
-    "nama_usaha": "SOPAN SOVIAN SINAGA",
-    "alamat": "SIBATU-BATU",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
   },
   {
     "nama_usaha": "EMMA TRESY SILALAHI",
@@ -21691,22 +19351,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "ROYANI SINAGA",
-    "alamat": "SOSOR PANSUR",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "HOTMAN SIDABUTAR",
     "alamat": "HOLANG-HOLANG",
     "kecamatan": "Simanindo",
     "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "HOLMES SINABARIBA",
-    "alamat": "JL. SIGURGUR",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "ZULPAN TAMBA",
@@ -21829,12 +19477,6 @@ const dataUsaha = [
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "ISHAK RIYANTO PARULIAN RINGO RINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "pengepul hasil pertanian DESAR JUNTAK",
     "alamat": "Pangaloan",
     "kecamatan": "Nainggolan",
@@ -21955,22 +19597,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "IRMA NOVIANTY",
-    "alamat": "BINAGA SISA",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "TITIR MARITO LUMBANRAJA",
     "alamat": "LUMBAN SINAGA DOLOK",
     "kecamatan": "Simanindo",
     "desa": "Tanjungan"
-  },
-  {
-    "nama_usaha": "LEXANDRO A TAMBA",
-    "alamat": "KOMPLEK SMP SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "SITOLU HAE HORBO",
@@ -22013,12 +19643,6 @@ const dataUsaha = [
     "alamat": "KOMPLEK SUMBER SARI",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "MINARMA ROULIKA SILABAN",
-    "alamat": "HUTA RAJA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "ENI PANDIANGAN",
@@ -22093,12 +19717,6 @@ const dataUsaha = [
     "desa": "Sait Ni Huta"
   },
   {
-    "nama_usaha": "PANRO TAMBA",
-    "alamat": "HUTARAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "JULIANTO HOTTUA SILALAHI",
     "alamat": "LUMBAN DOLOK",
     "kecamatan": "Onan Runggu",
@@ -22141,12 +19759,6 @@ const dataUsaha = [
     "desa": "Turpuk Sagala"
   },
   {
-    "nama_usaha": "HIRAS HARJONO SIMBOLON",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "YANTI",
     "alamat": "LIMBAN RIHIT",
     "kecamatan": "Pangururan",
@@ -22181,12 +19793,6 @@ const dataUsaha = [
     "alamat": "PAMUTARAN",
     "kecamatan": "Palipi",
     "desa": "Pamutaran"
-  },
-  {
-    "nama_usaha": "HOTMEI MANULLANG",
-    "alamat": "HUTA BARU",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "ADI SATRIMUDA TAMBUNAN",
@@ -22267,12 +19873,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "LUSTER LIMBONG",
-    "alamat": "LIMBONG,,SARI MARIHIT,SIANJUR MULA-MULA",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
     "nama_usaha": "WERIFSON SIALLAGAN",
     "alamat": "AMBARITA",
     "kecamatan": "Simanindo",
@@ -22309,18 +19909,6 @@ const dataUsaha = [
     "desa": "Panampangan"
   },
   {
-    "nama_usaha": "ROBINSON SIMBOLON",
-    "alamat": "SIGUMBANG",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
-    "nama_usaha": "TANI ELISMAN SILALAHI",
-    "alamat": "SITENGGAL-TENGGAL",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "RISTAN SIMBOLON",
     "alamat": "KOMPLEK HKBP",
     "kecamatan": "Pangururan",
@@ -22331,12 +19919,6 @@ const dataUsaha = [
     "alamat": "PANJAITAN",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Siboro"
-  },
-  {
-    "nama_usaha": "PANTUN SITUMORANG",
-    "alamat": "ONAN SIBAGANDING",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "HERMAN KABAN",
@@ -22355,12 +19937,6 @@ const dataUsaha = [
     "alamat": "Hutagalung",
     "kecamatan": "Harian",
     "desa": "Hutagalung"
-  },
-  {
-    "nama_usaha": "ELEVEN MANGADAR NAINGGOLAN",
-    "alamat": "AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "ARTAMA TAMBA",
@@ -22513,12 +20089,6 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "BANTI SIMBOLON",
-    "alamat": "LBN PANDE",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "MULA TIMBUL NAPITU",
     "alamat": "MARLUMBA",
     "kecamatan": "Simanindo",
@@ -22579,12 +20149,6 @@ const dataUsaha = [
     "desa": "Urat Timur"
   },
   {
-    "nama_usaha": "THEODORA SITANGGANG",
-    "alamat": "SIARUNG-ARUNG",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
-  },
-  {
     "nama_usaha": "YANTI GULTOM",
     "alamat": "BUNTU MAULI",
     "kecamatan": "Onan Runggu",
@@ -22601,12 +20165,6 @@ const dataUsaha = [
     "alamat": "LUMBAN SINAGA",
     "kecamatan": "Simanindo",
     "desa": "Parbalohan"
-  },
-  {
-    "nama_usaha": "HENRY HALOMOAN NAPITUPULU",
-    "alamat": "PARLUASAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
   },
   {
     "nama_usaha": "PARMONANGAN SAGALA",
@@ -22637,18 +20195,6 @@ const dataUsaha = [
     "alamat": "LABUHAN AMBARITA",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "HELENA E C SINAGA",
-    "alamat": "SAMOSIR SIALANGGAN",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
-  },
-  {
-    "nama_usaha": "OLIVER SITINJAK",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "TIARMA SITUMORANG",
@@ -22697,12 +20243,6 @@ const dataUsaha = [
     "alamat": "NAIBAHO 2",
     "kecamatan": "Palipi",
     "desa": "Sigaol Marbun"
-  },
-  {
-    "nama_usaha": "KELOMPOK BERMAIN WELIPA",
-    "alamat": "hutanagodang",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "RENTINA SIHALOHO",
@@ -22831,22 +20371,10 @@ const dataUsaha = [
     "desa": "Parsaoran Urat"
   },
   {
-    "nama_usaha": "ROTUA N.A SILALAHI",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "HENNI MARIANI SAGALA",
     "alamat": "LUMBAN SUHI SUI TORUAN",
     "kecamatan": "Pangururan",
     "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "NURLELA SILALAHI",
-    "alamat": "SIJAMBUR",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "DODYGIO HARYONO SIREGAR",
@@ -22873,12 +20401,6 @@ const dataUsaha = [
     "desa": "Huta Bolon"
   },
   {
-    "nama_usaha": "EBEN J. PINTUBATU",
-    "alamat": "JL. RAYA AMBARITA, AMBARITA, SIMANINDO, SAMOSIR",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "NURMAYA NAIBAHO",
     "alamat": "LUMBAN PINGGOL",
     "kecamatan": "Pangururan",
@@ -22889,12 +20411,6 @@ const dataUsaha = [
     "alamat": "HARIARA TOLU",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "ANDAS MENAK SINAGA",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "JIMRON HASIHOLAN NAINGGOLAN",
@@ -22945,12 +20461,6 @@ const dataUsaha = [
     "desa": "Pardomuan"
   },
   {
-    "nama_usaha": "ASMINA SANTI PANDIANGAN",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SUMIATI NAINGGOLAN",
     "alamat": "LUMBAN NAINGGOLAN",
     "kecamatan": "Simanindo",
@@ -22979,12 +20489,6 @@ const dataUsaha = [
     "alamat": "DUSUN II HUTABOLON",
     "kecamatan": "Pangururan",
     "desa": "Huta Bolon"
-  },
-  {
-    "nama_usaha": "LASNI RIWANTA SINAGA",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "SERI NOVIANTI SEMBIRING",
@@ -23077,12 +20581,6 @@ const dataUsaha = [
     "desa": "Aek Sipitudai"
   },
   {
-    "nama_usaha": "PELITA TAMBA",
-    "alamat": "PARENDEAN TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "Pidamalinda pasaribu",
     "alamat": "Hariara",
     "kecamatan": "Harian",
@@ -23119,12 +20617,6 @@ const dataUsaha = [
     "desa": "Urat II"
   },
   {
-    "nama_usaha": "FIRMAN NAZARA",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "IWAN PM SINAGA",
     "alamat": "GORAT",
     "kecamatan": "Palipi",
@@ -23137,12 +20629,6 @@ const dataUsaha = [
     "desa": "Simbolon Purba"
   },
   {
-    "nama_usaha": "BENTUR SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "JOSUA EXPALDO LIMBONG",
     "alamat": "TURPUK SAGALA",
     "kecamatan": "Harian",
@@ -23153,12 +20639,6 @@ const dataUsaha = [
     "alamat": "JL. HADRIANUS SINAGA",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "JUNIKA",
-    "alamat": "LUMBANSAORNAULI",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "MASRI K.RUMAHORBO",
@@ -23273,12 +20753,6 @@ const dataUsaha = [
     "alamat": "SITONGGI-TONGGI",
     "kecamatan": "Palipi",
     "desa": "Pamutaran"
-  },
-  {
-    "nama_usaha": "MAWAR SIMATUPANG",
-    "alamat": "PASAR DAME",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "TUMPAL EDYSON MANGIDOTUA",
@@ -23407,12 +20881,6 @@ const dataUsaha = [
     "desa": "Pintusona"
   },
   {
-    "nama_usaha": "BINSAR BU HARIANTO ARBI SINURAT",
-    "alamat": "SIHARBANGAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "TORRY HIA",
     "alamat": "AEK BOLON",
     "kecamatan": "Pangururan",
@@ -23453,12 +20921,6 @@ const dataUsaha = [
     "alamat": "TARABUNGA",
     "kecamatan": "Palipi",
     "desa": "Simbolon Purba"
-  },
-  {
-    "nama_usaha": "DARWIN SAGALA",
-    "alamat": "HASINGGAAN",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Hasinggahan"
   },
   {
     "nama_usaha": "SABAR HOTMARNINGOT SAGALA",
@@ -23533,12 +20995,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "AGUS FERNANDO SIMBOLON",
-    "alamat": "PINTUSONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "NOPIANTI SIDAURUK",
     "alamat": "KOMPLEK SMPN 4 SIMANINDO",
     "kecamatan": "Simanindo",
@@ -23549,12 +21005,6 @@ const dataUsaha = [
     "alamat": "Huta Gorat",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Salaon Tonga Tonga"
-  },
-  {
-    "nama_usaha": "LEONARDUS SINAGA",
-    "alamat": "ONAN SIBAGANDING",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "Riskawan lumban batu",
@@ -23617,12 +21067,6 @@ const dataUsaha = [
     "desa": "Parhorasan"
   },
   {
-    "nama_usaha": "HERTATI SINAGA",
-    "alamat": "TAMBA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "FRENKI NAIBAHO",
     "alamat": "PASAR SILENGGE DUSUN II,HUTA TINGGI,PANGURURUAN",
     "kecamatan": "Pangururan",
@@ -23675,12 +21119,6 @@ const dataUsaha = [
     "alamat": "JL.KEJAKSAAN NO.25",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "DOTDI SINAGA",
-    "alamat": "NAINGGOLAN,",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
   },
   {
     "nama_usaha": "KALDIN SINABARIBA",
@@ -23743,12 +21181,6 @@ const dataUsaha = [
     "desa": "Dosroha"
   },
   {
-    "nama_usaha": "ROI CANRA SARAGI",
-    "alamat": "NAHORNOP",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "LUNDU VIGILIUS SIMBOLON",
     "alamat": "GINOLAT",
     "kecamatan": "Sianjur Mulamula",
@@ -23765,12 +21197,6 @@ const dataUsaha = [
     "alamat": "SANGKALNIULAHAN",
     "kecamatan": "Simanindo",
     "desa": "Simanindo Sangkal"
-  },
-  {
-    "nama_usaha": "JONNER SITANGGANG",
-    "alamat": "AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "MARITEN SITUMORANG",
@@ -23851,12 +21277,6 @@ const dataUsaha = [
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "DIANTO MANIK",
-    "alamat": "KOMPLEKS POLISI",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "MARIA CANDRA NAINGGOLAN",
     "alamat": "LUMBAN MANIK",
     "kecamatan": "Pangururan",
@@ -23881,12 +21301,6 @@ const dataUsaha = [
     "desa": "Hutaginjang"
   },
   {
-    "nama_usaha": "MARSUDIN LUMBANTUNGKUP",
-    "alamat": "JL. MERDEKA NO. 10",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
     "nama_usaha": "PERIS SANDO SINAGA",
     "alamat": "PALLOMBUAN",
     "kecamatan": "Palipi",
@@ -23897,12 +21311,6 @@ const dataUsaha = [
     "alamat": "RIANIATE",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "ASLINA TUMANGGOR",
-    "alamat": "LUMBAN SUHI SUHI",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "Hotdo laura parida sitanggang",
@@ -24001,12 +21409,6 @@ const dataUsaha = [
     "desa": "Hasinggahan"
   },
   {
-    "nama_usaha": "MARTIN PAULUS SITANGGANG",
-    "alamat": "JL. PUTRI LOPIAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "ARTO AMBARITA",
     "alamat": "GINOLAT",
     "kecamatan": "Sianjur Mulamula",
@@ -24049,12 +21451,6 @@ const dataUsaha = [
     "desa": "Hutagalung"
   },
   {
-    "nama_usaha": "ENOS SINAGA /boru nadeak",
-    "alamat": "TAHUNAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "MANIMPAN SITOMPUL",
     "alamat": "LUMBAN HARO, SIBONOR OMPURATUS, NAINGGOLAN",
     "kecamatan": "Nainggolan",
@@ -24077,12 +21473,6 @@ const dataUsaha = [
     "alamat": "AEK NAULI",
     "kecamatan": "Palipi",
     "desa": "Sigaol Marbun"
-  },
-  {
-    "nama_usaha": "FERDINAN APRIYANTO SITUMORANG",
-    "alamat": "AMBARITA, AMBARITA, SIMANINDO SAMOSIR",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "ROIANTY MARBUN",
@@ -24343,12 +21733,6 @@ const dataUsaha = [
     "desa": "Nainggolan"
   },
   {
-    "nama_usaha": "ANDIKA LEO SAPUTRA TARIGAN",
-    "alamat": "LUMBAN SOIT",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "ELIDA IPANNA SITOMPUL",
     "alamat": "JL. RONGGUR NIHUTA",
     "kecamatan": "Pangururan",
@@ -24415,12 +21799,6 @@ const dataUsaha = [
     "desa": "Lumban Pinggol"
   },
   {
-    "nama_usaha": "MANOGU SINAGA",
-    "alamat": "BANJAR GUNUNG",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sianjur Mula Mula"
-  },
-  {
     "nama_usaha": "RETNA SIHOMBING",
     "alamat": "SITATAR",
     "kecamatan": "Palipi",
@@ -24461,12 +21839,6 @@ const dataUsaha = [
     "alamat": "Peabang",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Boho"
-  },
-  {
-    "nama_usaha": "penjahit <HOTSUMITA MASLIANA PARHUSIP.",
-    "alamat": "HUTARAJA",
-    "kecamatan": "Nainggolan",
-    "desa": "Parhusip"
   },
   {
     "nama_usaha": "MARHAMA ROHIMIN",
@@ -24517,22 +21889,10 @@ const dataUsaha = [
     "desa": "Sabulan"
   },
   {
-    "nama_usaha": "SIMSON SINAGA",
-    "alamat": "SIBARITA",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "HETTI NAIBAHO",
     "alamat": "LBN SITUMORANG DESA HUTA TINGGI KEC.PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Huta Tinggi"
-  },
-  {
-    "nama_usaha": "JOHANNES EFENDI SITANGGANG",
-    "alamat": "JL. SIARUNG - ARUNG",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "ANITA PUTRI SARI SITANGGANG",
@@ -24559,12 +21919,6 @@ const dataUsaha = [
     "desa": "Rianiate"
   },
   {
-    "nama_usaha": "ANCEL SINAGA",
-    "alamat": "TAMBAK DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "Nurhaya haulina warkuliana nadeak",
     "alamat": "Tanjung Bunga",
     "kecamatan": "Pangururan",
@@ -24581,12 +21935,6 @@ const dataUsaha = [
     "alamat": "JL AEK RAJA",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "Dumanris Turnip",
-    "alamat": "Sialapit Ds Cinta Dame",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "ABDONAL SINAGA",
@@ -24623,18 +21971,6 @@ const dataUsaha = [
     "alamat": "JANJI MATOGU",
     "kecamatan": "Onan Runggu",
     "desa": "Janji Matogu"
-  },
-  {
-    "nama_usaha": "RAMBANG SUNAWAR SIMBOLON",
-    "alamat": "JL. BARISAN GEREJA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
-  },
-  {
-    "nama_usaha": "MUSTAR SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "ENDANG SIJABAT",
@@ -24733,12 +22069,6 @@ const dataUsaha = [
     "desa": "Siallagan Pindaraya"
   },
   {
-    "nama_usaha": "PASTIADA M SIMBOLON",
-    "alamat": "SIGUMBANG ,",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "MASTON SUHIRMAN SIMBOLON",
     "alamat": "HUTA GODANG",
     "kecamatan": "Palipi",
@@ -24757,12 +22087,6 @@ const dataUsaha = [
     "desa": "Dosroha"
   },
   {
-    "nama_usaha": "ROBEKKA SIMALANGO - PEMBUATAN KERUPUK PISANG",
-    "alamat": "SIMARHULANG",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Paraduan"
-  },
-  {
     "nama_usaha": "HANSEN SITANGGANG",
     "alamat": "Sampe Horas",
     "kecamatan": "Palipi",
@@ -24773,18 +22097,6 @@ const dataUsaha = [
     "alamat": "LUMBAN PINGGOL",
     "kecamatan": "Pangururan",
     "desa": "Lumban Pinggol"
-  },
-  {
-    "nama_usaha": "DEDI HERMANTO TAMPUBOLON",
-    "alamat": "LBN. BANGUN-BANGUN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
-    "nama_usaha": "WESLY REZEKY SITIO",
-    "alamat": "JALAN BESAR AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "SANTI ROSANA SIMAMORA",
@@ -24871,12 +22183,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "JONGER SIMBOLON",
-    "alamat": "BARISAN TORUAN DOLOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "LINDA ELPINA SIMBOLON",
     "alamat": "PINTU SONA",
     "kecamatan": "Pangururan",
@@ -24911,12 +22217,6 @@ const dataUsaha = [
     "alamat": "TOMOK",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "MANUTUR SITUMORANG",
-    "alamat": "DOLOK MARTAHAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
   },
   {
     "nama_usaha": "SEFANIA SAGALA",
@@ -24959,12 +22259,6 @@ const dataUsaha = [
     "alamat": "KOMP FERRY TOMOK",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "PASTIMA DAMANIK",
-    "alamat": "KOMPLEK FERRY",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "Hotmian sigalingging",
@@ -25267,12 +22561,6 @@ const dataUsaha = [
     "desa": "Maduma"
   },
   {
-    "nama_usaha": "RINI OKTARIA TINDAON",
-    "alamat": "LUMBAN GALUNG",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "JONNER TAMBA",
     "alamat": "PEARUNG",
     "kecamatan": "Nainggolan",
@@ -25333,22 +22621,10 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "LAURINA PERAWATI SINURAT",
-    "alamat": "LUMBAN DOLOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "ELSION SABDA TURNIP",
     "alamat": "BAT-BATU",
     "kecamatan": "Sianjur Mulamula",
     "desa": "Sianjur Mula Mula"
-  },
-  {
-    "nama_usaha": "ARTHA CONSULTANT",
-    "alamat": "JALAN SISANGKIL PARADUAN",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "HERMAN SAPUTRA NAINGGOLAN",
@@ -25367,12 +22643,6 @@ const dataUsaha = [
     "alamat": "LUMBAN MANURUNG",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "DISKO SITANGGANG",
-    "alamat": "SIBARGOT",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "JARUSDIN NAIBAHO",
@@ -25429,12 +22699,6 @@ const dataUsaha = [
     "desa": "Sipinggan"
   },
   {
-    "nama_usaha": "ROLIKA MANIK",
-    "alamat": "HUTABARU",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "MARULI SIDABUTAR",
     "alamat": "JL, PANDE NABOLON",
     "kecamatan": "Simanindo",
@@ -25457,12 +22721,6 @@ const dataUsaha = [
     "alamat": "LUMBAN PANSUR",
     "kecamatan": "Pangururan",
     "desa": "Sitolu Huta"
-  },
-  {
-    "nama_usaha": "CANDRO WIDODO SIDABUTAR",
-    "alamat": "LBN GALUNG, TOMOK, SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "TOHAP WANDI SUPRATMAN SINAGA",
@@ -25523,12 +22781,6 @@ const dataUsaha = [
     "alamat": "Hutagalung",
     "kecamatan": "Harian",
     "desa": "Hutagalung"
-  },
-  {
-    "nama_usaha": "RUSMEY TOGATOROP",
-    "alamat": "TATAR BUNGA",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "RONI NURHASANAH LUBIS",
@@ -25603,28 +22855,10 @@ const dataUsaha = [
     "desa": "Onanrunggu"
   },
   {
-    "nama_usaha": "SARHOCHEL MARTOPOLO TAMBA",
-    "alamat": "SITONGGOR",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
-  },
-  {
     "nama_usaha": "TENUN ULOS <MELIANA SAGALA>",
     "alamat": "SITUNGKIR",
     "kecamatan": "Pangururan",
     "desa": "Situngkir"
-  },
-  {
-    "nama_usaha": "LAMBOK MALAU GRUP, CV",
-    "alamat": "GUDANG",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
-    "nama_usaha": "ASEP TAMBA",
-    "alamat": "PEGE PEGE DESA PARSAORAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "TRISNAWATY NAINGGOLAN",
@@ -25667,12 +22901,6 @@ const dataUsaha = [
     "alamat": "BARISAN GEREJA",
     "kecamatan": "Palipi",
     "desa": "Saornauli Hatoguan"
-  },
-  {
-    "nama_usaha": "ARIKO SITANGGANG",
-    "alamat": "SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "SITI NUR AINI",
@@ -25777,12 +23005,6 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Toruan"
   },
   {
-    "nama_usaha": "HETTI SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "ERDINAWATI NADEAK",
     "alamat": "JL.USKUP AGUNG SUGIOPRANOTO",
     "kecamatan": "Pangururan",
@@ -25883,12 +23105,6 @@ const dataUsaha = [
     "alamat": "PASARAN",
     "kecamatan": "Nainggolan",
     "desa": "Pasaran I"
-  },
-  {
-    "nama_usaha": "ROSLIN SIHOMBING",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "ROTUA TURNIP",
@@ -26065,22 +23281,10 @@ const dataUsaha = [
     "desa": "Pardugul"
   },
   {
-    "nama_usaha": "KARJO LIBRA H. SIMBOLON",
-    "alamat": "KOMPLEK SMA NEGEERI 1",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "KATARINA RINTA SINAGA",
     "alamat": "PANGAMBATAN, TOMOK SIMANINDO",
     "kecamatan": "Simanindo",
     "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "ARTA GUMIRAH SIREGAR",
-    "alamat": "HUTA BOLON",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "JUAL JAMU <JULIANA SITINJAK>",
@@ -26123,12 +23327,6 @@ const dataUsaha = [
     "alamat": "LUMBAN BUNTU",
     "kecamatan": "Pangururan",
     "desa": "Lumban Suhi Suhi Dolok"
-  },
-  {
-    "nama_usaha": "ADA TUA SIMBOLON",
-    "alamat": "PALLIMUTAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "OBBYE MARKHE SIDABUTAR",
@@ -26221,12 +23419,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "ELIAS NADEAK",
-    "alamat": "TAHUAN, KEL/DESA PARDOMUAN I, KEC. PANGURURAN, KAB. SAMOSIR",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "MARITO RAHMA SATIA MALAU",
     "alamat": "SANGKAL",
     "kecamatan": "Simanindo",
@@ -26281,12 +23473,6 @@ const dataUsaha = [
     "desa": "Sait Ni Huta"
   },
   {
-    "nama_usaha": "LARASWATI SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "ROMESTA SINAGA",
     "alamat": "GORAT",
     "kecamatan": "Palipi",
@@ -26323,28 +23509,10 @@ const dataUsaha = [
     "desa": "Bonan Dolok"
   },
   {
-    "nama_usaha": "ANFAL SAMOSIR",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
-    "nama_usaha": "HENLIANA MALAU",
-    "alamat": "SITALAMETANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SI UTTE BOLON",
     "alamat": "Lumban Suhi-suhi Dolok",
     "kecamatan": "Pangururan",
     "desa": "Lumban Suhi Suhi Dolok"
-  },
-  {
-    "nama_usaha": "EVI MAGDALENA MALAU",
-    "alamat": "HOLANG HOLANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "RENTELINA HASIBUAN",
@@ -26429,12 +23597,6 @@ const dataUsaha = [
     "alamat": "PARDOMUAN I",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "NOPITA SIMBOLON",
-    "alamat": "DUSUN III PANGUMPATAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "LOBER NAIBAHO",
@@ -26539,12 +23701,6 @@ const dataUsaha = [
     "desa": "Siruma Hombar"
   },
   {
-    "nama_usaha": "SANTI TAMBA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "DWI HARDO NAINGGOLAN",
     "alamat": "Lumban simanihuruk",
     "kecamatan": "Pangururan",
@@ -26563,34 +23719,16 @@ const dataUsaha = [
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "PIO MARIONO SIRINGORINGO",
-    "alamat": "SIGIRA-GIRA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
-  },
-  {
     "nama_usaha": "Paramita sagala",
     "alamat": "Harihara Pintu",
     "kecamatan": "Harian",
     "desa": "Hariara Pintu"
   },
   {
-    "nama_usaha": "APPRI MERIBA SINAGA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "SARDAYAN ROHANSEN NADEAK",
     "alamat": "TANJUNG BUNGA, TANJUNG BUNGA, PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Tanjung Bunga"
-  },
-  {
-    "nama_usaha": "ZEHNS DARWIN SITANGGANG",
-    "alamat": "JL. PARTUNGKOAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
   },
   {
     "nama_usaha": "JETRO SITANGGANG",
@@ -26629,22 +23767,10 @@ const dataUsaha = [
     "desa": "Pananggangan II"
   },
   {
-    "nama_usaha": "CASTRO ALEXANDER SINURAT",
-    "alamat": "JL. USKUP AGUNG SUGIOPRANOTO NO. 2",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "Elisabet rona uli sidabutar",
     "alamat": "Onanrunggu",
     "kecamatan": "Onan Runggu",
     "desa": "Onanrunggu"
-  },
-  {
-    "nama_usaha": "ASDA SITANGGANG",
-    "alamat": "HUTA RAJA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "WINDA SILALAHI",
@@ -26705,12 +23831,6 @@ const dataUsaha = [
     "alamat": "SIGUMBANG",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "DESMA NAINGGOLAN",
-    "alamat": "JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "ROSITA HOTNIIDA SITUMORANG",
@@ -26803,12 +23923,6 @@ const dataUsaha = [
     "desa": "Sigaol Marbun"
   },
   {
-    "nama_usaha": "JUANDA LIMBONG",
-    "alamat": "JL. PELABUHAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "NAHLAN NAIBAHO",
     "alamat": "SIAGIAN",
     "kecamatan": "Pangururan",
@@ -26825,12 +23939,6 @@ const dataUsaha = [
     "alamat": "JLN RINGROAD SAMOSIR/gorat",
     "kecamatan": "Palipi",
     "desa": "Gorat Pallombuan"
-  },
-  {
-    "nama_usaha": "MARISOL SIMBOLON",
-    "alamat": "LUMBAN DOLOK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "Dina rogantina tamba",
@@ -26899,18 +24007,6 @@ const dataUsaha = [
     "desa": "Pananggangan II"
   },
   {
-    "nama_usaha": "JUAL KUE <ANITA BR. SAGALA>",
-    "alamat": "LUMBAN SUHI, PANGURURAN",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
-    "nama_usaha": "ENITA SINAGA",
-    "alamat": "SITALAMETANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "EVI SIMANJUNTAK",
     "alamat": "SIOPAT SOSOR",
     "kecamatan": "Pangururan",
@@ -26921,12 +24017,6 @@ const dataUsaha = [
     "alamat": "SITORNONG",
     "kecamatan": "Nainggolan",
     "desa": "Sipinggan"
-  },
-  {
-    "nama_usaha": "ABAR SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "Rohanca sitohang",
@@ -27035,12 +24125,6 @@ const dataUsaha = [
     "alamat": "JL. RONGGURNIHUTA",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "HORAS MT. TAMBA",
-    "alamat": "LBN SIANTAR",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "MARIANUS SIMANIHURUK",
@@ -27181,12 +24265,6 @@ const dataUsaha = [
     "desa": "Hatoguan"
   },
   {
-    "nama_usaha": "RIATI SINAGA",
-    "alamat": "UGAN UGAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "LIDYA LUMBANRAJA",
     "alamat": "NANTINDANG",
     "kecamatan": "Nainggolan",
@@ -27229,18 +24307,6 @@ const dataUsaha = [
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "LARIS H. MALAU",
-    "alamat": "SOOSR MALAU",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "RIMMA SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "SEKIN AGNES MALAU",
     "alamat": "PARMONANGAN",
     "kecamatan": "Pangururan",
@@ -27257,12 +24323,6 @@ const dataUsaha = [
     "alamat": "PARSAORAN I",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "VERONICA TUMANGGOR",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "VIKTOR SITANGGANG",
@@ -27287,18 +24347,6 @@ const dataUsaha = [
     "alamat": "Hariara Pintu",
     "kecamatan": "Harian",
     "desa": "Hariara Pintu"
-  },
-  {
-    "nama_usaha": "BUDI APRIANTO",
-    "alamat": "SIPONGGOL TANDUK",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
-  },
-  {
-    "nama_usaha": "FENNI R. TURNIP",
-    "alamat": "LIMBONG",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
   },
   {
     "nama_usaha": "DODI ANDIKA PUTRA LUMBAN RAJA",
@@ -27415,12 +24463,6 @@ const dataUsaha = [
     "desa": "Ronggur Ni Huta"
   },
   {
-    "nama_usaha": "RIDAWATI LUMBANBATU",
-    "alamat": "JL. DR. HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "DESPON SIHOTANG",
     "alamat": "MOGANG",
     "kecamatan": "Palipi",
@@ -27455,12 +24497,6 @@ const dataUsaha = [
     "alamat": "JL. RONGGUR",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "LAMBOK LAMHOT LEROY MALAU",
-    "alamat": "GUDANG",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "BENNI NAIBAHO",
@@ -27499,12 +24535,6 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Toruan"
   },
   {
-    "nama_usaha": "SIBOLEBOLE",
-    "alamat": "Sait Nihuta",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "RISTA SIHOTANG",
     "alamat": "Alngit",
     "kecamatan": "Pangururan",
@@ -27521,12 +24551,6 @@ const dataUsaha = [
     "alamat": "BATU LUNAK",
     "kecamatan": "Simanindo",
     "desa": "Parmonangan"
-  },
-  {
-    "nama_usaha": "HEDDI PURBA",
-    "alamat": "SIALAPIT",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "BATAHAN PAKPAHAN",
@@ -27547,22 +24571,10 @@ const dataUsaha = [
     "desa": "Huta Bolon"
   },
   {
-    "nama_usaha": "RESTA RAJAGUKGUK",
-    "alamat": "JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
-  },
-  {
     "nama_usaha": "MARSAULINA BR BUTAR BUTAR",
     "alamat": "JL. PULO SAMOSIR",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "LASMARIA SINAGA",
-    "alamat": "SIHADUKKA",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "JOY JEKSION SINAGA",
@@ -27575,12 +24587,6 @@ const dataUsaha = [
     "alamat": "JL. D.I PANJAITAN NO.63",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "HOTMAN SIDABUTAR",
-    "alamat": "PELABUHAN TOMOK TOUR",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "RENATA SAULINA PANDIANGAN",
@@ -27709,18 +24715,6 @@ const dataUsaha = [
     "desa": "Sigaol Simbolon"
   },
   {
-    "nama_usaha": "ARMAN NAINGGOLAN",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "KAPRO SIDABUTAR",
-    "alamat": "PASAR BARU",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
     "nama_usaha": "LEDIS RAMAYANA SIMBOLON",
     "alamat": "TANJUNG BUNGA",
     "kecamatan": "Pangururan",
@@ -27793,22 +24787,10 @@ const dataUsaha = [
     "desa": "Huta Dame"
   },
   {
-    "nama_usaha": "SAKKAMADEHA KREASI SEMESTA",
-    "alamat": "HUTA BARU",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "USDEN MALAU",
     "alamat": "PINTU BATU",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "HEPI HENNI MALAU",
-    "alamat": "JL PELABUHAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "JUSTIANUS SINAGA",
@@ -27841,12 +24823,6 @@ const dataUsaha = [
     "desa": "Simarmata"
   },
   {
-    "nama_usaha": "PONIMIN SIBORO",
-    "alamat": "LUMBAN SIBORO",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "KRISTINA HUTAGAOL",
     "alamat": "LUMBAN JIOR",
     "kecamatan": "Nainggolan",
@@ -27873,12 +24849,6 @@ const dataUsaha = [
   {
     "nama_usaha": "Nursani tambunan",
     "alamat": "Jl.dr.f.l Tobing",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "BARBARA GULTOM",
-    "alamat": "JL. DI. PANJAITAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
   },
@@ -27923,12 +24893,6 @@ const dataUsaha = [
     "alamat": "PARSAORAN",
     "kecamatan": "Sitio-tio",
     "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "JUDIMAN",
-    "alamat": "HUTAURUK-URUK",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "JUNIOR JECKSON",
@@ -28009,12 +24973,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "OCTO SIDABUTAR",
-    "alamat": "TUKTUK SIADONG",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
-  },
-  {
     "nama_usaha": "WESLI NAIBAHO",
     "alamat": "AEKHELA, SIMBOLON PURBA, KEC. PALIPI, KAB. SAMOSIR, PROV. SUMATERA UTARA",
     "kecamatan": "Palipi",
@@ -28037,12 +24995,6 @@ const dataUsaha = [
     "alamat": "HATOGUAN",
     "kecamatan": "Palipi",
     "desa": "Hatoguan"
-  },
-  {
-    "nama_usaha": "HERLEDIS SINAGA",
-    "alamat": "SABULAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
   },
   {
     "nama_usaha": "ROSENDI MARIANA E.P SITOHANG",
@@ -28079,12 +25031,6 @@ const dataUsaha = [
     "alamat": "Lumban Simbolon",
     "kecamatan": "Pangururan",
     "desa": "Parlondut"
-  },
-  {
-    "nama_usaha": "COSMAS SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "ANNA M SIDABUTAR",
@@ -28145,12 +25091,6 @@ const dataUsaha = [
     "alamat": "AEK RANGAT",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "SAUT MARTUA TAMBA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "TOURISMA SIMBOLON",
@@ -28303,18 +25243,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "CHARLES BACTIAR SIDABUTAR",
-    "alamat": "LUMBAN PARMONANGAN",
-    "kecamatan": "Simanindo",
-    "desa": "Martoba"
-  },
-  {
-    "nama_usaha": "SRI SARI REJEKI SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "MIAN SITANGGANG",
     "alamat": "LUMBAN SINAGA",
     "kecamatan": "Simanindo",
@@ -28351,22 +25279,10 @@ const dataUsaha = [
     "desa": "Sigaol Marbun"
   },
   {
-    "nama_usaha": "HASNA HENRI MAITO SIHOTANG",
-    "alamat": "Labuhan Raut Bosi",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "WASHINTON SITUMORANG",
     "alamat": "UNJUR",
     "kecamatan": "Simanindo",
     "desa": "Unjur"
-  },
-  {
-    "nama_usaha": "MIKAEL NAIBAHO",
-    "alamat": "SIBUNTUON",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "NOVIYANTILUSIANA SIMANJUNTAK",
@@ -28403,12 +25319,6 @@ const dataUsaha = [
     "alamat": "JL. INPRES",
     "kecamatan": "Simanindo",
     "desa": "Tuk-Tuk Siadong"
-  },
-  {
-    "nama_usaha": "ROMBIONO SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "IRMA SITANGGANG",
@@ -28471,12 +25381,6 @@ const dataUsaha = [
     "desa": "Ginolat"
   },
   {
-    "nama_usaha": "SIMON SINURAT",
-    "alamat": "SIBARGOT",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "JAIMAN PANDIANGAN",
     "alamat": "LUMBAN PANDE, HUTADAME, PALIPI,",
     "kecamatan": "Palipi",
@@ -28525,22 +25429,10 @@ const dataUsaha = [
     "desa": "Harian"
   },
   {
-    "nama_usaha": "RONAULI SIMANIHURUK",
-    "alamat": "LUMBAN BOLON",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "ESRON SIHOTANG",
     "alamat": "SIBARA-BARA",
     "kecamatan": "Harian",
     "desa": "Turpuk Sihotang"
-  },
-  {
-    "nama_usaha": "JALENTAR TAMBA",
-    "alamat": "PARSAORAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "MISGIANTO PARHUSIP",
@@ -28561,12 +25453,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "Novalina situmorang",
-    "alamat": "Sitalametang",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "GEMBIRA SINAGA",
     "alamat": "JL. HUTABOLON",
     "kecamatan": "Simanindo",
@@ -28583,12 +25469,6 @@ const dataUsaha = [
     "alamat": "PETAK",
     "kecamatan": "Palipi",
     "desa": "Palipi"
-  },
-  {
-    "nama_usaha": "SOFIAN BERTUA SIMBOLON",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "DARMA SITUMORANG",
@@ -28663,12 +25543,6 @@ const dataUsaha = [
     "desa": "Dosroha"
   },
   {
-    "nama_usaha": "DEDDY SIMANJORANG",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
-  },
-  {
     "nama_usaha": "PARLINDUNGAN SAMOSIR",
     "alamat": "ONAN RUNGGU",
     "kecamatan": "Onan Runggu",
@@ -28697,12 +25571,6 @@ const dataUsaha = [
     "alamat": "PANGKUALA",
     "kecamatan": "Nainggolan",
     "desa": "Pasaran Parsaoran"
-  },
-  {
-    "nama_usaha": "LAMTIAR NAIBAHO",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "ERIKA LUMBANTUNGKUP",
@@ -28789,12 +25657,6 @@ const dataUsaha = [
     "desa": "Simanindo"
   },
   {
-    "nama_usaha": "MARINGANTUA TAMBA",
-    "alamat": "LUMBAN TAMBA",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "FERRY RUDI HARTONO SINAGA",
     "alamat": "HUTA LUMBAN LINTONG, URAT II, PALIPI",
     "kecamatan": "Palipi",
@@ -28817,12 +25679,6 @@ const dataUsaha = [
     "alamat": "HARIARA TOLU",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "LAMBOK SIMBOLON",
-    "alamat": "SITALAMETANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "SURYANI DALIMUNTE",
@@ -28871,18 +25727,6 @@ const dataUsaha = [
     "alamat": "GURNING",
     "kecamatan": "Simanindo",
     "desa": "Tomok Parsaoran"
-  },
-  {
-    "nama_usaha": "HARKARTO NAINGGOLAN",
-    "alamat": "SIBORO",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Siboro"
-  },
-  {
-    "nama_usaha": "KONTA SIBATUARA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "ASNI NOMI GULTOM",
@@ -29011,12 +25855,6 @@ const dataUsaha = [
     "desa": "Salaon Toba"
   },
   {
-    "nama_usaha": "DONAL ALMANTO SINAGA",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "RISMA SIHALOHO",
     "alamat": "LUMBAN SARAGIH",
     "kecamatan": "Pangururan",
@@ -29107,12 +25945,6 @@ const dataUsaha = [
     "desa": "Saornauli Hatoguan"
   },
   {
-    "nama_usaha": "KADIM SINAGA",
-    "alamat": "SIBAGANDING",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "PARDOMUAN SIAHAAN",
     "alamat": "LBN. SIAHAAN",
     "kecamatan": "Onan Runggu",
@@ -29135,12 +25967,6 @@ const dataUsaha = [
     "alamat": "JLN. SISINGAMANGARAJA NO. 41",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "BERLIANA NADEAK",
-    "alamat": "PALLIMUTAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "MG EINSTEIN RUMAHORBO",
@@ -29197,12 +26023,6 @@ const dataUsaha = [
     "desa": "Sait Ni Huta"
   },
   {
-    "nama_usaha": "JANNES PANDIANGAN",
-    "alamat": "SABULAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
-  },
-  {
     "nama_usaha": "SESILIA SINAGA",
     "alamat": "Sitare tareon",
     "kecamatan": "Pangururan",
@@ -29213,18 +26033,6 @@ const dataUsaha = [
     "alamat": "LUMBAN SITOHANG",
     "kecamatan": "Simanindo",
     "desa": "Tanjungan"
-  },
-  {
-    "nama_usaha": "PERONIKA SIPAYUNG",
-    "alamat": "Raut Bosi",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
-    "nama_usaha": "PATAR  SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "LIASRI HERTIKA F SITANGGANG",
@@ -29485,12 +26293,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "BUDI BINTANG L SIMBOLON",
-    "alamat": "JL. DR.HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "SWANDO SINAGA",
     "alamat": "JL, LUMBAN SAMOSIR",
     "kecamatan": "Simanindo",
@@ -29567,12 +26369,6 @@ const dataUsaha = [
     "alamat": "PAHODA",
     "kecamatan": "Pangururan",
     "desa": "Panampangan"
-  },
-  {
-    "nama_usaha": "KASMAN NAIBAHO",
-    "alamat": "PASAR DAME",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "MARIDEN LIMBONG",
@@ -29659,22 +26455,10 @@ const dataUsaha = [
     "desa": "Ronggur Ni Huta"
   },
   {
-    "nama_usaha": "KARAOKE <HERMANTO T SIHOTANG>",
-    "alamat": "NAGA TIMBUL",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
-  },
-  {
     "nama_usaha": "Johanris Rapael Gultom",
     "alamat": "Baringin",
     "kecamatan": "Onan Runggu",
     "desa": "Huta Hotang"
-  },
-  {
-    "nama_usaha": "HOTNA SIDAURUK",
-    "alamat": "DESA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
   },
   {
     "nama_usaha": "Desina uli manalu",
@@ -29695,12 +26479,6 @@ const dataUsaha = [
     "desa": "Sampur Toba"
   },
   {
-    "nama_usaha": "ROBBY P.L. SITORUS",
-    "alamat": "MARIARAJA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
-  },
-  {
     "nama_usaha": "ROLIANNA SEMBIRING",
     "alamat": "RONGGUR NIHUTA",
     "kecamatan": "Ronggur Nihuta",
@@ -29711,12 +26489,6 @@ const dataUsaha = [
     "alamat": "SIPINGGAN LUMBAN SIANTAR",
     "kecamatan": "Nainggolan",
     "desa": "Sipinggan Lumban Siantar"
-  },
-  {
-    "nama_usaha": "HENRI H SAMOSIR",
-    "alamat": "AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
   },
   {
     "nama_usaha": "GERHAD NADEAK",
@@ -29785,22 +26557,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "DEDDY HERMAN SIDABUTAR",
-    "alamat": "AMBARITA",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "NURITA SIMBOLON",
     "alamat": "UPA HODA",
     "kecamatan": "Pangururan",
     "desa": "Huta Tinggi"
-  },
-  {
-    "nama_usaha": "MIKAEL SINAGA",
-    "alamat": "PARRAUAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "BARITA SIMBOLON",
@@ -29957,12 +26717,6 @@ const dataUsaha = [
     "alamat": "PARBABA",
     "kecamatan": "Pangururan",
     "desa": "Huta Bolon"
-  },
-  {
-    "nama_usaha": "GERMAN MANURUNG",
-    "alamat": "DUSUN II AMBARITA, AMBARITA, SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "WILTER HUTASOIT",
@@ -30139,12 +26893,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "JOHN FRENKI SITINJAK",
-    "alamat": "JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
-  },
-  {
     "nama_usaha": "SENDE RENALDUS SINAGA",
     "alamat": "LUMBAN SINAGA",
     "kecamatan": "Simanindo",
@@ -30241,12 +26989,6 @@ const dataUsaha = [
     "desa": "Harian"
   },
   {
-    "nama_usaha": "DENITA",
-    "alamat": "BINANGA BORTA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "Cahaya sihombing",
     "alamat": "Dusun L Bong Bong",
     "kecamatan": "Harian",
@@ -30337,12 +27079,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "TURMAN PANDEANGAN",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "Emiliana sitinjak",
     "alamat": "Harihara Pintu",
     "kecamatan": "Harian",
@@ -30353,12 +27089,6 @@ const dataUsaha = [
     "alamat": "SIOPAT SOSOR, PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "ROSALIN P MANULLANG",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "MARET LIMBONG",
@@ -30391,12 +27121,6 @@ const dataUsaha = [
     "desa": "Pardomuan Nauli"
   },
   {
-    "nama_usaha": "MARSIHA SIMBOLON",
-    "alamat": "HARANGGASAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "GARUDA SIMANDALAHI",
     "alamat": "HASINGGAHAN",
     "kecamatan": "Sianjur Mulamula",
@@ -30425,12 +27149,6 @@ const dataUsaha = [
     "alamat": "PASARAN",
     "kecamatan": "Nainggolan",
     "desa": "Pasaran I"
-  },
-  {
-    "nama_usaha": "MANIBUN MARPAUNG",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
   },
   {
     "nama_usaha": "HERIANTO SINABUTAR",
@@ -30569,12 +27287,6 @@ const dataUsaha = [
     "alamat": "SIPINGGAN",
     "kecamatan": "Nainggolan",
     "desa": "Sipinggan"
-  },
-  {
-    "nama_usaha": "JAUTIR SIMBOLON",
-    "alamat": "JL. USKUP AGUNG",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
   },
   {
     "nama_usaha": "ROTUA NADEAK",
@@ -30733,14 +27445,8 @@ const dataUsaha = [
     "desa": "Sideak"
   },
   {
-    "nama_usaha": "FEBRYS RUMAHORBO",
-    "alamat": "AMBARITA, AMBARITA, SIMANINDO SAMOSIR",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
-  },
-  {
     "nama_usaha": "Herlida simarmata",
-    "alamat": "2,17E+17",
+    "alamat": "2,1711E+17",
     "kecamatan": "Harian",
     "desa": "Hutagalung"
   },
@@ -30809,12 +27515,6 @@ const dataUsaha = [
     "alamat": "SIMANGONDING",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "SWARDIMAN SITUMORANG",
-    "alamat": "SIBAGAS",
-    "kecamatan": "Nainggolan",
-    "desa": "Pasaran I"
   },
   {
     "nama_usaha": "BANI UHUR SITIO",
@@ -30913,12 +27613,6 @@ const dataUsaha = [
     "desa": "Parmonangan"
   },
   {
-    "nama_usaha": "LABATUA TAMBA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "EVITA SRY NAINGGOLAN",
     "alamat": "SOSOR DOLOK",
     "kecamatan": "Harian",
@@ -30957,8 +27651,8 @@ const dataUsaha = [
   {
     "nama_usaha": "PAHALA LAMBAS TRIPUTRI SINAGA, PT",
     "alamat": "PARTUNGKONAGINJANG",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "MARTOGI SINAGA",
@@ -30967,22 +27661,10 @@ const dataUsaha = [
     "desa": "Sibonor Ompu Ratus"
   },
   {
-    "nama_usaha": "SIBUHA BUHA",
-    "alamat": "Cinta Maju",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "YOSAPAT JONRI SITANGGANG - PENGANGKUTAN EKSPEDISI HASIL BUMI",
     "alamat": "PEA NABOLAK",
     "kecamatan": "Ronggur Nihuta",
     "desa": "Sabungan Ni Huta"
-  },
-  {
-    "nama_usaha": "KATARINA SITANGGANG",
-    "alamat": "JL.DR.HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "SANTI MALAU",
@@ -31039,12 +27721,6 @@ const dataUsaha = [
     "desa": "Simanindo"
   },
   {
-    "nama_usaha": "VETER HANJIAN SIMBOLON",
-    "alamat": "SIANTING ANTING",
-    "kecamatan": "Pangururan",
-    "desa": "Sianting - Anting"
-  },
-  {
     "nama_usaha": "MELINTON SIRINGO",
     "alamat": "SAOR NAULI HATOGUAN",
     "kecamatan": "Palipi",
@@ -31079,12 +27755,6 @@ const dataUsaha = [
     "alamat": "HUTA BOLON",
     "kecamatan": "Pangururan",
     "desa": "Huta Bolon"
-  },
-  {
-    "nama_usaha": "SANTO SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "TOKO MATERIAL <BENNY JONNIES MARULITUA SIRINGORINGO>",
@@ -31129,12 +27799,6 @@ const dataUsaha = [
     "desa": "Pasaran I"
   },
   {
-    "nama_usaha": "ANDI SIMBOLON",
-    "alamat": "HARANGGASAN",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "SONTIARA NAIBAHO",
     "alamat": "JLN.SISINGAMANGARAJA",
     "kecamatan": "Pangururan",
@@ -31163,12 +27827,6 @@ const dataUsaha = [
     "alamat": "JL. DI PANJAITAN",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "REZINA MASLY SIMANJORANG",
-    "alamat": "SIAMBALO",
-    "kecamatan": "Pangururan",
-    "desa": "Huta Namora"
   },
   {
     "nama_usaha": "ESRON HASIHOLAN SIHALOHO",
@@ -31291,22 +27949,10 @@ const dataUsaha = [
     "desa": "Pintusona"
   },
   {
-    "nama_usaha": "INDAH MIKANA SIMBOLON",
-    "alamat": "JL DR HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "HERMINA SITUMORANG",
-    "alamat": "SIALAMAN, SINAGA URUK PANDIANGAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Sinaga Uruk Pandiangan"
-  },
-  {
     "nama_usaha": "LORENZO",
     "alamat": "Samosir",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "JUJUR BASAR ALBINER HUTAGAOL",
@@ -31331,18 +27977,6 @@ const dataUsaha = [
     "alamat": "UMAGING",
     "kecamatan": "Onan Runggu",
     "desa": "Tambun Sungkean"
-  },
-  {
-    "nama_usaha": "EFFENDI SIDABUTAR",
-    "alamat": "JL. PASAR BARU",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
-  },
-  {
-    "nama_usaha": "OKY BOYNARE GURNING - PENGEMPUL HASIL PERTANIAN",
-    "alamat": "PARADUAN",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Paraduan"
   },
   {
     "nama_usaha": "BUDIMAN POHAN",
@@ -31459,12 +28093,6 @@ const dataUsaha = [
     "desa": "Pardomuan"
   },
   {
-    "nama_usaha": "BOYAN SIRINGORINGO",
-    "alamat": "LUMBAN BUNTU",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "DEWI EPRIANI BUTARBUTAR",
     "alamat": "SIIGAR IGAR",
     "kecamatan": "Pangururan",
@@ -31481,12 +28109,6 @@ const dataUsaha = [
     "alamat": "LUMBAN SITIO",
     "kecamatan": "Simanindo",
     "desa": "Simanindo"
-  },
-  {
-    "nama_usaha": "BARIS SIREGAR",
-    "alamat": "JANJIRAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Raja"
   },
   {
     "nama_usaha": "DAULAT AMBARITA",
@@ -31513,28 +28135,10 @@ const dataUsaha = [
     "desa": "Martoba"
   },
   {
-    "nama_usaha": "REINHEART TAMBA",
-    "alamat": "TAMBA DOLOK",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "MANURIA ERNAWATI PAKPAHAN",
     "alamat": "HUTARAJA",
     "kecamatan": "Onan Runggu",
     "desa": "Pakpahan"
-  },
-  {
-    "nama_usaha": "SUDIARTO SAGALA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
-    "nama_usaha": "SANDONAL SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "OKTO DEDI GUNAWAN SINAGA",
@@ -31595,12 +28199,6 @@ const dataUsaha = [
     "alamat": "JANJI MARIA DUSUN III DESA SIGAOL SIMBOLON KECAMATAN PALIPI KABUPATEN SAMOSIR PROVINSI SUMATERA UTARA",
     "kecamatan": "Palipi",
     "desa": "Sigaol Simbolon"
-  },
-  {
-    "nama_usaha": "RICHARDSON SIMBOLON",
-    "alamat": "LUMBAN SILALAHI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "REYNELDA RUMAPEA",
@@ -31801,22 +28399,10 @@ const dataUsaha = [
     "desa": "Huta Namora"
   },
   {
-    "nama_usaha": "ASTRI SUMARNI SILITONGA",
-    "alamat": "HUTA BARU",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "RABEKKA AMBARITA",
     "alamat": "AMBARITA",
     "kecamatan": "Simanindo",
     "desa": "Ambarita"
-  },
-  {
-    "nama_usaha": "ENI SUSANTI",
-    "alamat": "SITOLU HUTA",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
   },
   {
     "nama_usaha": "SARMAN H NAIBAHO",
@@ -31897,12 +28483,6 @@ const dataUsaha = [
     "desa": "Sait Ni Huta"
   },
   {
-    "nama_usaha": "NELLIDA SIRINGORINGO",
-    "alamat": "BARISAN GEREJA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
-  },
-  {
     "nama_usaha": "NIKO S.P. SITUMORANG",
     "alamat": "PARADUAN, SIDEAK, PALIPI",
     "kecamatan": "Palipi",
@@ -31913,18 +28493,6 @@ const dataUsaha = [
     "alamat": "JANJI SAHATA",
     "kecamatan": "Palipi",
     "desa": "Pardomuan Nauli"
-  },
-  {
-    "nama_usaha": "MANGATAR GULTOM",
-    "alamat": "RASANG BOSI",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "MARBEN  NAIBAHO",
-    "alamat": "HUTA RAJA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "ENIK MUSTIKAWATI",
@@ -31943,12 +28511,6 @@ const dataUsaha = [
     "alamat": "Sosor Batu",
     "kecamatan": "Onan Runggu",
     "desa": "Pakpahan"
-  },
-  {
-    "nama_usaha": "DAYANTI SUCAPRINA MALAU",
-    "alamat": "LUMBAN SITOHANG",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "HOTJON SIMARMATA",
@@ -31993,12 +28555,6 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "HARLEN SINURAT",
-    "alamat": "PARRANDEAN",
-    "kecamatan": "Pangururan",
-    "desa": "Pardomuan I"
-  },
-  {
     "nama_usaha": "KASIAN L SIMARMATA",
     "alamat": "LIMBONG,SIMARIHIT,SIANJAR MULA-MULA",
     "kecamatan": "Sianjur Mulamula",
@@ -32015,12 +28571,6 @@ const dataUsaha = [
     "alamat": "SIMANGONDING",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "ROMAULI SINURAT",
-    "alamat": "LUMBAN SINURAT",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
   },
   {
     "nama_usaha": "INGRID RABECCA DAMAYANI NAIBAHO",
@@ -32107,22 +28657,10 @@ const dataUsaha = [
     "desa": "Bonan Dolok"
   },
   {
-    "nama_usaha": "FERNANDO PARHUSIP",
-    "alamat": "SOSOR PASIR",
-    "kecamatan": "Nainggolan",
-    "desa": "Nainggolan"
-  },
-  {
     "nama_usaha": "TRISHA PATRECIA PANGGABEAN",
     "alamat": "JALAN RAYA PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Sait Ni Huta"
-  },
-  {
-    "nama_usaha": "RUKERTINA SAGALA",
-    "alamat": "BINANGAN BORTA",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
   },
   {
     "nama_usaha": "ALFRADI NAIBAHO",
@@ -32239,12 +28777,6 @@ const dataUsaha = [
     "desa": "Sipira"
   },
   {
-    "nama_usaha": "TULUS GUNAWAN P. SINAGA",
-    "alamat": "SIBONOR OMPURATUS,",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
-  },
-  {
     "nama_usaha": "NEVENNI PARHUSIP",
     "alamat": "SOSOR DAGAL",
     "kecamatan": "Onan Runggu",
@@ -32281,12 +28813,6 @@ const dataUsaha = [
     "desa": "Urat Timur"
   },
   {
-    "nama_usaha": "DENNI SITUMORANG",
-    "alamat": "HUTARAJA LUMBAN SUHI TORUAN",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "NELLI MEGAWATI",
     "alamat": "HATOGUAN",
     "kecamatan": "Palipi",
@@ -32321,12 +28847,6 @@ const dataUsaha = [
     "alamat": "HARIARA TOLU",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "GINTON SINAGA",
-    "alamat": "SIBAGANDING",
-    "kecamatan": "Nainggolan",
-    "desa": "Sibonor Ompu Ratus"
   },
   {
     "nama_usaha": "GOKSAN SIMBOLON",
@@ -32371,22 +28891,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "JOSRIANDO HARO",
-    "alamat": "ONAN RIHIT",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "TONGGO RIMBUN SIMBOLON",
     "alamat": "SIRIMBANG URUK",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "PRANCIS SIRINGORINGO",
-    "alamat": "BARISAN GERAJA",
-    "kecamatan": "Palipi",
-    "desa": "Saornauli Hatoguan"
   },
   {
     "nama_usaha": "TUKANG JAHIT <CINDI CLAUDIA SIDAURUK>",
@@ -32395,34 +28903,10 @@ const dataUsaha = [
     "desa": "Aek Nauli"
   },
   {
-    "nama_usaha": "JUASNAR MANURUNG",
-    "alamat": "CINTA DAME",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
-  },
-  {
     "nama_usaha": "TIPAN SIMALANGO",
     "alamat": "SASGIAN",
     "kecamatan": "Simanindo",
     "desa": "Parmonangan"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <ROULI NAIBAHO>",
-    "alamat": "PEGE-PEGE, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "pengumpul hasil bumi <reni purba>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
-    "nama_usaha": "WARUNG KOPI <SUTRIANTI RAJAGUKGUK>",
-    "alamat": "DESA JANJI RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
   },
   {
     "nama_usaha": "TUA HOTDISON SITUMORANG",
@@ -32437,22 +28921,10 @@ const dataUsaha = [
     "desa": "Parlondut"
   },
   {
-    "nama_usaha": "KARYA MURNI SIDIHONI",
-    "alamat": "JL. RONGGURNIHUTA-SIDIHONI",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Sijambur"
-  },
-  {
     "nama_usaha": "HOTBIN NADEAK",
     "alamat": "JL. TANAH LAPANG",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "EVEN RUDDIN LUMBAN GAOL",
-    "alamat": "PAGAR BATU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
   },
   {
     "nama_usaha": "YULI MARTHA SINAGA",
@@ -32483,12 +28955,6 @@ const dataUsaha = [
     "alamat": "SIRIMBANG PASIR",
     "kecamatan": "Pangururan",
     "desa": "Rianiate"
-  },
-  {
-    "nama_usaha": "ANDRIADI RP SIMBOLON",
-    "alamat": "SITALAMETANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "ENITA MANIK",
@@ -32533,12 +28999,6 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Dolok"
   },
   {
-    "nama_usaha": "PENJUAL IKAN <RINDU GULTOM>",
-    "alamat": "PARRAUAN, DUSUN 3",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "Tigan Bakery",
     "alamat": "Jl Simanindo Raya, Desa Siopat Sosor",
     "kecamatan": "Pangururan",
@@ -32549,12 +29009,6 @@ const dataUsaha = [
     "alamat": "JL. GEREJA",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "Warung Jajanan <Santa Ida Tamba>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "ROSMERY ESTERLINA BANGUN",
@@ -32617,18 +29071,6 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Toruan"
   },
   {
-    "nama_usaha": "FRANSISCA LIMBONG",
-    "alamat": "LIMBONG",
-    "kecamatan": "Sianjur Mulamula",
-    "desa": "Sarimarrihit"
-  },
-  {
-    "nama_usaha": "JIMSON SIRINGORINGO",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "RIANTO SITANGGANG",
     "alamat": "JLN.KEJAKSAAN",
     "kecamatan": "Pangururan",
@@ -32657,12 +29099,6 @@ const dataUsaha = [
     "alamat": "PINDA RAYA",
     "kecamatan": "Simanindo",
     "desa": "Siallagan Pindaraya"
-  },
-  {
-    "nama_usaha": "WARUNG KOPI <ENRIA GULTOM>",
-    "alamat": "PARRAUAN, DUSUN 3",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "BPK RUMA BOLON",
@@ -32719,22 +29155,10 @@ const dataUsaha = [
     "desa": "Simanindo Sangkal"
   },
   {
-    "nama_usaha": "MARTUNAS SINAGA",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
-  },
-  {
     "nama_usaha": "CHARLES W. SITUNGKIR",
     "alamat": "SOSOR NANGKA",
     "kecamatan": "Simanindo",
     "desa": "Dosroha"
-  },
-  {
-    "nama_usaha": "JUAL SEMBAKO <MANGIRING M. NAIBAHO>",
-    "alamat": "JL. DR. HADRIANUS SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "JUANTO SIMARMATA",
@@ -32785,28 +29209,10 @@ const dataUsaha = [
     "desa": "Parlondut"
   },
   {
-    "nama_usaha": "PANGKAS RAMBUT <LOGITO SITINJAK>",
-    "alamat": "PITTOLON, DUSUN 1",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "Jual Mainan Anak <Leonardo Tamba>",
-    "alamat": "Cinta Maju",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "ZIKRI BURGER",
     "alamat": "JL GEREJA KELURAHAN PASAR PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Pasar Pangururan"
-  },
-  {
-    "nama_usaha": "Warung Jajanan <Only Silaban>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "ERNIDAWATI SIMARMATA",
@@ -32911,24 +29317,6 @@ const dataUsaha = [
     "desa": "Tuk-Tuk Siadong"
   },
   {
-    "nama_usaha": "WARUNG KOPI <HORAS TAMBA>",
-    "alamat": "PANGUMBILAN, DUSUN 1",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "Warung Ester <Esterios Op Sunggu>",
-    "alamat": "Cinta Maju",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
-    "nama_usaha": "PENJAHIT MARLINA SIHOTANG",
-    "alamat": "DESA JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
-  },
-  {
     "nama_usaha": "PERONIKA SIPAYUNG",
     "alamat": "Raut Bosi",
     "kecamatan": "Simanindo",
@@ -32939,12 +29327,6 @@ const dataUsaha = [
     "alamat": "Batu batu",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "MARINA HOTEL SAMOSIR, PT",
-    "alamat": "JALAN RAYA SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Tuk-Tuk Siadong"
   },
   {
     "nama_usaha": "SANGGAM RIANTO OBERLIN NAINGGOLAN",
@@ -32963,12 +29345,6 @@ const dataUsaha = [
     "alamat": "DUSUN III",
     "kecamatan": "Pangururan",
     "desa": "Tanjung Bunga"
-  },
-  {
-    "nama_usaha": "DEMARIS TURNIP",
-    "alamat": "BOLOBOLO",
-    "kecamatan": "Simanindo",
-    "desa": "Cinta Dame"
   },
   {
     "nama_usaha": "EFDIZON SIMARMATA",
@@ -33029,24 +29405,6 @@ const dataUsaha = [
     "alamat": "PARSEWAAN",
     "kecamatan": "Palipi",
     "desa": "Simbolon Purba"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <PARASIAN SITINJAK>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "Pengumpul Hasil Bumi <Liston Tamba>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
-    "nama_usaha": "KILANG PADI <HONNI SINURAT>",
-    "alamat": "DESA JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
   },
   {
     "nama_usaha": "SAHAT PARULIAN MARPAUNG",
@@ -33151,22 +29509,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "WARUNG KELONTONG <SAMMERTUA TAMBA>",
-    "alamat": "PEGE-PEGE, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "RUMAH MAKAN CAHAYA",
     "alamat": "Dusun 1 Siopat Sosor",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <GENTA MARBUN>",
-    "alamat": "DESA CINTA MAJU",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "TOKO SEMBAKO HUTASOIT",
@@ -33271,22 +29617,10 @@ const dataUsaha = [
     "desa": "Pardomuan I"
   },
   {
-    "nama_usaha": "WARUNG KELONTONG <RAMLAN TAMBA>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "WARUNG KOPI <LIKA SITINJAK>",
-    "alamat": "SITINJAK, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "Warung Makan <Ayu Sari Turnip>",
     "alamat": "Siopat Sosor, Pangururan",
-    "kecamatan": "",
-    "desa": ""
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "SULASTRI SIMARMATA",
@@ -33317,12 +29651,6 @@ const dataUsaha = [
     "alamat": "LUMBAN BUNTU",
     "kecamatan": "Nainggolan",
     "desa": "Pananggangan II"
-  },
-  {
-    "nama_usaha": "DEWI SIMBOLON",
-    "alamat": "JL. DR HADRIANUS  SINAGA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "JONSON SIMBOLON",
@@ -33499,12 +29827,6 @@ const dataUsaha = [
     "desa": "Ronggur Ni Huta"
   },
   {
-    "nama_usaha": "TOTA MANGANTA SUKSES",
-    "alamat": "Dusun III",
-    "kecamatan": "Sitio-tio",
-    "desa": "Tamba Dolok"
-  },
-  {
     "nama_usaha": "ADIL SIMBOLON",
     "alamat": "HATOGUAN",
     "kecamatan": "Palipi",
@@ -33515,12 +29837,6 @@ const dataUsaha = [
     "alamat": "TUKTUK BARINGIN DESA SILIMALOMBU,KECAMATAN ONANRUNGGU",
     "kecamatan": "Onan Runggu",
     "desa": "Silima Lombu"
-  },
-  {
-    "nama_usaha": "JUNITA OCTAVIA SIDABUKKE",
-    "alamat": "DUSUN II AMBARITA, AMBARITA, SIMANINDO",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "DIATOR SIMBOLON",
@@ -33557,12 +29873,6 @@ const dataUsaha = [
     "alamat": "SAMPEAN",
     "kecamatan": "Palipi",
     "desa": "Sigaol Simbolon"
-  },
-  {
-    "nama_usaha": "JUNIAR ARITONANG",
-    "alamat": "HOLBUNG",
-    "kecamatan": "Sitio-tio",
-    "desa": "Holbung"
   },
   {
     "nama_usaha": "EKO RICHARDO",
@@ -33607,28 +29917,10 @@ const dataUsaha = [
     "desa": "Turpuk Sihotang"
   },
   {
-    "nama_usaha": "PENJUAL KUE <YISPAN RUMAPEA>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <BOIMAN GULTOM>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "Fotokopi Ondo",
     "alamat": "Dusun 1  siopat sosor",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "Warung Mardiaman Tamba <Mardiaman Tamba>",
-    "alamat": "Sibuha Buha",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "BUDIMAN",
@@ -33691,12 +29983,6 @@ const dataUsaha = [
     "desa": "Janji Martahan"
   },
   {
-    "nama_usaha": "HASIHOLAN SINAGA",
-    "alamat": "DOLOK MARTAHAN, BUNTU MAULI, SITIO-TIO",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
     "nama_usaha": "ARBONANSA SITUMORANG",
     "alamat": "TANGGA BATU",
     "kecamatan": "Simanindo",
@@ -33727,40 +30013,16 @@ const dataUsaha = [
     "desa": "Siogung - Ogung"
   },
   {
-    "nama_usaha": "DOORSMER <ENRIRO SITINJAK>",
-    "alamat": "PITTOLON, DUSUN 1",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "KILANG PADI <MIKAEL SINAGA>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "WARUNG MAKAN PARBABA VIEW",
     "alamat": "DESA SIOPAT SOSOR",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
   },
   {
-    "nama_usaha": "Warung Jajanan <Mardahai Sinaga>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
     "nama_usaha": "WIDIWATY F GULTOM",
     "alamat": "WFC Pangururan",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "LAURA SARTIKA M. SITANGGANG",
-    "alamat": "DUSUN II",
-    "kecamatan": "Simanindo",
-    "desa": "Ambarita"
   },
   {
     "nama_usaha": "RUSMEY TOGATOROP",
@@ -33841,40 +30103,10 @@ const dataUsaha = [
     "desa": "Saornauli Hatoguan"
   },
   {
-    "nama_usaha": "HERIANTO SINAGA",
-    "alamat": "RANSANG BOSI, BUNTU MAULI, SITIO-TIO,",
-    "kecamatan": "Sitio-tio",
-    "desa": "Buntu Mauli"
-  },
-  {
-    "nama_usaha": "NOVELITA BUTAR BUTAR",
-    "alamat": "KP. BATU GORDANG",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
-    "nama_usaha": "WARUNG KOPI <RAFLIN SIHOMBING>",
-    "alamat": "PEGE-PEGE, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <PASTER TAMBA>",
-    "alamat": "PARRAUAN, DUSUN 3",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "TOKO OBAT DEBORA",
     "alamat": "DESA SIOPAT SOSOR KEC PANGURURAN",
     "kecamatan": "Pangururan",
     "desa": "Siopat Sosor"
-  },
-  {
-    "nama_usaha": "Warung Sembako <Elpi Tamba>",
-    "alamat": "Cinta Maju",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "HOTNA SITANGGANG",
@@ -33985,28 +30217,10 @@ const dataUsaha = [
     "desa": "Tomok Parsaoran"
   },
   {
-    "nama_usaha": "PENJUAL IKAN <ELDO SILALAHI>",
-    "alamat": "SIDAURUK, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "Hans Ponsel",
     "alamat": "Desa Pardomuan I, dekat SPBU Pangururan",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "Menjual Bahan Bangunan <Aryo Tamba>",
-    "alamat": "Sibuha Buha",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <BILMAR NAIBAHO>",
-    "alamat": "DESA JANJI MARIA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Janji Maria"
   },
   {
     "nama_usaha": "HABIBILLAH RUHULLAH",
@@ -34081,22 +30295,10 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "JALOHOT DOMIANUS SITUMORANG",
-    "alamat": "LUMBAN SITIO",
-    "kecamatan": "Simanindo",
-    "desa": "Simanindo"
-  },
-  {
     "nama_usaha": "ERIKSON NAIBAHO",
     "alamat": "LUMBAN SITAKKARAEN",
     "kecamatan": "Harian",
     "desa": "Turpuk Limbong"
-  },
-  {
-    "nama_usaha": "SARTIKA SIMAMORA",
-    "alamat": "TIMBUL NAULI",
-    "kecamatan": "Pangururan",
-    "desa": "Parhorasan"
   },
   {
     "nama_usaha": "GEMARINA HOTNIAWAN SINAGA",
@@ -34123,28 +30325,10 @@ const dataUsaha = [
     "desa": "Lumban Suhi Suhi Toruan"
   },
   {
-    "nama_usaha": "WARUNG KELONTONG <DESI SITINJAK.",
-    "alamat": "PITTOLON, DUSUN 1",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "Coffee Shop <Gohima>",
-    "alamat": "Siopat Sosor, Pangururan",
-    "kecamatan": "Pangururan",
-    "desa": "Siopat Sosor"
-  },
-  {
     "nama_usaha": "Yabes Homestay",
     "alamat": "Jl. Putri Lopian",
     "kecamatan": "Pangururan",
     "desa": "Pardomuan I"
-  },
-  {
-    "nama_usaha": "Warung Jajanan Anak <Pelita Tamba>",
-    "alamat": "Tamba Nagodang",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "TOLEDO TUKTUK SAMOSIR",
@@ -34181,12 +30365,6 @@ const dataUsaha = [
     "alamat": "HATOGUAN, HATOGUAN, PALIPI,",
     "kecamatan": "Palipi",
     "desa": "Hatoguan"
-  },
-  {
-    "nama_usaha": "HOTMARITA MANURUNG",
-    "alamat": "KOMPLEK LOPO",
-    "kecamatan": "Simanindo",
-    "desa": "Tomok"
   },
   {
     "nama_usaha": "RHENE SIDAURUK",
@@ -34231,12 +30409,6 @@ const dataUsaha = [
     "desa": "Pangaloan"
   },
   {
-    "nama_usaha": "LASON TURNIP",
-    "alamat": "SITORANG NABOLON",
-    "kecamatan": "Pangururan",
-    "desa": "Lumban Suhi Suhi Toruan"
-  },
-  {
     "nama_usaha": "MANSEN MANIK",
     "alamat": "SIARSAM",
     "kecamatan": "Ronggur Nihuta",
@@ -34277,12 +30449,6 @@ const dataUsaha = [
     "alamat": "SIRUMA HOMBAR",
     "kecamatan": "Nainggolan",
     "desa": "Siruma Hombar"
-  },
-  {
-    "nama_usaha": "PENIEL PARHUSIP",
-    "alamat": "NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Parhusip"
   },
   {
     "nama_usaha": "Meldawati sinurat",
@@ -34405,12 +30571,6 @@ const dataUsaha = [
     "desa": "Hutagalung"
   },
   {
-    "nama_usaha": "VERONIKA SIMBOLON ALIAS NURHAYATI SIMBOLON",
-    "alamat": "PINTU SONA",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "Ita situmorang",
     "alamat": "Bongbong",
     "kecamatan": "Harian",
@@ -34439,12 +30599,6 @@ const dataUsaha = [
     "alamat": "TURPUK SAGALA,TURPUK SAGALA,HARIAN ,",
     "kecamatan": "Harian",
     "desa": "Turpuk Sagala"
-  },
-  {
-    "nama_usaha": "JIMMI CARTER SITUMORANG",
-    "alamat": "HUTA RAJA",
-    "kecamatan": "Sitio-tio",
-    "desa": "Cinta Maju"
   },
   {
     "nama_usaha": "ROPENDY SAHAT TUA SIDABUTAR",
@@ -34481,18 +30635,6 @@ const dataUsaha = [
     "alamat": "Harian",
     "kecamatan": "Harian",
     "desa": "Hariara Pintu"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <EVENTUSTAMBA>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
-    "nama_usaha": "WARUNG KELONTONG <HERTATI SINAGA>",
-    "alamat": "PITTOLON, DUSUN 1",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
   },
   {
     "nama_usaha": "Mie Balap Sidabukke",
@@ -34669,12 +30811,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "FIKRI MARSANGAP TUA SIADARI",
-    "alamat": "DUSUN 1 SIBURAK BURAK",
-    "kecamatan": "Simanindo",
-    "desa": "Unjur"
-  },
-  {
     "nama_usaha": "Jeremia kristina pakpahan",
     "alamat": "Hariara Pintu",
     "kecamatan": "Harian",
@@ -34699,18 +30835,6 @@ const dataUsaha = [
     "desa": "Pasar Pangururan"
   },
   {
-    "nama_usaha": "LASRIA PANGIHUTAN SIHOTANG",
-    "alamat": "BUTTU MAULI",
-    "kecamatan": "Ronggur Nihuta",
-    "desa": "Salaon Dolok"
-  },
-  {
-    "nama_usaha": "Tio riska naibaho",
-    "alamat": "Pintu Sona",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
-  },
-  {
     "nama_usaha": "HUDDEN SILALAHI",
     "alamat": "JLN.DR.FL.TOBING",
     "kecamatan": "Pangururan",
@@ -34721,12 +30845,6 @@ const dataUsaha = [
     "alamat": "SIMULLOP",
     "kecamatan": "Pangururan",
     "desa": "Siogung - Ogung"
-  },
-  {
-    "nama_usaha": "LASNIA SIMBOLON",
-    "alamat": "KOMPLEK SD NEGERI",
-    "kecamatan": "Pangururan",
-    "desa": "Pintusona"
   },
   {
     "nama_usaha": "HAMDAH SIMBOLON",
@@ -34775,18 +30893,6 @@ const dataUsaha = [
     "alamat": "Sitanggang Bau",
     "kecamatan": "Pangururan",
     "desa": "Parsaoran I"
-  },
-  {
-    "nama_usaha": "SUMANRO PARHUSIP",
-    "alamat": "PASAR NAINGGOLAN",
-    "kecamatan": "Nainggolan",
-    "desa": "Parhusip"
-  },
-  {
-    "nama_usaha": "TOGA marudut SIAHAAN",
-    "alamat": "SIALLAGAN",
-    "kecamatan": "Simanindo",
-    "desa": "Siallagan Pindaraya"
   },
   {
     "nama_usaha": "JUAL SEMBAKO <HELEN VINTAULI>",
@@ -34849,22 +30955,10 @@ const dataUsaha = [
     "desa": "Siruma Hombar"
   },
   {
-    "nama_usaha": "WARUNG KELONTONG <HISAR SITINJAK>",
-    "alamat": "SAITNIHUTA, DUSUN 2",
-    "kecamatan": "Sitio-tio",
-    "desa": "Parsaoran"
-  },
-  {
     "nama_usaha": "Warung Makan <NDK>",
     "alamat": "Siopat Sosor, Pangururan",
-    "kecamatan": "",
-    "desa": ""
-  },
-  {
-    "nama_usaha": "SMAN 1 SITIOTIO",
-    "alamat": "SABULAN DUSUN III",
-    "kecamatan": "Sitio-tio",
-    "desa": "Sabulan"
+    "kecamatan": "#N/A",
+    "desa": "#N/A"
   },
   {
     "nama_usaha": "RIKARDO HUTAJULU",
